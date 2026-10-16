@@ -1,0 +1,733 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><script src="assets/img.js"></script><script>(function(){var M=window.IMG||{};
+function r(s){return typeof s==='string'?s.replace(/IMG:([\w]+)/g,function(_,k){return M[k]||''}):s}
+window.__R=r;function fix(el){if(!el.getAttribute)return;['src','srcset','poster','href'].forEach(function(a){var v=el.getAttribute('data-'+a);if(v&&v.indexOf('IMG:')>-1){el.setAttribute(a,r(v));el.removeAttribute('data-'+a)}v=el.getAttribute(a);if(v&&v.indexOf('IMG:')>-1)el.setAttribute(a,r(v))})}
+function walk(n){fix(n);if(n.querySelectorAll)n.querySelectorAll('[data-src],[data-srcset],[data-poster],[src*="IMG:"],[srcset*="IMG:"],[poster*="IMG:"]').forEach(fix)}
+new MutationObserver(function(ms){ms.forEach(function(m){m.addedNodes.forEach(walk);if(m.type==='attributes')fix(m.target)})}).observe(document.documentElement,{childList:true,subtree:true,attributes:true,attributeFilter:['src','srcset','poster']});
+document.addEventListener('DOMContentLoaded',function(){walk(document.documentElement)})})();</script><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FROM INDIA, FOR GLOBAL | Dennison Fashion India</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="IMG:4f723ed2c96dacb5"><style>
+:root{--ink:#000;--text:#1c1d1d;--muted:#6b6b6b;--line:#e8e8e1;--soft:#f7f7f7;--accent:#bc521d;--red:#cf1515;--star:#f5b301;--foot:#e8e8e8;
+--font:'Poppins',sans-serif;--maxw:1500px;--gut:40px;--barh:0px;--hdr:78px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);font-size:13px;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer;background:none;border:0;color:inherit}
+input,select{font-family:inherit}
+#viewport{container-type:inline-size;margin:0 auto;background:#fff;min-height:100vh;position:relative}
+body.mobile{background:#d9d9d9}
+body.mobile #viewport{max-width:420px;box-shadow:0 0 30px rgba(0,0,0,.15)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut)}
+.svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.6}
+.hide-d{display:none!important}
+
+/* preview toolbar */
+#pbar{position:fixed;top:0;left:0;right:0;height:40px;background:#111;color:#fff;z-index:900;display:flex;align-items:center;gap:14px;padding:0 14px;font-size:12px}
+#pbar b{letter-spacing:.08em}
+#pbar a{opacity:.75}#pbar a.on,#pbar a:hover{opacity:1;text-decoration:underline}
+#pbar .vt{margin-left:auto;display:flex;border:1px solid #555;border-radius:4px;overflow:hidden}
+#pbar .vt button{padding:5px 10px;color:#ccc;font-size:12px}
+#pbar .vt button.on{background:#fff;color:#000}
+body.has-bar{--barh:40px;padding-top:40px}
+
+/* utility bar */
+.toolbar{border-bottom:1px solid #f0f0f0;font-size:11px}
+.toolbar .wrap{display:flex;align-items:center;justify-content:space-between;height:25px}
+.toolbar .tl a{margin-right:20px}
+.toolbar .soc{display:flex;gap:10px}
+.toolbar .soc svg{width:17px;height:17px;fill:#000}
+
+/* header */
+.site-header{position:sticky;top:var(--barh);z-index:200;background:#fff;transition:box-shadow .2s}
+.site-header.stuck{box-shadow:0 0 1px rgba(0,0,0,.2)}
+.hdr{display:flex;align-items:center;height:78px}
+.hdr .l,.hdr .r{flex:1;display:flex;align-items:center}
+.hdr .r{justify-content:flex-end;gap:6px}
+.hdr .ib{width:52px;height:44px;display:flex;align-items:center;justify-content:center;position:relative}
+.hdr .ib svg{width:25px;height:25px}
+.hdr .logo img{width:150px}
+.hdr .cnt{position:absolute;top:5px;right:7px;background:#000;color:#fff;border-radius:50%;min-width:16px;height:16px;font-size:9px;display:flex;align-items:center;justify-content:center;padding:0 3px}
+.hdr .cnt:empty,.hdr .cnt[data-z="1"]{display:none}
+.cat-circles{display:none}
+
+/* drawer */
+.ovl{position:fixed;inset:0;background:rgba(0,0,0,.35);opacity:0;visibility:hidden;transition:.3s;z-index:400}
+.ovl.on{opacity:1;visibility:visible}
+.nav-drawer{position:fixed;top:var(--barh);bottom:0;left:0;width:350px;max-width:88vw;background:var(--soft);z-index:410;transform:translateX(-100%);transition:transform .35s ease;overflow:hidden;display:flex;flex-direction:column}
+.nav-drawer.on{transform:none}
+.nav-drawer .dtop{display:flex;justify-content:flex-end;padding:16px 26px 0;height:58px;flex:none}
+.nav-drawer .dtop svg{width:22px;height:22px}
+.dviews{position:relative;flex:1;overflow:hidden}
+.dview{position:absolute;inset:0;overflow-y:auto;padding:0 30px 30px;transition:transform .35s ease;background:var(--soft)}
+.dview.sub{transform:translateX(100%)}
+.dview.sub.on{transform:none}
+.dview.root.push{transform:translateX(-30%)}
+.dlist{border-top:1px solid #000}
+.dlist li{list-style:none;border-bottom:1px solid var(--accent)}
+.dlist li a,.dlist li button{display:flex;justify-content:space-between;align-items:center;width:100%;padding:13px 0;font-size:13.2px;letter-spacing:.2em;text-transform:uppercase;text-align:left}
+.dlist li button .ch{border-left:1px solid #000;padding-left:14px;height:28px;display:flex;align-items:center}
+.dlist li button svg,.dback svg{width:13px;height:13px}
+.dback{display:flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:6px 0 16px;color:#444}
+.dsubh{font-size:15px;letter-spacing:.2em;text-transform:uppercase;padding:0 0 12px;font-weight:500}
+.dlist.lvl li{border-bottom:1px solid #e2e2e2}
+.dlist.lvl li a,.dlist.lvl li button{letter-spacing:.06em;font-size:13px}
+.dfoot{margin-top:26px}
+.dfoot .lg{display:block;margin-bottom:18px;font-size:13px}
+.dfoot .lk{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;margin-bottom:20px;font-size:13px}
+.dsoc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--accent);border-left:1px solid var(--accent);margin:0 -30px}
+.dsoc a{border-right:1px solid var(--accent);border-bottom:1px solid var(--accent);height:45px;display:flex;align-items:center;justify-content:center}
+.dsoc svg{width:20px;height:20px;fill:#000}
+
+/* search */
+.search-ov{position:fixed;left:0;right:0;top:var(--barh);background:#fff;z-index:420;transform:translateY(-100%);transition:.3s;box-shadow:0 10px 30px rgba(0,0,0,.1)}
+.search-ov.on{transform:none}
+.search-ov .wrap{padding-top:22px;padding-bottom:30px}
+.search-ov .sbar{display:flex;align-items:center;border-bottom:1px solid #000;gap:10px}
+.search-ov input{flex:1;border:0;font-size:22px;padding:14px 0;outline:0}
+.search-ov h4{font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin:22px 0 12px;font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid #ddd;border-radius:20px;padding:7px 14px;font-size:12px}
+.chip:hover{border-color:#000}
+.s-tiles{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.s-tiles a{text-align:center;font-size:11px;letter-spacing:.1em}
+.s-tiles img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;margin-bottom:6px;background:#f2f2f2}
+.s-res{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.s-res a{display:flex;gap:10px;align-items:center;font-size:12px}
+.s-res img{width:54px;height:70px;object-fit:cover}
+
+/* hero slider */
+.slider{position:relative;overflow:hidden}
+.slider .track{display:flex;transition:transform .6s ease}
+.slider .slide{flex:0 0 100%}
+.slider .slide img{width:100%;height:auto}
+.slider .dots{position:absolute;left:0;right:0;bottom:18px;display:flex;justify-content:center;gap:8px}
+.slider .dots button{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.6);box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+.slider .dots button.on{background:#fff;width:10px;height:10px;margin-top:-1px}
+.sec-gap{height:48px}
+.banner img{width:100%}
+
+/* section heading */
+.sh{font-size:20px;text-transform:uppercase;text-align:center;font-weight:400;letter-spacing:.02em;margin:0 0 22px}
+.sh.big{font-size:36px}
+
+/* spotlight */
+.spot{padding:24px 0 34px}
+.cslider{position:relative}
+.cs-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth}
+.cs-track::-webkit-scrollbar{display:none}
+.spot .tile{flex:0 0 calc((100% - 64px)/5);scroll-snap-align:start;position:relative;border-radius:10px;overflow:hidden;aspect-ratio:226/300}
+.spot .tile img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.spot .tile:hover img{transform:scale(1.04)}
+.spot .tile .cap{position:absolute;left:0;right:0;bottom:0;padding:40px 14px 14px;background:linear-gradient(transparent,rgba(0,0,0,.55));color:#fff}
+.spot .tile .cap b{display:block;font-size:17px;font-weight:600;text-transform:uppercase}
+.spot .tile .cap span{font-size:10px;text-transform:uppercase;letter-spacing:.05em}
+.cs-arrow{position:absolute;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;background:#fff;box-shadow:0 1px 6px rgba(0,0,0,.2);display:flex;align-items:center;justify-content:center;z-index:2}
+.cs-arrow svg{width:12px;height:12px}
+.cs-arrow.prev{left:-14px}.cs-arrow.next{right:-14px}
+.cs-dots{display:flex;justify-content:center;gap:8px;margin-top:20px}
+.cs-dots i{width:7px;height:7px;border-radius:50%;background:#ccc}
+.cs-dots i.on{background:#000}
+
+/* store rating */
+.srate{max-width:1100px;margin:70px auto 90px;background:#f7f7f7;border-radius:12px;padding:20px 20px 20px}
+.srate h3{font-size:15px;font-weight:600;display:inline}
+.srate .sc{font-size:15px;margin-left:6px}
+.srate p{margin:12px 0 10px;font-size:12.5px;line-height:1.6}
+.srate .tags{display:flex;gap:6px;flex-wrap:wrap}
+.srate .tags span{border:1px solid #d6d6d6;border-radius:20px;padding:3px 8px;font-size:11px;background:#fff}
+.srate .tags span:after{content:"\1F44D";filter:hue-rotate(110deg) saturate(1.4);margin-left:4px;font-size:11px}
+.srate small{display:block;color:#888;font-size:10.5px;margin:12px 0}
+.srate .vb{background:#0d7c66;color:#fff;border-radius:20px;padding:4px 14px;font-size:13px;display:inline-block}
+
+/* shop the look */
+.look{padding:10px 0 60px}
+.look .row{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;padding-right:40px}
+.look .row::-webkit-scrollbar{display:none}
+.look .reel{flex:0 0 192px;aspect-ratio:192/340;border-radius:6px;overflow:hidden;position:relative;background:#111;cursor:pointer}
+.look .reel video,.look .reel img{width:100%;height:100%;object-fit:cover}
+.look .reel .tag{position:absolute;top:8px;right:8px;width:22px;height:22px;color:#fff}
+.look .reel .tag svg{width:18px;height:18px;stroke:#fff}
+
+/* product cards / grid */
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+.pc{position:relative;display:flex;flex-direction:column;padding-bottom:16px}
+.pc .imw{position:relative}
+.pc .im{display:block;position:relative;aspect-ratio:3/4;overflow:hidden;background:#f4f4f4}
+.pc .im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .35s}
+.pc .im img.h2{opacity:0}
+.pc:hover .im img.h2{opacity:1}
+.pc .heart{position:absolute;right:10px;bottom:44px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;z-index:2}
+.pc .heart svg{width:19px;height:19px;stroke:#000;stroke-width:1.8;fill:none}
+.pc .heart.on svg{fill:#000}
+.pc .qa{position:absolute;right:10px;bottom:10px;width:26px;height:26px;background:#fff;border-radius:4px;display:flex;align-items:center;justify-content:center;z-index:2;box-shadow:0 0 2px rgba(0,0,0,.1)}
+.pc .qa svg{width:14px;height:14px}
+.pc .meta{padding:12px 10px 0}
+.pc .tt{display:block;font-size:12.5px;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:85%}
+.pc .pr{display:flex;justify-content:space-between;align-items:center;margin-top:6px;font-size:12px}
+.pc .rt{display:flex;align-items:center;gap:4px;font-size:12px}
+.pc .rt svg{width:13px;height:13px;fill:var(--star)}
+.bv{display:inline-block;background:var(--red);color:#fff;font-size:9.5px;padding:3px 8px;margin-top:8px;border-radius:2px;letter-spacing:.02em}
+.bv b{font-weight:600}
+.home-bs .grid{gap:0}
+.home-bs .pc .tt{font-size:11.5px}
+.btn{display:inline-block;background:#000;color:#fff;padding:11px 20px;font-size:13px;letter-spacing:.3em;text-transform:uppercase;border-radius:3px;font-weight:600}
+.btn.ol{background:#fff;color:#000;border:1px solid #000;font-weight:400}
+.center{text-align:center}
+
+/* blog */
+.blog{border-top:1px solid #999;padding:96px 0 60px;margin-top:80px}
+.blog .bg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px;margin-top:40px}
+.blog .bg img{width:100%;aspect-ratio:385/250;object-fit:cover;margin-bottom:16px}
+.blog .bg a{text-align:center;font-size:15px;line-height:1.35}
+
+/* footer */
+.footer{background:var(--foot);padding:56px 0 20px;font-size:11px}
+.footer .fg{display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px}
+.footer ul li{list-style:none;margin-bottom:12px}
+.footer .nl p{font-size:11px;margin-bottom:12px;max-width:290px}
+.footer .nl form{display:flex;border-bottom:1px solid #000;max-width:290px}
+.footer .nl input{flex:1;border:0;background:none;padding:8px 0;font-size:11px;outline:0}
+.footer .nl .soc{display:flex;gap:14px;margin-top:22px}
+.footer .nl .soc svg{width:22px;height:22px;fill:#000}
+.footer h5{font-size:10px;letter-spacing:.3em;font-weight:500;margin:34px 0 14px}
+.footer .about{line-height:1.7}
+.footer .about a{text-decoration:underline}
+.footer .ct{margin-top:40px;line-height:1.55}
+.footer .copy{text-align:center;margin-top:24px;font-size:12px}
+
+/* chat */
+.chatb{position:fixed;right:20px;bottom:20px;width:42px;height:42px;border-radius:50%;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.2);display:flex;align-items:center;justify-content:center;z-index:150}
+.chatb svg{width:18px;height:18px;fill:#000}
+
+/* PLP */
+.c-hero img{width:100%}
+.plp{display:grid;grid-template-columns:230px minmax(0,1fr);gap:30px;padding-top:30px}
+.fside .fb{border-bottom:1px solid var(--accent)}
+.fside .fb>button{display:flex;justify-content:space-between;width:100%;padding:16px 0 10px;font-size:10px;letter-spacing:.3em;text-transform:uppercase}
+.fside .fb>button svg{width:12px;height:12px;transition:.2s}
+.fside .fb.open>button svg{transform:rotate(180deg)}
+.fside .fo{display:none;padding:0 0 14px;max-height:260px;overflow:auto}
+.fside .fb.open .fo{display:block}
+.fo label{display:flex;align-items:center;gap:8px;padding:5px 0;font-size:12px;cursor:pointer}
+.fo input{accent-color:#000}
+.fo .sz{display:flex;flex-wrap:wrap;gap:6px}
+.fo .sz label{border:1px solid #ccc;padding:6px 10px;min-width:40px;justify-content:center}
+.fo .sz input{display:none}
+.fo .sz label:has(input:checked){background:#000;color:#fff;border-color:#000}
+.fo .range{display:flex;gap:8px;align-items:center}
+.fo .range input{width:80px;border:1px solid #ccc;padding:6px}
+.ptop{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;gap:12px}
+.ptop .cnt{font-size:12px;color:var(--muted)}
+.sortsel{border:1px solid #000;padding:9px 34px 9px 10px;font-size:14px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23000' fill='none'/%3E%3C/svg%3E") no-repeat right 10px center/10px;appearance:none;min-width:190px}
+.achips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.achips button{border:1px solid #000;border-radius:20px;padding:5px 12px;font-size:11px}
+.achips button:after{content:" \00d7"}
+.achips .clr{border:0;text-decoration:underline}
+.achips .clr:after{content:""}
+.plp .grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px 0}
+.plp .pc{padding:0 1px 18px}
+.promo{aspect-ratio:3/4;overflow:hidden}
+.promo img{width:100%;height:100%;object-fit:cover}
+.mfbar{display:none}
+.empty{padding:60px 0;text-align:center;color:var(--muted);grid-column:1/-1}
+.loadmore{margin:30px 0 60px;text-align:center}
+
+/* sheets */
+.sheet{position:fixed;left:0;right:0;bottom:0;background:#fff;z-index:430;border-radius:14px 14px 0 0;transform:translateY(100%);transition:.3s;max-height:82vh;display:flex;flex-direction:column}
+.sheet.on{transform:none}
+.sheet .shd{display:flex;justify-content:space-between;align-items:center;padding:16px 18px;border-bottom:1px solid #eee;font-size:14px;letter-spacing:.1em;text-transform:uppercase}
+.sheet .sbd{overflow:auto;padding:4px 18px 18px}
+.sheet .sft{display:flex;gap:10px;padding:12px 18px;border-top:1px solid #eee}
+.sheet .sft button{flex:1;padding:12px;border:1px solid #000;font-size:12px;letter-spacing:.15em;text-transform:uppercase}
+.sheet .sft .ap{background:#000;color:#fff}
+.sheet .sbd .sopt{display:block;width:100%;text-align:left;padding:14px 0;border-bottom:1px solid #f0f0f0;font-size:14px}
+.sheet .sbd .sopt.on{font-weight:600}
+
+/* PDP */
+.pdp{display:grid;grid-template-columns:minmax(0,1fr) 434px;gap:54px;padding-top:56px;align-items:start}
+.gal{position:relative}
+.gal .gt{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth}
+.gal .gt::-webkit-scrollbar{display:none}
+.gal .gt img{flex:none;width:50%;min-width:0;height:auto;aspect-ratio:3/4;object-fit:cover;scroll-snap-align:start;cursor:zoom-in}
+.gal .share{position:absolute;top:10px;right:10px;width:36px;height:36px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(0,0,0,.15)}
+.gal .share svg{width:17px;height:17px}
+.gal .ga{position:absolute;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.9);display:flex;align-items:center;justify-content:center;opacity:0;transition:.2s}
+.gal:hover .ga{opacity:1}
+.gal .ga.p{left:10px}.gal .ga.n{right:10px}
+.gal .ga svg{width:12px;height:12px}
+.gal .gdots{display:none}
+.pmq{display:none}
+.pinfo h1{font-size:23px;font-weight:400;text-transform:uppercase;line-height:1.25}
+.pinfo .sku{font-size:14px;margin-top:2px}
+.pinfo .prw{display:flex;justify-content:space-between;margin-top:20px}
+.pinfo .price{font-size:19px}
+.pinfo .tax{font-size:12px;color:#555}
+.pinfo .rt{display:flex;gap:4px;align-items:center;font-size:13px}
+.pinfo .rt svg{width:15px;height:15px;fill:var(--star)}
+.offh{font-size:20px;font-weight:600;margin:10px 0 8px}
+.offers{position:relative;overflow:hidden}
+.offers .os{flex:0 0 100%;padding:4px 6px 6px 4px}
+.offers .ot{display:flex;transition:transform .5s}
+.offer{border:2px solid #000;border-radius:6px;box-shadow:3px 3px 0 #000;position:relative;background:#fff}
+.offer .o1{display:flex;align-items:center;gap:14px;padding:14px 18px;border-bottom:1px solid #ddd;font-size:14px}
+.offer .o1 svg{width:20px;height:20px;fill:#000}
+.offer .o1 b{color:#c9302c;font-weight:500;font-size:16px}
+.offer .o2{padding:10px 18px;font-size:12px;font-weight:600}
+.offer .ex{position:absolute;top:-2px;right:-2px;background:#c94f4a;color:#fff;font-size:10px;font-weight:600;padding:4px 7px;border-radius:0 6px 0 6px}
+.lbl{font-size:11px;text-transform:uppercase;letter-spacing:.06em;margin:20px 0 10px}
+.swr{display:flex;gap:7px;flex-wrap:wrap}
+.swr button{width:66px;height:78px;padding:2px;border:1px solid transparent}
+.swr button.on{border-color:#000}
+.swr img{width:100%;height:100%;object-fit:cover}
+.szr{display:flex;gap:9px;margin-top:22px;flex-wrap:wrap}
+.szb{display:flex;flex-direction:column;align-items:center}
+.szb button{width:46px;height:46px;border:1px solid #bbb;border-radius:3px;font-size:14px;position:relative}
+.szb button.on{border-color:#000;box-shadow:inset 0 0 0 1px #000}
+.szb button.so{color:#666;background:linear-gradient(to top left,transparent calc(50% - .5px),#666 50%,transparent calc(50% + .5px))}
+.szb small{color:#c94f4a;font-size:9px;font-weight:600;margin-top:4px;min-height:11px}
+.sizech{display:inline-block;margin-top:14px;font-size:10px;text-decoration:underline;letter-spacing:.04em}
+.ctas{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:26px}
+.ctas button{background:#000;color:#fff;height:50px;font-size:14px;letter-spacing:.3em;font-weight:500;border-radius:3px}
+.deliv h4{font-size:15px;font-weight:600;margin:20px 0 8px}
+.deliv form{display:flex;gap:6px}
+.deliv input{flex:1;border:1px solid #ccc;padding:10px 16px;font-size:12px}
+.deliv button{background:#000;color:#fff;padding:0 16px;letter-spacing:.3em;font-weight:600;border-radius:3px}
+.deliv .dmsg{font-size:12px;margin-top:6px;color:#0d7c66}
+.goq{border:1px solid #ddd;border-radius:8px;padding:12px 12px 14px;margin-top:20px}
+.goq .gh{display:flex;justify-content:space-between;font-size:12px}
+.goq .gh b{color:#c9302c;font-weight:600}
+.goq .gh span{color:#777}
+.goq .gb{background:#f3f3f3;border-radius:8px;margin-top:14px;padding:14px 12px 10px;display:flex;gap:10px;align-items:center;position:relative}
+.goq .gb .pt{position:absolute;top:-9px;left:40px;background:#c9302c;color:#fff;font-size:10.5px;padding:2px 14px;border-radius:3px}
+.goq .gb .ic{width:30px;height:30px;border-radius:50%;background:#232f3e;color:#fff;font-size:9px;display:flex;align-items:center;justify-content:center;flex:none}
+.goq .gb .tx{flex:1;overflow:hidden;font-size:12px;white-space:nowrap}
+.goq .gb .tx small{display:block;color:#555;font-size:10.5px}
+.goq .gprog{display:flex;gap:6px;margin-top:10px}
+.goq .gprog i{flex:1;height:4px;background:#e5e5e5;border-radius:2px}
+.goq .gprog i.on{background:#c9302c}
+.acc{border:1px solid #ddd;border-radius:4px;margin-top:16px}
+.acc details{border-bottom:1px solid #ddd}
+.acc details:last-child{border-bottom:0}
+.acc summary{list-style:none;padding:14px 16px;font-size:13.5px;letter-spacing:.05em;text-transform:uppercase;display:flex;justify-content:space-between;cursor:pointer}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary:after{content:"";width:8px;height:8px;border-right:1px solid #000;border-bottom:1px solid #000;transform:rotate(45deg);margin-top:2px}
+.acc details[open] summary:after{transform:rotate(-135deg);margin-top:6px}
+.acc .ab{padding:0 16px 16px;font-size:12.5px;line-height:1.7}
+.acc .ab h3{font-size:13px;margin:10px 0 4px}
+.acc .ab p,.acc .ab div{margin:0!important}
+.shr{display:flex;gap:26px;justify-content:center;font-size:11px;margin-top:24px}
+.shr a{display:flex;align-items:center;gap:6px}
+.shr svg{width:15px;height:15px;fill:#000}
+.bundle{border:1px solid #e3e3e3;margin:40px 0 0;padding:20px 22px 22px}
+.bundle h2{font-size:20px;font-weight:400;text-align:center;margin-bottom:12px}
+.bundle .bt{display:flex;gap:20px;align-items:flex-start}
+.bundle .bi{display:flex;align-items:center;gap:6px}
+.bundle .bi img{width:100px;height:134px;object-fit:cover}
+.bundle .tot{font-size:10px;letter-spacing:.06em}
+.bundle .tot b{font-size:11px;margin-left:30px}
+.bundle .tot .btn{margin-top:10px}
+.bundle .bl{margin-top:18px;font-size:11px}
+.bundle .bl label{display:flex;align-items:center;gap:10px;margin:6px 0}
+.bundle .bl select{font-size:10px;padding:2px}
+.bundle .bl .bp{margin-left:80px;font-weight:600}
+.seen{padding:50px 0 20px}
+.seen .lr{display:flex;align-items:center;justify-content:center;gap:50px;flex-wrap:wrap}
+.seen .lr img{height:40px;width:auto;max-width:170px;object-fit:contain}
+.revs{max-width:1000px;margin:20px auto 40px;border-top:1px solid #eee;padding-top:30px}
+.revs .rh{display:flex;align-items:center;gap:40px;justify-content:center;flex-wrap:wrap}
+.revs .avg{text-align:center}
+.revs .avg .st{color:#108474;font-size:18px;letter-spacing:2px}
+.revs .hist div{display:flex;gap:8px;align-items:center;font-size:11px;margin:3px 0}
+.revs .hist .b{width:120px;height:10px;background:#eee}
+.revs .hist .b i{display:block;height:100%;background:#108474}
+.revs .wr{background:#108474;color:#fff;padding:10px 26px;font-size:13px}
+.revs .rv{border-top:1px solid #eee;margin-top:30px;padding-top:20px;font-size:13px}
+.revs .rv .st{color:#108474}
+.revs .rv .nm{font-weight:600;margin:4px 0}
+.ymal .rail{display:flex;overflow-x:auto;scrollbar-width:none}
+.ymal .rail::-webkit-scrollbar{display:none}
+.ymal .rail .pc{flex:0 0 20.6%}
+
+/* sticky ATC */
+.satc{position:fixed;left:0;right:0;bottom:0;background:#fff;box-shadow:0 -2px 10px rgba(0,0,0,.1);z-index:160;transform:translateY(110%);transition:.3s}
+.satc.on{transform:none}
+.satc .in{display:flex;align-items:center;gap:14px;padding:10px var(--gut);max-width:var(--maxw);margin:0 auto}
+.satc img{width:44px;height:56px;object-fit:cover}
+.satc .nm{flex:1;font-size:13px;text-transform:uppercase}
+.satc .nm small{display:flex;gap:6px;align-items:center;text-transform:none;color:#555;margin-top:3px}
+.satc .nm small svg{width:12px;height:12px;fill:var(--star)}
+.satc .bt{display:flex;gap:8px}
+.satc .bt button{background:#000;color:#fff;padding:13px 26px;letter-spacing:.2em;font-size:12px;border-radius:3px}
+
+/* modal (variant) */
+.modal{position:fixed;inset:0;z-index:450;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:.25s}
+.modal.on{opacity:1;visibility:visible}
+.modal .mbg{position:absolute;inset:0;background:rgba(0,0,0,.45)}
+.modal .mc{position:relative;background:#fff;width:760px;max-width:94vw;max-height:90vh;overflow:auto;display:grid;grid-template-columns:300px 1fr;gap:24px;padding:24px;border-radius:4px}
+.modal .x{position:absolute;top:10px;right:12px;font-size:24px;line-height:1}
+.modal .mc>img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.modal h3{font-size:18px;font-weight:400;text-transform:uppercase;padding-right:24px}
+.modal .mp{margin-top:8px;font-size:16px}
+.modal .mp s{color:#888;font-size:13px;margin-left:6px}
+.modal .addb{width:100%;background:#000;color:#fff;height:48px;letter-spacing:.3em;margin-top:22px;border-radius:3px}
+.modal .addb:disabled{opacity:.4;cursor:not-allowed}
+.modal .vfd{display:block;text-align:center;margin-top:14px;text-decoration:underline;font-size:12px}
+.modal .merr{color:#c9302c;font-size:12px;margin-top:8px;min-height:14px}
+.sizechart .mc{display:block;width:620px}
+.sizechart table{width:100%;border-collapse:collapse;margin-top:16px;font-size:12px}
+.sizechart th,.sizechart td{border:1px solid #ddd;padding:8px;text-align:center}
+.sizechart th{background:#f5f5f5}
+
+/* mini cart */
+.cart-dr{position:fixed;top:var(--barh);right:0;bottom:0;width:420px;max-width:100vw;background:#fff;z-index:440;transform:translateX(100%);transition:transform .35s;display:flex;flex-direction:column}
+.cart-dr.on{transform:none}
+.cart-dr .ch{display:flex;justify-content:space-between;align-items:center;padding:20px 22px;border-bottom:1px solid #eee;font-size:15px;letter-spacing:.2em;text-transform:uppercase}
+.cart-dr .ch button{font-size:24px}
+.cart-dr .fs{padding:12px 22px;border-bottom:1px solid #eee;font-size:12px}
+.cart-dr .fs .bar{height:5px;background:#eee;border-radius:3px;margin-top:8px;overflow:hidden}
+.cart-dr .fs .bar i{display:block;height:100%;background:var(--accent);transition:width .3s}
+.cart-dr .cb{flex:1;overflow-y:auto;padding:4px 22px}
+.ci{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid #f0f0f0}
+.ci img{width:76px;height:100px;object-fit:cover}
+.ci .cm{flex:1;font-size:12.5px}
+.ci .cm .nm{text-transform:uppercase}
+.ci .cm .vr{color:#666;margin:4px 0 8px;cursor:pointer;text-decoration:underline dotted}
+.ci .qty{display:inline-flex;border:1px solid #ccc;align-items:center}
+.ci .qty button{width:28px;height:28px;font-size:15px}
+.ci .qty span{width:26px;text-align:center}
+.ci .acts{display:flex;gap:14px;margin-top:8px;font-size:11px;color:#555}
+.ci .acts button{text-decoration:underline}
+.ci .edit{display:none;margin-top:8px;gap:6px;flex-wrap:wrap}
+.ci.editing .edit{display:flex}
+.ci .edit select{font-size:12px;padding:4px}
+.cart-dr .empty-c{text-align:center;padding:60px 0;color:#666}
+.cart-dr .sfl h5,.cart-dr .yml h5{font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin:20px 0 10px;font-weight:500}
+.cart-dr .yml .yr{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;padding-bottom:10px}
+.cart-dr .yml .yr a{flex:0 0 110px;font-size:10.5px;text-transform:uppercase}
+.cart-dr .yml .yr img{width:110px;height:146px;object-fit:cover;margin-bottom:5px}
+.cart-dr .yml .yr button{font-size:10px;text-decoration:underline;margin-top:3px}
+.cart-dr .cf{border-top:1px solid #eee;padding:14px 22px 18px;background:#fff;box-shadow:0 -4px 10px rgba(0,0,0,.04)}
+.cart-dr .cpn{display:flex;gap:8px;margin-bottom:10px}
+.cart-dr .cpn input{flex:1;border:1px solid #ccc;padding:10px;font-size:12px;text-transform:uppercase}
+.cart-dr .cpn button{border:1px solid #000;padding:0 16px;font-size:12px;letter-spacing:.1em}
+.cart-dr .cmsg{font-size:11.5px;color:#0d7c66;margin:-4px 0 8px;min-height:0}
+.cart-dr .ckb{width:100%;background:#000;color:#fff;height:50px;letter-spacing:.2em;font-size:14px;border-radius:3px}
+
+/* stories / reels */
+.reel-m{position:fixed;inset:0;z-index:460;background:rgba(0,0,0,.85);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:.3s}
+.reel-m.on{opacity:1;visibility:visible}
+.reel-m .ph{position:relative;width:380px;height:min(680px,92vh);background:#000;border-radius:14px;overflow:hidden}
+.reel-m video{width:100%;height:100%;object-fit:cover}
+.reel-m .pbars{position:absolute;top:10px;left:10px;right:10px;display:flex;gap:4px;z-index:3}
+.reel-m .pbars i{flex:1;height:3px;background:rgba(255,255,255,.35);border-radius:2px;overflow:hidden}
+.reel-m .pbars i b{display:block;height:100%;width:0;background:#fff}
+.reel-m .rtop{position:absolute;top:22px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center;z-index:3;color:#fff;font-size:12px}
+.reel-m .rtop .br{display:flex;align-items:center;gap:8px}
+.reel-m .rtop .br img{width:28px;height:28px;border-radius:50%;background:#fff;padding:3px;object-fit:contain}
+.reel-m .rtop button{color:#fff;font-size:22px;margin-left:10px}
+.reel-m .tz{position:absolute;top:60px;bottom:90px;width:35%;z-index:2}
+.reel-m .tz.l{left:0}.reel-m .tz.r{right:0}
+.reel-m .rbar{position:absolute;left:10px;right:10px;bottom:10px;background:#fff;border-radius:10px;padding:8px;display:flex;align-items:center;gap:10px;z-index:3}
+.reel-m .rbar img{width:44px;height:56px;object-fit:cover;border-radius:4px}
+.reel-m .rbar .rn{flex:1;font-size:11px;text-transform:uppercase}
+.reel-m .rbar .rn b{display:block;font-weight:500;margin-top:2px}
+.reel-m .rbar a{background:#000;color:#fff;padding:9px 12px;font-size:10.5px;letter-spacing:.12em;border-radius:3px}
+
+/* wishlist page */
+.wl{padding:40px 0 70px}
+.wl h1{font-size:26px;font-weight:400;text-align:center;letter-spacing:.05em;margin-bottom:30px}
+.wl .grid{gap:10px 0}
+
+/* gate */
+#gate{position:fixed;inset:0;z-index:1000;background:#f7f7f7;display:flex;align-items:center;justify-content:center}
+#gate .gb{background:#fff;padding:44px 40px;width:380px;max-width:92vw;text-align:center;box-shadow:0 10px 40px rgba(0,0,0,.08)}
+#gate img{width:180px;margin:0 auto 20px}
+#gate p{font-size:12px;color:#555;margin-bottom:20px;letter-spacing:.04em}
+#gate input{width:100%;border:1px solid #ccc;padding:12px;font-size:14px;margin-bottom:12px;text-align:center}
+#gate button{width:100%;background:#000;color:#fff;height:46px;letter-spacing:.3em}
+#gate .err{color:#c9302c;font-size:12px;margin-top:10px;min-height:14px}
+body.gated{overflow:hidden}
+
+/* hide off-canvas layers when closed */
+.nav-drawer,.cart-dr,.sheet,.search-ov{visibility:hidden}
+.nav-drawer.on,.cart-dr.on,.sheet.on,.search-ov.on{visibility:visible}
+.nav-drawer,.cart-dr,.sheet,.search-ov{transition-property:transform,visibility}
+.satc{visibility:hidden}.satc.on{visibility:visible}
+/* toast */
+.toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,40px);background:#000;color:#fff;padding:12px 20px;font-size:12px;border-radius:4px;opacity:0;transition:.3s;z-index:470}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+/* hub */
+.hub{max-width:900px;margin:60px auto;padding:0 20px}
+.hub img{width:200px;margin:0 auto 10px}
+.hub h1{text-align:center;font-weight:400;font-size:16px;letter-spacing:.2em;margin-bottom:30px;color:#555}
+.hub .hg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.hub .hg a{border:1px solid #ddd;padding:22px;font-size:15px;letter-spacing:.1em;text-transform:uppercase;display:flex;justify-content:space-between}
+.hub .hg a:hover{border-color:#000}
+.hub .hg small{color:#888;text-transform:none;letter-spacing:0;font-size:12px}
+
+/* ---------- MOBILE ---------- */
+@container (max-width:760px){
+ :root{--gut:12px}
+ .wrap{padding:0 12px}
+ .hide-m{display:none!important}
+ .hide-d{display:revert!important}
+ .toolbar{display:none}
+ .hdr{height:60px}
+ .hdr .ib{width:36px}
+ .hdr .ib svg{width:21px;height:21px}
+ .hdr .ib.acct{display:none}
+ .hdr .logo img{width:120px}
+ .hdr .l .ib{width:auto;padding-left:4px}
+ .cat-circles{display:flex;gap:12px;overflow-x:auto;scrollbar-width:none;padding:6px 12px 6px;background:#fff}
+ .cat-circles::-webkit-scrollbar{display:none}
+ .cat-circles a{flex:0 0 78px;text-align:center;font-size:9.5px;text-transform:uppercase}
+ .cat-circles img{width:78px;height:78px;border-radius:50%;object-fit:cover;margin-bottom:4px;background:#eee}
+ .sec-gap{height:0}
+ .sh{font-size:17px}
+ .sh.big{font-size:30px}
+ .spot .tile{flex:0 0 60%}
+ .spot{padding-top:60px}
+ .cs-arrow{display:none}
+ .srate{margin:20px 12px 40px;padding:18px}
+ .srate h3,.srate .sc{font-size:17px}
+ .srate .sc{display:block;margin:4px 0 0}
+ .srate p{font-size:13px}
+ .look .reel{flex-basis:46%}
+ .grid,.home-bs .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .pc .meta{padding:10px 6px 0}
+ .pc .tt{font-size:11.5px}
+ .pc .pr{font-size:11px}
+ .bv{font-size:9px}
+ .blog{padding:50px 0 30px;margin-top:40px}
+ .blog .bg{grid-template-columns:1fr;gap:26px}
+ .footer .fg{grid-template-columns:1fr 1fr}
+ .footer .nl{grid-column:1/-1}
+ .plp{grid-template-columns:minmax(0,1fr);padding-top:12px}
+ .fside,.ptop{display:none}
+ .mfbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:sticky;top:calc(var(--barh) + 60px);z-index:120;background:#fff;padding:10px 0}
+ .mfbar button{border:1px solid #000;padding:12px;font-size:15px;display:flex;align-items:center;gap:10px;justify-content:flex-start}
+ .mfbar svg{width:18px;height:18px}
+ .plp .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 0}
+ .pdp{grid-template-columns:minmax(0,1fr);gap:0;padding-top:0}
+ .pdp>.gal{margin:0 -12px}
+ .gal .gt img{width:100%}
+ .gal .ga{display:none}
+ .gal .share{top:auto;bottom:16px;right:14px}
+ .gal .gdots{display:flex;justify-content:center;gap:6px;position:absolute;bottom:12px;left:0;right:0}
+ .gal .gdots i{width:6px;height:6px;border-radius:50%;background:rgba(0,0,0,.25)}
+ .gal .gdots i.on{background:#000}
+ .pmq{display:block;overflow:hidden;white-space:nowrap;border-bottom:1px solid #eee;margin:0 -12px;padding:10px 0;font-weight:600;font-size:12.5px}
+ .pmq .mq{display:inline-block;animation:mq 22s linear infinite}
+ .pmq span{margin:0 14px}
+ .pinfo{padding-top:18px}
+ .pinfo h1{font-size:14px}
+ .pinfo .sku{font-size:12px}
+ .pinfo .prw{margin-top:12px}
+ .ctas{display:none}
+ .bundle{padding:16px}
+ .bundle .bt{flex-direction:column;align-items:center}
+ .bundle .bl .bp{margin-left:auto}
+ .seen .lr{gap:24px}
+ .seen .lr img{height:28px;max-width:120px}
+ .ymal .rail .pc{flex-basis:46%}
+ .satc .in{padding:8px 10px}
+ .satc img,.satc .nm{display:none}
+ .satc .bt{flex:1}
+ .satc .bt button{flex:1;padding:15px 8px;font-size:12px}
+ .satc.pdpm{transform:none}
+ .modal{align-items:flex-end}
+ .modal .mc{grid-template-columns:110px 1fr;gap:14px;padding:18px;border-radius:14px 14px 0 0;max-width:100%;width:100%}
+ .sizechart .mc{width:100%}
+ .reel-m .ph{width:100vw;height:100vh;border-radius:0;transform:translateY(100%);transition:transform .35s}
+ .reel-m.on .ph{transform:none}
+ .hub .hg{grid-template-columns:1fr}
+ .s-tiles{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .s-res{grid-template-columns:1fr 1fr}
+ .search-ov input{font-size:17px}
+ .chatb{bottom:84px;right:12px}
+}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(max-width:760px){#pbar .pl{display:none}#pbar b{font-size:11px}}
+</style></head><body class="has-bar"><div id="gate"><div class="gb"><img data-src="IMG:4f723ed2c96dacb5" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Dennison"><p>This preview is password protected.</p><input id="gpw" type="password" placeholder="Enter password"><button>ENTER</button><div class="err"></div></div></div><div id="pbar"><b>DENNISON · MOCKUP</b><a class="pl" href="index.html">Hub</a><a class="pl on" href="home.html">Home</a><a class="pl" href="collection.html">Collection</a><a class="pl" href="product.html">Product</a><a class="pl" href="wishlist.html">Wishlist</a><div class="vt"><button data-v="d">Desktop</button><button data-v="m">Mobile</button></div></div><div id="viewport"><div class="toolbar"><div class="wrap"><div class="tl"><a href="#">Return/Exchange</a><a href="#">About us</a><a href="#">Career</a><a href="#">Affilate Marketing</a></div><div class="soc"><a href="https://www.instagram.com/dennison.in" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zm0 2c-3.1 0-3.5 0-4.7.1-2.3.1-3.3 1.2-3.4 3.4-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 2.2 1.1 3.3 3.4 3.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c2.3-.1 3.3-1.2 3.4-3.4.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-2.2-1.2-3.3-3.4-3.4-1.2-.1-1.6-.1-4.7-.1zm0 3a4.8 4.8 0 110 9.6 4.8 4.8 0 010-9.6zm0 2a2.8 2.8 0 100 5.6 2.8 2.8 0 000-5.6zm5-3.3a1.1 1.1 0 110 2.3 1.1 1.1 0 010-2.3z"/></svg></a><a href="https://www.facebook.com/share/19t3HsHuDQ/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12a12 12 0 10-13.9 11.9v-8.4h-3V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0024 12z"/></svg></a><a href="https://www.youtube.com/channel/UCPbtZH-Me1HZ0JmrS9pHByQ" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 00.5 6.2 31 31 0 000 12a31 31 0 00.5 5.8 3 3 0 002.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 002.1-2.1A31 31 0 0024 12a31 31 0 00-.5-5.8zM9.6 15.6V8.4l6.2 3.6z"/></svg></a><a href="https://in.pinterest.com/dennisonindia/" target="_blank" rel="noopener" aria-label="Pinterest"><svg viewBox="0 0 24 24"><path d="M12 0a12 12 0 00-4.4 23.2c-.1-.9-.2-2.4 0-3.4l1.4-6s-.4-.7-.4-1.8c0-1.7 1-2.9 2.2-2.9 1 0 1.5.8 1.5 1.7 0 1-.7 2.6-1 4-.3 1.2.6 2.2 1.8 2.2 2.1 0 3.8-2.2 3.8-5.5 0-2.9-2.1-4.9-5-4.9-3.4 0-5.4 2.6-5.4 5.2 0 1 .4 2.1.9 2.7.1.1.1.2.1.3l-.3 1.4c-.1.2-.2.3-.4.2-1.5-.7-2.4-2.9-2.4-4.6 0-3.8 2.7-7.2 7.9-7.2 4.1 0 7.3 2.9 7.3 6.9 0 4.1-2.6 7.4-6.2 7.4-1.2 0-2.4-.6-2.8-1.4l-.8 2.9c-.3 1-1 2.3-1.5 3.1A12 12 0 1012 0z"/></svg></a><a href="https://www.snapchat.com/add/dennisonfashion" target="_blank" rel="noopener" aria-label="Snapchat"><svg viewBox="0 0 24 24"><path d="M12.2 1c1.8 0 4.9.6 6.1 3.5.4 1 .3 2.6.2 4l.1.3c.3.1.7.2 1.1 0 .6-.2 1.3.1 1.3.7 0 .5-.6.9-1.6 1.2-.4.1-.9.4-.8 1 .6 1.5 2 3.2 3.7 3.6.4.1.5.4.3.8-.4.8-2 1.1-2.6 1.2-.2.3-.2 1-.5 1.2-.4.2-1.3-.2-2.5 0-1.5.2-2.5 2.5-4.8 2.5s-3.3-2.3-4.8-2.5c-1.2-.2-2.1.2-2.5 0-.3-.2-.3-.9-.5-1.2-.6-.1-2.2-.4-2.6-1.2-.2-.4 0-.7.3-.8 1.7-.4 3.1-2.1 3.7-3.6.1-.6-.4-.9-.8-1-1-.3-1.6-.7-1.6-1.2 0-.6.7-.9 1.3-.7.4.2.8.1 1.1 0l.1-.3c-.1-1.4-.2-3 .2-4C7.3 1.6 10.4 1 12.2 1z"/></svg></a><a href="https://www.linkedin.com/company/dennison-india/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.1c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4z"/></svg></a></div></div></div><header class="site-header"><div class="wrap"><div class="hdr"><div class="l"><button class="ib" data-act="menu" aria-label="Menu"><svg class="svg" viewBox="0 0 28 18"><path d="M1 1h26M1 9h26M1 17h26"/></svg></button></div><a class="logo" href="home.html"><img data-src="IMG:4f723ed2c96dacb5" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Dennison"></a><div class="r"><a class="ib acct" href="#" aria-label="Account"><svg class="svg" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4.5"/><path d="M3.5 21c1.4-4.2 4.6-6 8.5-6s7.1 1.8 8.5 6z"/></svg></a><button class="ib" data-act="search" aria-label="Search"><svg class="svg" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="7.5"/><path d="M16 16l6 6"/></svg></button><a class="ib" href="wishlist.html" aria-label="Wishlist"><svg class="svg" viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.8 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.3 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg><span class="cnt wl-cnt"></span></a><a class="ib" href="cart.html" onclick="openCart();return false" aria-label="Cart"><svg class="svg" viewBox="0 0 24 24"><path d="M4 7h16v15H4z"/><path d="M8.5 7V5.5a3.5 3.5 0 017 0V7"/></svg><span class="cnt cart-cnt"></span></a></div></div></div></header><nav class="nav-drawer" aria-label="Menu"><div class="dtop"><button data-act="dclose" aria-label="Close"><svg class="svg" viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20"/></svg></button></div><div class="dviews"><div class="dview root"><ul class="dlist"><li><a href="collection.html">BEST SELLERS</a></li><li><a href="collection.html">NEW ARRIVALS</a></li><li><a href="collection.html">TROUSERS</a></li><li><a href="collection.html">SHIRTS</a></li><li><a href="collection.html">JEANS</a></li><li><a href="collection.html">T-SHIRT</a></li><li><a href="collection.html">KURTAS</a></li><li><a href="collection.html">SHACKETS</a></li><li><a href="collection.html">COORD SETS</a></li><li><button data-act="push" data-v="dv-all">ALL COLLECTIONS<span class="ch"><svg class="svg" style="transform:rotate(-90deg)" viewBox="0 0 12 8"><path d="M1 1.5l5 5 5-5"/></svg></span></button></li></ul><div class="dfoot"><div class="lk"><a href="#">Return/Exchange</a><a href="#">About us</a><a href="#">Career</a><a href="#">Affilate Marketing</a></div><a class="lg" href="#">Log in</a><div class="dsoc"><a href="https://www.instagram.com/dennison.in" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zm0 2c-3.1 0-3.5 0-4.7.1-2.3.1-3.3 1.2-3.4 3.4-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 2.2 1.1 3.3 3.4 3.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c2.3-.1 3.3-1.2 3.4-3.4.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-2.2-1.2-3.3-3.4-3.4-1.2-.1-1.6-.1-4.7-.1zm0 3a4.8 4.8 0 110 9.6 4.8 4.8 0 010-9.6zm0 2a2.8 2.8 0 100 5.6 2.8 2.8 0 000-5.6zm5-3.3a1.1 1.1 0 110 2.3 1.1 1.1 0 010-2.3z"/></svg></a><a href="https://www.facebook.com/share/19t3HsHuDQ/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12a12 12 0 10-13.9 11.9v-8.4h-3V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0024 12z"/></svg></a><a href="https://www.youtube.com/channel/UCPbtZH-Me1HZ0JmrS9pHByQ" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 00.5 6.2 31 31 0 000 12a31 31 0 00.5 5.8 3 3 0 002.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 002.1-2.1A31 31 0 0024 12a31 31 0 00-.5-5.8zM9.6 15.6V8.4l6.2 3.6z"/></svg></a><a href="https://in.pinterest.com/dennisonindia/" target="_blank" rel="noopener" aria-label="Pinterest"><svg viewBox="0 0 24 24"><path d="M12 0a12 12 0 00-4.4 23.2c-.1-.9-.2-2.4 0-3.4l1.4-6s-.4-.7-.4-1.8c0-1.7 1-2.9 2.2-2.9 1 0 1.5.8 1.5 1.7 0 1-.7 2.6-1 4-.3 1.2.6 2.2 1.8 2.2 2.1 0 3.8-2.2 3.8-5.5 0-2.9-2.1-4.9-5-4.9-3.4 0-5.4 2.6-5.4 5.2 0 1 .4 2.1.9 2.7.1.1.1.2.1.3l-.3 1.4c-.1.2-.2.3-.4.2-1.5-.7-2.4-2.9-2.4-4.6 0-3.8 2.7-7.2 7.9-7.2 4.1 0 7.3 2.9 7.3 6.9 0 4.1-2.6 7.4-6.2 7.4-1.2 0-2.4-.6-2.8-1.4l-.8 2.9c-.3 1-1 2.3-1.5 3.1A12 12 0 1012 0z"/></svg></a><a href="https://www.snapchat.com/add/dennisonfashion" target="_blank" rel="noopener" aria-label="Snapchat"><svg viewBox="0 0 24 24"><path d="M12.2 1c1.8 0 4.9.6 6.1 3.5.4 1 .3 2.6.2 4l.1.3c.3.1.7.2 1.1 0 .6-.2 1.3.1 1.3.7 0 .5-.6.9-1.6 1.2-.4.1-.9.4-.8 1 .6 1.5 2 3.2 3.7 3.6.4.1.5.4.3.8-.4.8-2 1.1-2.6 1.2-.2.3-.2 1-.5 1.2-.4.2-1.3-.2-2.5 0-1.5.2-2.5 2.5-4.8 2.5s-3.3-2.3-4.8-2.5c-1.2-.2-2.1.2-2.5 0-.3-.2-.3-.9-.5-1.2-.6-.1-2.2-.4-2.6-1.2-.2-.4 0-.7.3-.8 1.7-.4 3.1-2.1 3.7-3.6.1-.6-.4-.9-.8-1-1-.3-1.6-.7-1.6-1.2 0-.6.7-.9 1.3-.7.4.2.8.1 1.1 0l.1-.3c-.1-1.4-.2-3 .2-4C7.3 1.6 10.4 1 12.2 1z"/></svg></a><a href="https://www.linkedin.com/company/dennison-india/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.1c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4z"/></svg></a></div></div></div><div class="dview sub" id="dv-all"><button class="dback" data-act="pop"><svg class="svg" viewBox="0 0 8 14"><path d="M7 1L1 7l6 6"/></svg> Menu</button><div class="dsubh">All Collections</div><ul class="dlist lvl"><li><a href="collection.html">VIEW ALL COLLECTIONS</a></li><li><button data-act="push" data-v="dv-top">TOP WEAR <svg class="svg" viewBox="0 0 8 14"><path d="M1 1l6 6-6 6"/></svg></button></li><li><button data-act="push" data-v="dv-bottom">BOTTOM WEAR <svg class="svg" viewBox="0 0 8 14"><path d="M1 1l6 6-6 6"/></svg></button></li></ul></div><div class="dview sub" id="dv-top"><button class="dback" data-act="pop"><svg class="svg" viewBox="0 0 8 14"><path d="M7 1L1 7l6 6"/></svg> All Collections</button><div class="dsubh">Top Wear</div><ul class="dlist lvl"><li><a href="collection.html">HANDCRAFTED SHIRTS</a></li><li><a href="collection.html">CRAFTED LEGACY</a></li><li><a href="collection.html">CASUAL SHIRTS</a></li><li><a href="collection.html">HEMP SHIRTS</a></li><li><a href="collection.html">RESORT SHIRTS</a></li><li><a href="collection.html">KIMONO SHIRTS</a></li><li><a href="collection.html">STRIPE SHIRTS</a></li><li><a href="collection.html">T- SHIRTS</a></li><li><a href="collection.html">CHECK SHIRTS</a></li><li><a href="collection.html">EMBROIDERED SHIRTS</a></li><li><a href="collection.html">FORMAL SHIRTS</a></li><li><a href="collection.html">PRINTED SHIRTS</a></li><li><a href="collection.html">SOLID SHIRTS</a></li><li><a href="collection.html">CLUB WEAR</a></li><li><a href="collection.html">TIE &amp; DYE SHIRTS</a></li><li><a href="collection.html">MEN&#x27;S BLAZER</a></li></ul></div><div class="dview sub" id="dv-bottom"><button class="dback" data-act="pop"><svg class="svg" viewBox="0 0 8 14"><path d="M7 1L1 7l6 6"/></svg> All Collections</button><div class="dsubh">Bottom Wear</div><ul class="dlist lvl"><li><a href="collection.html">GURKHA TROUSERS</a></li><li><a href="collection.html">KOREAN TROUSERS</a></li><li><a href="collection.html">CASUAL TROUSERS</a></li><li><a href="collection.html">3 PLEATED TROUSERS</a></li><li><a href="collection.html">WIDE LEG TROUSERS</a></li><li><a href="collection.html">LINEN TROUSERS</a></li><li><a href="collection.html">CHINOS TROUSERS</a></li><li><a href="collection.html">AUTO - FIT TROUSERS</a></li><li><a href="collection.html">PLEATED TROUSERS</a></li><li><a href="collection.html">ANKLE FIT TROUSERS</a></li><li><a href="collection.html">FORMAL TROUSERS</a></li><li><a href="collection.html">STRECH EASE PANTS</a></li></ul></div></div></nav><div class="search-ov"><div class="wrap"><div class="sbar"><svg class="svg" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="7.5"/><path d="M16 16l6 6"/></svg><input id="sq" placeholder="Search our store" autocomplete="off"><button data-act="sclose" aria-label="Close"><svg class="svg" viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20"/></svg></button></div><div id="spop"><h4>Popular searches</h4><div class="chips"><a href=# class=chip data-q="Korean trousers">Korean trousers</a><a href=# class=chip data-q="Baggy jeans">Baggy jeans</a><a href=# class=chip data-q="Gurkha trousers">Gurkha trousers</a><a href=# class=chip data-q="Linen shirts">Linen shirts</a><a href=# class=chip data-q="Kurtas">Kurtas</a><a href=# class=chip data-q="Formal shirts">Formal shirts</a><a href=# class=chip data-q="Check shirts">Check shirts</a><a href=# class=chip data-q="Bootcut">Bootcut</a></div><h4>Shop by category</h4><div class="s-tiles"><a href="collection.html"><img data-src="IMG:9479f815623603dc" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="">TROUSERS</a><a href="collection.html"><img data-src="IMG:2de0887347a645d3" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="">SHIRTS</a><a href="collection.html"><img data-src="IMG:612790419dc212e4" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="">JEANS</a><a href="collection.html"><img data-src="IMG:cc613db47f372961" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="">T-SHIRTS</a><a href="collection.html"><img data-src="IMG:3a71000d36e966e6" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="">KURTAS</a></div></div><div id="sres"></div></div></div><aside class="cart-dr" aria-label="Cart"><div class="ch">Cart<button data-act="cclose" aria-label="Close">×</button></div><div class="fs"><div id="cartFS"></div><div class="bar"><i id="cartBar"></i></div></div><div class="cb" id="cartBody"></div><div class="cf"><div class="cpn"><input id="cpn" placeholder="Coupon code"><button data-act="coupon">APPLY</button></div><div class="cmsg" id="cmsg"></div><button class="ckb" id="ckb" data-act="ck">CHECKOUT</button></div></aside><div class="modal" id="qmodal"><div class="mbg"></div><div class="mc"></div></div><div class="modal sizechart" id="szmodal"><div class="mbg"></div><div class="mc"><button class="x" data-act="mclose">×</button><h3>Size chart — Trousers (inches)</h3><table><tr><th>Size</th><th>Waist</th><th>Hip</th><th>Length</th></tr><tr><td>28</td><td>30</td><td>40</td><td>39.5</td></tr><tr><td>30</td><td>32</td><td>42</td><td>40</td></tr><tr><td>32</td><td>34</td><td>44</td><td>40.5</td></tr><tr><td>34</td><td>36</td><td>46</td><td>41</td></tr><tr><td>36</td><td>38</td><td>48</td><td>41.5</td></tr><tr><td>38</td><td>40</td><td>50</td><td>42</td></tr></table><p style="font-size:11px;color:#777;margin-top:10px">Indicative measurements for this mockup.</p></div></div><div class="reel-m" id="reel"><div class="ph"><video playsinline></video><div class="pbars"></div><div class="rtop"><div class="br"><img data-src="IMG:4f723ed2c96dacb5" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="">dennison.in</div><div><button data-act="rmute">🔇</button><button data-act="rclose" aria-label="Close">×</button></div></div><div class="tz l" data-act="rprev"></div><div class="tz r" data-act="rnext"></div><div class="rbar"><img src="" alt=""><div class="rn"></div><a href="#" data-act="radd" data-h="">ADD TO CART</a></div></div></div><div class="ovl"></div><a class="chatb" href="#" aria-label="Chat"><svg viewBox="0 0 24 24"><path d="M12 3C6.5 3 2 6.9 2 11.7c0 2.6 1.3 4.9 3.4 6.5L4.5 22l4.3-2.2c1 .3 2.1.4 3.2.4 5.5 0 10-3.9 10-8.6S17.5 3 12 3zm-4 7.5h8v1.4H8zm0 3h5.5v1.4H8z"/></svg></a><main><div class="cat-circles"><a href="collection.html"><img data-src="IMG:8ba6b3f629069422" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="">TROUSERS</a><a href="collection.html"><img data-src="IMG:d66fd2092a691ede" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="">SHIRTS</a><a href="collection.html"><img data-src="IMG:939e25036d710f93" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="">JEANS</a><a href="collection.html"><img data-src="IMG:f36e9794971aed8a" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="">T-SHIRTS</a><a href="collection.html"><img data-src="IMG:fc5b38b6d348c9a8" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="">KURTAS</a></div><section class="slider"><div class="track"><div class="slide"><a href="collection.html"><picture><source media="(max-width:767px)" data-srcset="IMG:337c1b2d86b6e93a"><img data-src="IMG:71225cb47fba408e" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"></picture></a></div><div class="slide"><a href="collection.html"><picture><source media="(max-width:767px)" data-srcset="IMG:fc51e6de39f87ebf"><img data-src="IMG:1c6740c5075a55c2" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"></picture></a></div><div class="slide"><a href="collection.html"><picture><source media="(max-width:767px)" data-srcset="IMG:abe0bacbca02f603"><img data-src="IMG:dffa69a7777dcc34" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"></picture></a></div><div class="slide"><a href="collection.html"><picture><source media="(max-width:767px)" data-srcset="IMG:04bdd5ffab81c317"><img data-src="IMG:4f724513c6fb8418" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"></picture></a></div></div><div class="dots"></div></section><div class="sec-gap"></div><section class="banner"><a href="collection.html"><picture><source media="(max-width:767px)" data-srcset="IMG:78bbb9646ea15cb0"><img data-src="IMG:5cc70744debc990f" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Buy 2 get 20% off" loading="lazy"></picture></a></section><section class="spot"><div class="wrap"><h2 class="sh">In the Spotlight</h2><div class="cslider"><button class="cs-arrow prev" aria-label="Previous"><svg class="svg" viewBox="0 0 8 14"><path d="M7 1L1 7l6 6"/></svg></button><div class="cs-track"><a class="tile" href="collection.html"><img data-src="IMG:c1b7e4db3d46e049" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"><div class="cap"><b>BAGGY</b><span>JEANS</span></div></a><a class="tile" href="collection.html"><img data-src="IMG:85b9ce6857fbce62" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"><div class="cap"><b>CASUAL</b><span>SHIRTS</span></div></a><a class="tile" href="collection.html"><img data-src="IMG:a86616b2af43a08b" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"><div class="cap"><b>GURKHA</b><span>TROUSERS</span></div></a><a class="tile" href="collection.html"><img data-src="IMG:380cf5e4ef3d2402" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"><div class="cap"><b>CHECKED</b><span>SHIRTS</span></div></a><a class="tile" href="collection.html"><img data-src="IMG:89a3c9e51fd11663" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"><div class="cap"><b>KOREAN</b><span>TROUSERS</span></div></a><a class="tile" href="collection.html"><img data-src="IMG:2da778709893ab70" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"><div class="cap"><b>SOLID</b><span>SHIRTS</span></div></a></div><button class="cs-arrow next" aria-label="Next"><svg class="svg" viewBox="0 0 8 14"><path d="M1 1l6 6-6 6"/></svg></button></div><div class="cs-dots"></div></div></section><section class="banner"><a href="collection.html"><picture><source media="(max-width:767px)" data-srcset="IMG:0b6f909fdd9352da"><img data-src="IMG:cdc182b5e8727030" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"></picture></a></section><section class="slider"><div class="track"><div class="slide"><a href="collection.html"><picture><source media="(max-width:767px)" data-srcset="IMG:563b37aac3d05039"><img data-src="IMG:8c76eb9c70062c93" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"></picture></a></div><div class="slide"><a href="collection.html"><picture><source media="(max-width:767px)" data-srcset="IMG:ab5b87e8fc553f4a"><img data-src="IMG:efaf69e2fb959d5b" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"></picture></a></div><div class="slide"><a href="collection.html"><picture><source media="(max-width:767px)" data-srcset="IMG:2daedb496fe82b7b"><img data-src="IMG:77a0af7d02ba505e" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"></picture></a></div><div class="slide"><a href="collection.html"><picture><source media="(max-width:767px)" data-srcset="IMG:13457a5c7fbc4fdc"><img data-src="IMG:c927041153b2c2dd" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"></picture></a></div></div><div class="dots"></div></section><section class="slider"><div class="track"><div class="slide"><a href="collection.html"><picture><source media="(max-width:767px)" data-srcset="IMG:e286fd35c7ec9315"><img data-src="IMG:2ffea4c2cd4f7d71" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"></picture></a></div><div class="slide"><a href="collection.html"><picture><source media="(max-width:767px)" data-srcset="IMG:f00395499716c333"><img data-src="IMG:dea12672f0b83493" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"></picture></a></div></div><div class="dots"></div></section><section class="srate"><h3>Customers rate this store</h3><span class="sc">4.4 ★ (7,004)</span><p>The store offers stylish Korean and trendy apparel with good quality fabrics at reasonable prices. Customers appreciate the comfortable fits, accurate sizing, and fast delivery. While most reviews are positive, some sizing inconsistencies and customer service issues have been reported.</p><div class="tags"><span>Trouser</span><span>Delivery</span><span>Fabric</span><span>Fit</span><span>Quality</span></div><small>✦ Summarized and selected by AI from recent customer reviews</small><a class="vb" href="#">View customer reviews</a></section><section class="look"><div class="wrap"><h2 class="sh big">SHOP THE LOOK</h2><div class="row"><div class="reel" data-act="reel" data-i="0"><video src="assets/look0.mp4" data-poster="IMG:look0" muted loop playsinline preload="none"></video><span class="tag"><svg class="svg" viewBox="0 0 24 24"><path d="M3 12V3h9l9 9-9 9z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg></span></div><div class="reel" data-act="reel" data-i="1"><video src="assets/look1.mp4" data-poster="IMG:look1" muted loop playsinline preload="none"></video><span class="tag"><svg class="svg" viewBox="0 0 24 24"><path d="M3 12V3h9l9 9-9 9z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg></span></div><div class="reel" data-act="reel" data-i="2"><video src="assets/look2.mp4" data-poster="IMG:look2" muted loop playsinline preload="none"></video><span class="tag"><svg class="svg" viewBox="0 0 24 24"><path d="M3 12V3h9l9 9-9 9z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg></span></div><div class="reel" data-act="reel" data-i="3"><video src="assets/look3.mp4" data-poster="IMG:look3" muted loop playsinline preload="none"></video><span class="tag"><svg class="svg" viewBox="0 0 24 24"><path d="M3 12V3h9l9 9-9 9z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg></span></div><div class="reel" data-act="reel" data-i="4"><video src="assets/look4.mp4" data-poster="IMG:look4" muted loop playsinline preload="none"></video><span class="tag"><svg class="svg" viewBox="0 0 24 24"><path d="M3 12V3h9l9 9-9 9z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg></span></div><div class="reel" data-act="reel" data-i="5"><video src="assets/look5.mp4" data-poster="IMG:look5" muted loop playsinline preload="none"></video><span class="tag"><svg class="svg" viewBox="0 0 24 24"><path d="M3 12V3h9l9 9-9 9z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg></span></div><div class="reel" data-act="reel" data-i="6"><video src="assets/look6.mp4" data-poster="IMG:look6" muted loop playsinline preload="none"></video><span class="tag"><svg class="svg" viewBox="0 0 24 24"><path d="M3 12V3h9l9 9-9 9z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg></span></div></div></div></section><section class="banner"><a href="collection.html"><picture><source media="(max-width:767px)" data-srcset="IMG:f77d7c5de0e66621"><img data-src="IMG:7ff5c098fcbe1fdf" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"></picture></a></section><section class="home-bs" style="padding-top:80px"><div class="wrap"><h2 class="sh">Our Best Sellers</h2><div class="grid"><div class="pc"><div class="imw"><a href="product.html" class="im"><img data-src="IMG:2f42852deb1697a2" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="90&#x27;s Bootcut Trouser" loading="lazy"><img class="h2" data-src="IMG:38109f6087977a19" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"></a><button class="heart" data-act="wl" data-wl="classic-bootcut-trouser-5" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.8 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.3 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button><button class="qa" data-act="quick" data-h="classic-bootcut-trouser-5" aria-label="Quick add"><svg class="svg" viewBox="0 0 24 24"><path d="M4 7h16v15H4z"/><path d="M8.5 7V5.5a3.5 3.5 0 017 0V7"/></svg></button></div><div class="meta"><a href="product.html" class="tt">90&#x27;s Bootcut Trouser</a><div class="pr"><span>Rs. 1,599.00</span></div><span class="bv">BEST Value: <b>Rs. 1,279.20*</b></span></div></div><div class="pc"><div class="imw"><a href="product.html" class="im"><img data-src="IMG:2914d89dadfbaa67" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Classic Bootcut Trouser" loading="lazy"><img class="h2" data-src="IMG:68b56189b347a0eb" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"></a><button class="heart" data-act="wl" data-wl="classic-bootcut-trouser-4" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.8 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.3 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button><button class="qa" data-act="quick" data-h="classic-bootcut-trouser-4" aria-label="Quick add"><svg class="svg" viewBox="0 0 24 24"><path d="M4 7h16v15H4z"/><path d="M8.5 7V5.5a3.5 3.5 0 017 0V7"/></svg></button></div><div class="meta"><a href="product.html" class="tt">Classic Bootcut Trouser</a><div class="pr"><span>Rs. 1,599.00</span><span class="rt"><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.6 7.2.9-5.3 5 1.4 7.1L12 18.1 5.6 21.6 7 14.5 1.7 9.5l7.2-.9z"/></svg>2.0</span></div><span class="bv">BEST Value: <b>Rs. 1,279.20*</b></span></div></div><div class="pc"><div class="imw"><a href="product.html" class="im"><img data-src="IMG:71ea0732dcd3b6c0" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Korean Baggy Fit Trouser" loading="lazy"><img class="h2" data-src="IMG:dfb9e977f7e96c74" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"></a><button class="heart" data-act="wl" data-wl="korean-baggy-fit-trouser-5" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.8 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.3 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button><button class="qa" data-act="quick" data-h="korean-baggy-fit-trouser-5" aria-label="Quick add"><svg class="svg" viewBox="0 0 24 24"><path d="M4 7h16v15H4z"/><path d="M8.5 7V5.5a3.5 3.5 0 017 0V7"/></svg></button></div><div class="meta"><a href="product.html" class="tt">Korean Baggy Fit Trouser</a><div class="pr"><span>Rs. 999.00</span><span class="rt"><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.6 7.2.9-5.3 5 1.4 7.1L12 18.1 5.6 21.6 7 14.5 1.7 9.5l7.2-.9z"/></svg>5.0</span></div><span class="bv">BEST Value: <b>Rs. 799.20*</b></span></div></div><div class="pc"><div class="imw"><a href="product.html" class="im"><img data-src="IMG:5879b4e1a581c2e1" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Vertical Striped Spread Collar Shirt" loading="lazy"><img class="h2" data-src="IMG:13af36db5768963f" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"></a><button class="heart" data-act="wl" data-wl="vertical-striped-spread-collar-shirt-1" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.8 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.3 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button><button class="qa" data-act="quick" data-h="vertical-striped-spread-collar-shirt-1" aria-label="Quick add"><svg class="svg" viewBox="0 0 24 24"><path d="M4 7h16v15H4z"/><path d="M8.5 7V5.5a3.5 3.5 0 017 0V7"/></svg></button></div><div class="meta"><a href="product.html" class="tt">Vertical Striped Spread Collar Shirt</a><div class="pr"><span>Rs. 899.00</span></div><span class="bv">BEST Value: <b>Rs. 719.20*</b></span></div></div><div class="pc"><div class="imw"><a href="product.html" class="im"><img data-src="IMG:bc21d526b5c92c64" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Classic Bootcut Trouser" loading="lazy"><img class="h2" data-src="IMG:1eba22e00aa9367c" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"></a><button class="heart" data-act="wl" data-wl="classic-bootcut-trouser-7" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.8 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.3 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button><button class="qa" data-act="quick" data-h="classic-bootcut-trouser-7" aria-label="Quick add"><svg class="svg" viewBox="0 0 24 24"><path d="M4 7h16v15H4z"/><path d="M8.5 7V5.5a3.5 3.5 0 017 0V7"/></svg></button></div><div class="meta"><a href="product.html" class="tt">Classic Bootcut Trouser</a><div class="pr"><span>Rs. 1,599.00</span></div><span class="bv">BEST Value: <b>Rs. 1,279.20*</b></span></div></div><div class="pc"><div class="imw"><a href="product.html" class="im"><img data-src="IMG:eec99c27dc351d2c" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Retro Bootcut Trouser" loading="lazy"><img class="h2" data-src="IMG:b1817004df8faef4" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"></a><button class="heart" data-act="wl" data-wl="classic-bootcut-trouser-6" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.8 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.3 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button><button class="qa" data-act="quick" data-h="classic-bootcut-trouser-6" aria-label="Quick add"><svg class="svg" viewBox="0 0 24 24"><path d="M4 7h16v15H4z"/><path d="M8.5 7V5.5a3.5 3.5 0 017 0V7"/></svg></button></div><div class="meta"><a href="product.html" class="tt">Retro Bootcut Trouser</a><div class="pr"><span>Rs. 1,599.00</span></div><span class="bv">BEST Value: <b>Rs. 1,279.20*</b></span></div></div><div class="pc"><div class="imw"><a href="product.html" class="im"><img data-src="IMG:f8949089dd1ec87b" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Korean Baggy Fit Trouser" loading="lazy"><img class="h2" data-src="IMG:f17a255b8e56b80f" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"></a><button class="heart" data-act="wl" data-wl="korean-baggy-fit-trouser-9" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.8 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.3 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button><button class="qa" data-act="quick" data-h="korean-baggy-fit-trouser-9" aria-label="Quick add"><svg class="svg" viewBox="0 0 24 24"><path d="M4 7h16v15H4z"/><path d="M8.5 7V5.5a3.5 3.5 0 017 0V7"/></svg></button></div><div class="meta"><a href="product.html" class="tt">Korean Baggy Fit Trouser</a><div class="pr"><span>Rs. 999.00</span></div><span class="bv">BEST Value: <b>Rs. 799.20*</b></span></div></div><div class="pc"><div class="imw"><a href="product.html" class="im"><img data-src="IMG:1502d325083980ae" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Korean Baggy Fit Trouser" loading="lazy"><img class="h2" data-src="IMG:a6d6a803a1e8612e" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"></a><button class="heart" data-act="wl" data-wl="korean-baggy-fit-trouser-4" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.8 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.3 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button><button class="qa" data-act="quick" data-h="korean-baggy-fit-trouser-4" aria-label="Quick add"><svg class="svg" viewBox="0 0 24 24"><path d="M4 7h16v15H4z"/><path d="M8.5 7V5.5a3.5 3.5 0 017 0V7"/></svg></button></div><div class="meta"><a href="product.html" class="tt">Korean Baggy Fit Trouser</a><div class="pr"><span>Rs. 999.00</span></div><span class="bv">BEST Value: <b>Rs. 799.20*</b></span></div></div><div class="pc"><div class="imw"><a href="product.html" class="im"><img data-src="IMG:a107b3188a62f13c" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Baggy Fit Korean Trouser" loading="lazy"><img class="h2" data-src="IMG:1bba13b74b1efd8d" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"></a><button class="heart" data-act="wl" data-wl="black-baggy-fit-korean-trouser" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.8 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.3 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button><button class="qa" data-act="quick" data-h="black-baggy-fit-korean-trouser" aria-label="Quick add"><svg class="svg" viewBox="0 0 24 24"><path d="M4 7h16v15H4z"/><path d="M8.5 7V5.5a3.5 3.5 0 017 0V7"/></svg></button></div><div class="meta"><a href="product.html" class="tt">Baggy Fit Korean Trouser</a><div class="pr"><span>Rs. 1,199.00</span><span class="rt"><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.6 7.2.9-5.3 5 1.4 7.1L12 18.1 5.6 21.6 7 14.5 1.7 9.5l7.2-.9z"/></svg>4.5</span></div><span class="bv">BEST Value: <b>Rs. 959.20*</b></span></div></div><div class="pc"><div class="imw"><a href="product.html" class="im"><img data-src="IMG:9664e91aa0ca3406" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Baggy Fit Jeans" loading="lazy"><img class="h2" data-src="IMG:e1bc295571a4be6a" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"></a><button class="heart" data-act="wl" data-wl="grey-baggy-fit-jeans" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.8 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.3 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button><button class="qa" data-act="quick" data-h="grey-baggy-fit-jeans" aria-label="Quick add"><svg class="svg" viewBox="0 0 24 24"><path d="M4 7h16v15H4z"/><path d="M8.5 7V5.5a3.5 3.5 0 017 0V7"/></svg></button></div><div class="meta"><a href="product.html" class="tt">Baggy Fit Jeans</a><div class="pr"><span>Rs. 1,449.00</span><span class="rt"><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.6 7.2.9-5.3 5 1.4 7.1L12 18.1 5.6 21.6 7 14.5 1.7 9.5l7.2-.9z"/></svg>4.8</span></div><span class="bv">BEST Value: <b>Rs. 1,159.20*</b></span></div></div><div class="pc"><div class="imw"><a href="product.html" class="im"><img data-src="IMG:0dc8c8b805ef6f72" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Korean Baggy Fit Trouser" loading="lazy"><img class="h2" data-src="IMG:c2e9eeb8ec9c3fe2" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"></a><button class="heart" data-act="wl" data-wl="korean-baggy-fit-trouser-3" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.8 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.3 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button><button class="qa" data-act="quick" data-h="korean-baggy-fit-trouser-3" aria-label="Quick add"><svg class="svg" viewBox="0 0 24 24"><path d="M4 7h16v15H4z"/><path d="M8.5 7V5.5a3.5 3.5 0 017 0V7"/></svg></button></div><div class="meta"><a href="product.html" class="tt">Korean Baggy Fit Trouser</a><div class="pr"><span>Rs. 999.00</span></div><span class="bv">BEST Value: <b>Rs. 799.20*</b></span></div></div><div class="pc"><div class="imw"><a href="product.html" class="im"><img data-src="IMG:c503ff9d6159a320" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Korean Baggy Fit Trouser" loading="lazy"><img class="h2" data-src="IMG:51dea91080955544" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"></a><button class="heart" data-act="wl" data-wl="korean-baggy-fit-trouser-2" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.8 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.3 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button><button class="qa" data-act="quick" data-h="korean-baggy-fit-trouser-2" aria-label="Quick add"><svg class="svg" viewBox="0 0 24 24"><path d="M4 7h16v15H4z"/><path d="M8.5 7V5.5a3.5 3.5 0 017 0V7"/></svg></button></div><div class="meta"><a href="product.html" class="tt">Korean Baggy Fit Trouser</a><div class="pr"><span>Rs. 999.00</span></div><span class="bv">BEST Value: <b>Rs. 799.20*</b></span></div></div><div class="pc"><div class="imw"><a href="product.html" class="im"><img data-src="IMG:50b3ef7c057a5407" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Wide Leg Pleated Korean Pant" loading="lazy"><img class="h2" data-src="IMG:05ec9bdc4cb1d130" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"></a><button class="heart" data-act="wl" data-wl="korean-pleated-pant-wide-leg-7" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.8 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.3 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button><button class="qa" data-act="quick" data-h="korean-pleated-pant-wide-leg-7" aria-label="Quick add"><svg class="svg" viewBox="0 0 24 24"><path d="M4 7h16v15H4z"/><path d="M8.5 7V5.5a3.5 3.5 0 017 0V7"/></svg></button></div><div class="meta"><a href="product.html" class="tt">Wide Leg Pleated Korean Pant</a><div class="pr"><span>Rs. 1,099.00</span></div><span class="bv">BEST Value: <b>Rs. 879.20*</b></span></div></div><div class="pc"><div class="imw"><a href="product.html" class="im"><img data-src="IMG:6a5167694cb12256" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Wide Leg Pleated Korean Pant" loading="lazy"><img class="h2" data-src="IMG:cb9522f9afe9c891" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"></a><button class="heart" data-act="wl" data-wl="korean-pleated-pant-wide-leg-6" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.8 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.3 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button><button class="qa" data-act="quick" data-h="korean-pleated-pant-wide-leg-6" aria-label="Quick add"><svg class="svg" viewBox="0 0 24 24"><path d="M4 7h16v15H4z"/><path d="M8.5 7V5.5a3.5 3.5 0 017 0V7"/></svg></button></div><div class="meta"><a href="product.html" class="tt">Wide Leg Pleated Korean Pant</a><div class="pr"><span>Rs. 1,099.00</span></div><span class="bv">BEST Value: <b>Rs. 879.20*</b></span></div></div><div class="pc"><div class="imw"><a href="product.html" class="im"><img data-src="IMG:5d4fc01036eb692b" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Wide Leg Pleated Korean Pant" loading="lazy"><img class="h2" data-src="IMG:01b86cf6b526f8ef" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"></a><button class="heart" data-act="wl" data-wl="korean-pleated-pant-wide-leg-1" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.8 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.3 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button><button class="qa" data-act="quick" data-h="korean-pleated-pant-wide-leg-1" aria-label="Quick add"><svg class="svg" viewBox="0 0 24 24"><path d="M4 7h16v15H4z"/><path d="M8.5 7V5.5a3.5 3.5 0 017 0V7"/></svg></button></div><div class="meta"><a href="product.html" class="tt">Wide Leg Pleated Korean Pant</a><div class="pr"><span>Rs. 1,099.00</span></div><span class="bv">BEST Value: <b>Rs. 879.20*</b></span></div></div><div class="pc"><div class="imw"><a href="product.html" class="im"><img data-src="IMG:f25c3a35b012dbc9" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Korean Pleated Pant - Wide Leg" loading="lazy"><img class="h2" data-src="IMG:b981dfc2b99b1491" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"></a><button class="heart" data-act="wl" data-wl="wide-leg-pleated-trouser" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.8 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.3 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button><button class="qa" data-act="quick" data-h="wide-leg-pleated-trouser" aria-label="Quick add"><svg class="svg" viewBox="0 0 24 24"><path d="M4 7h16v15H4z"/><path d="M8.5 7V5.5a3.5 3.5 0 017 0V7"/></svg></button></div><div class="meta"><a href="product.html" class="tt">Korean Pleated Pant - Wide Leg</a><div class="pr"><span>Rs. 1,199.00</span></div><span class="bv">BEST Value: <b>Rs. 959.20*</b></span></div></div></div><p class="center" style="margin-top:26px"><a class="btn" href="collection.html">View all</a></p></div></section><section class="blog"><div class="wrap"><h2 class="sh">Blog posts</h2><p class="center"><a class="btn ol" href="#">View all</a></p><div class="bg"><a href="#"><img data-src="IMG:34900230ff7cc946" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy">What to Wear to an Indian Wedding as a Guest: Men&#x27;s Complete Guide</a><a href="#"><img data-src="IMG:32a85ab5a564af83" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy">Printed Shirts for Men: How to Wear Them Without Looking Overdressed</a><a href="#"><img data-src="IMG:bba3cb7144396b0c" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy">Dennison&#x27;s Independence Day Sale is Coming: Buy 1 Get 1 Free on Kurtas and Shirts This Weekend</a></div></div></section></main><footer class="footer"><div class="wrap"><div class="fg">
+<ul><li><a href="#">Blogs</a></li><li><a href="#">Return &amp; Exchange Policy</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms &amp; Conditions</a></li><li><a href="#">Contact us</a></li><li><a href="#">FAQs</a></li></ul>
+<ul><li><a href="#">Return/Exchange</a></li><li><a href="#">About us</a></li><li><a href="#">Career</a></li><li><a href="#">Affilate Marketing</a></li></ul>
+<div class="nl"><p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p><form onsubmit="event.preventDefault();DN.toast('Thanks for subscribing!');this.reset()"><input type="email" required placeholder="Enter your email"><button aria-label="Subscribe"><svg class="svg" viewBox="0 0 24 18" style="width:20px"><path d="M1 1h22v16H1z"/><path d="M1 1l11 9 11-9"/></svg></button></form><div class="soc"><a href="https://www.instagram.com/dennison.in" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zm0 2c-3.1 0-3.5 0-4.7.1-2.3.1-3.3 1.2-3.4 3.4-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 2.2 1.1 3.3 3.4 3.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c2.3-.1 3.3-1.2 3.4-3.4.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-2.2-1.2-3.3-3.4-3.4-1.2-.1-1.6-.1-4.7-.1zm0 3a4.8 4.8 0 110 9.6 4.8 4.8 0 010-9.6zm0 2a2.8 2.8 0 100 5.6 2.8 2.8 0 000-5.6zm5-3.3a1.1 1.1 0 110 2.3 1.1 1.1 0 010-2.3z"/></svg></a><a href="https://www.facebook.com/share/19t3HsHuDQ/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12a12 12 0 10-13.9 11.9v-8.4h-3V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0024 12z"/></svg></a><a href="https://www.youtube.com/channel/UCPbtZH-Me1HZ0JmrS9pHByQ" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 00.5 6.2 31 31 0 000 12a31 31 0 00.5 5.8 3 3 0 002.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 002.1-2.1A31 31 0 0024 12a31 31 0 00-.5-5.8zM9.6 15.6V8.4l6.2 3.6z"/></svg></a><a href="https://in.pinterest.com/dennisonindia/" target="_blank" rel="noopener" aria-label="Pinterest"><svg viewBox="0 0 24 24"><path d="M12 0a12 12 0 00-4.4 23.2c-.1-.9-.2-2.4 0-3.4l1.4-6s-.4-.7-.4-1.8c0-1.7 1-2.9 2.2-2.9 1 0 1.5.8 1.5 1.7 0 1-.7 2.6-1 4-.3 1.2.6 2.2 1.8 2.2 2.1 0 3.8-2.2 3.8-5.5 0-2.9-2.1-4.9-5-4.9-3.4 0-5.4 2.6-5.4 5.2 0 1 .4 2.1.9 2.7.1.1.1.2.1.3l-.3 1.4c-.1.2-.2.3-.4.2-1.5-.7-2.4-2.9-2.4-4.6 0-3.8 2.7-7.2 7.9-7.2 4.1 0 7.3 2.9 7.3 6.9 0 4.1-2.6 7.4-6.2 7.4-1.2 0-2.4-.6-2.8-1.4l-.8 2.9c-.3 1-1 2.3-1.5 3.1A12 12 0 1012 0z"/></svg></a><a href="https://www.snapchat.com/add/dennisonfashion" target="_blank" rel="noopener" aria-label="Snapchat"><svg viewBox="0 0 24 24"><path d="M12.2 1c1.8 0 4.9.6 6.1 3.5.4 1 .3 2.6.2 4l.1.3c.3.1.7.2 1.1 0 .6-.2 1.3.1 1.3.7 0 .5-.6.9-1.6 1.2-.4.1-.9.4-.8 1 .6 1.5 2 3.2 3.7 3.6.4.1.5.4.3.8-.4.8-2 1.1-2.6 1.2-.2.3-.2 1-.5 1.2-.4.2-1.3-.2-2.5 0-1.5.2-2.5 2.5-4.8 2.5s-3.3-2.3-4.8-2.5c-1.2-.2-2.1.2-2.5 0-.3-.2-.3-.9-.5-1.2-.6-.1-2.2-.4-2.6-1.2-.2-.4 0-.7.3-.8 1.7-.4 3.1-2.1 3.7-3.6.1-.6-.4-.9-.8-1-1-.3-1.6-.7-1.6-1.2 0-.6.7-.9 1.3-.7.4.2.8.1 1.1 0l.1-.3c-.1-1.4-.2-3 .2-4C7.3 1.6 10.4 1 12.2 1z"/></svg></a><a href="https://www.linkedin.com/company/dennison-india/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.1c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4z"/></svg></a></div></div>
+</div>
+<h5>MORE ABOUT US</h5><p class="about">Dennison—The brand was born out of a single idea, how to make an affordable ready-to-wear apparel line for people when it had access to only certain privileged sections of society. <a href="#">Read more</a></p>
+<p class="ct">Call us at +91 6268 596 191<br>email at care@dennison.in<br>Our Operating Hours—11:00 AM to 6:00 PM,<br>Monday through Friday.<br><br>Feel free to contact us during these times for assistance.</p>
+<p class="copy">© 2026 Dennison Fashion India All rights reserved</p></div></footer></div>
+<script>window.GATE_PW="growisto";window.P=JSON.parse(__R(JSON.stringify({"classic-bootcut-trouser-5": {"h": "classic-bootcut-trouser-5", "t": "90's Bootcut Trouser", "type": "Trouser", "price": 1599.0, "cmp": 2499.0, "r": null, "img": "IMG:2f42852deb1697a2", "img2": "IMG:38109f6087977a19", "imgs": ["IMG:2f42852deb1697a2", "IMG:38109f6087977a19"], "color": "Green", "sizes": [["30", true], ["32", true], ["34", true], ["36", true]], "sw": [["Green", "IMG:530fe35dacdd79a9", "classic-bootcut-trouser-5"]]}, "classic-bootcut-trouser-4": {"h": "classic-bootcut-trouser-4", "t": "Classic Bootcut Trouser", "type": "Trouser", "price": 1599.0, "cmp": 2499.0, "r": 2.0, "img": "IMG:2914d89dadfbaa67", "img2": "IMG:68b56189b347a0eb", "imgs": ["IMG:2914d89dadfbaa67", "IMG:68b56189b347a0eb"], "color": "Brown", "sizes": [["30", false], ["32", true], ["34", true], ["36", false]], "sw": [["Brown", "IMG:042289666a818fa3", "classic-bootcut-trouser-4"], ["Beige", "IMG:61cb375d4d5a4f1a", "classic-bootcut-trouser-7"]]}, "korean-baggy-fit-trouser-5": {"h": "korean-baggy-fit-trouser-5", "t": "Korean Baggy Fit Trouser", "type": "Trouser", "price": 999.0, "cmp": 2999.0, "r": 5.0, "img": "IMG:71ea0732dcd3b6c0", "img2": "IMG:dfb9e977f7e96c74", "imgs": ["IMG:71ea0732dcd3b6c0", "IMG:dfb9e977f7e96c74", "IMG:be496c2399e5ac0a", "IMG:0e0cca1071e40705", "IMG:5d2171ce7ea2688f", "IMG:68b69d0fc4345413", "IMG:4a2ce3c6624d3002"], "color": "Black", "sizes": [["30", false], ["32", true], ["34", true], ["36", true]], "sw": [["Black", "IMG:71ea0732dcd3b6c0", "korean-baggy-fit-trouser-5"], ["Grey", "IMG:ad92bcdfe1ee2ff9", "korean-baggy-fit-trouser-1"], ["Brown", "IMG:c503ff9d6159a320", "korean-baggy-fit-trouser-2"], ["Pearl Grey", "IMG:0dc8c8b805ef6f72", "korean-baggy-fit-trouser-3"], ["Dark Brown", "IMG:1502d325083980ae", "korean-baggy-fit-trouser-4"]]}, "vertical-striped-spread-collar-shirt-1": {"h": "vertical-striped-spread-collar-shirt-1", "t": "Vertical Striped Spread Collar Shirt", "type": "Shirts", "price": 899.0, "cmp": 2499.0, "r": null, "img": "IMG:5879b4e1a581c2e1", "img2": "IMG:13af36db5768963f", "imgs": ["IMG:5879b4e1a581c2e1", "IMG:13af36db5768963f"], "color": "Off White and Brown", "sizes": [["38", true], ["40", true], ["42", true], ["44", true]], "sw": [["Off White and Brown", "IMG:09eeebeacf94b904", "vertical-striped-spread-collar-shirt-1"]]}, "classic-bootcut-trouser-7": {"h": "classic-bootcut-trouser-7", "t": "Classic Bootcut Trouser", "type": "Trouser", "price": 1599.0, "cmp": 2499.0, "r": null, "img": "IMG:bc21d526b5c92c64", "img2": "IMG:1eba22e00aa9367c", "imgs": ["IMG:bc21d526b5c92c64", "IMG:1eba22e00aa9367c"], "color": "Beige", "sizes": [["30", true], ["32", true], ["34", true], ["36", false]], "sw": [["Beige", "IMG:61cb375d4d5a4f1a", "classic-bootcut-trouser-7"], ["Brown", "IMG:042289666a818fa3", "classic-bootcut-trouser-4"]]}, "classic-bootcut-trouser-6": {"h": "classic-bootcut-trouser-6", "t": "Retro Bootcut Trouser", "type": "Trouser", "price": 1599.0, "cmp": 2499.0, "r": null, "img": "IMG:eec99c27dc351d2c", "img2": "IMG:b1817004df8faef4", "imgs": ["IMG:eec99c27dc351d2c", "IMG:b1817004df8faef4"], "color": "Grey", "sizes": [["30", false], ["32", true], ["34", true], ["36", true]], "sw": [["Grey", "IMG:c802497e05a87df4", "classic-bootcut-trouser-6"]]}, "korean-baggy-fit-trouser-9": {"h": "korean-baggy-fit-trouser-9", "t": "Korean Baggy Fit Trouser", "type": "Trouser", "price": 999.0, "cmp": 2999.0, "r": null, "img": "IMG:f8949089dd1ec87b", "img2": "IMG:f17a255b8e56b80f", "imgs": ["IMG:f8949089dd1ec87b", "IMG:f17a255b8e56b80f", "IMG:0ecec20c5e1c55c7", "IMG:4ed5804a667e3b2a", "IMG:a1c8a90f9b6879f0", "IMG:825b41f18b7a17ea", "IMG:346e95baa414ce39", "IMG:bd367626631b361e"], "color": "Dark Grey", "sizes": [["30", true], ["32", true], ["34", true], ["36", true]], "sw": [["Dark Grey", "IMG:915863edc0bed0cc", "korean-baggy-fit-trouser-9"], ["Beige", "IMG:170dacbb39d5997d", "korean-baggy-fit-trouser"], ["Grey", "IMG:e7d4b4191727f1f6", "korean-baggy-fit-trouser-1"], ["Brown", "IMG:122fc354ca3ca845", "korean-baggy-fit-trouser-2"], ["Pearl Grey", "IMG:e8a6c551ddbc14b8", "korean-baggy-fit-trouser-3"], ["Dark Brown", "IMG:e0d7551feeb7a450", "korean-baggy-fit-trouser-4"], ["Black", "IMG:05d47c0da9b0b66e", "korean-baggy-fit-trouser-5"], ["Light Grey", "IMG:b921caca46ab28bf", "korean-baggy-fit-trouser-6"]]}, "korean-baggy-fit-trouser-4": {"h": "korean-baggy-fit-trouser-4", "t": "Korean Baggy Fit Trouser", "type": "Trouser", "price": 999.0, "cmp": 2999.0, "r": null, "img": "IMG:1502d325083980ae", "img2": "IMG:a6d6a803a1e8612e", "imgs": ["IMG:1502d325083980ae", "IMG:a6d6a803a1e8612e", "IMG:3a9cef01c8991536", "IMG:50a6c6ae25e48106", "IMG:c7c0874f15e112fe", "IMG:722e344b923d16f1", "IMG:03522b02d4574a83"], "color": "Dark Brown", "sizes": [["30", true], ["32", true], ["34", true], ["36", true]], "sw": [["Black", "IMG:71ea0732dcd3b6c0", "korean-baggy-fit-trouser-5"], ["Grey", "IMG:ad92bcdfe1ee2ff9", "korean-baggy-fit-trouser-1"], ["Brown", "IMG:c503ff9d6159a320", "korean-baggy-fit-trouser-2"], ["Pearl Grey", "IMG:0dc8c8b805ef6f72", "korean-baggy-fit-trouser-3"], ["Dark Brown", "IMG:1502d325083980ae", "korean-baggy-fit-trouser-4"]]}, "black-baggy-fit-korean-trouser": {"h": "black-baggy-fit-korean-trouser", "t": "Baggy Fit Korean Trouser", "type": "Trouser", "price": 1199.0, "cmp": 3499.0, "r": 4.5, "img": "IMG:a107b3188a62f13c", "img2": "IMG:1bba13b74b1efd8d", "imgs": ["IMG:a107b3188a62f13c", "IMG:1bba13b74b1efd8d"], "color": "Black", "sizes": [["28", true], ["30", true], ["32", false], ["34", true], ["36", true], ["38", true]], "sw": [["Black", "IMG:a98990a5d02dbc7b", "black-baggy-fit-korean-trouser"]]}, "grey-baggy-fit-jeans": {"h": "grey-baggy-fit-jeans", "t": "Baggy Fit Jeans", "type": "Jeans", "price": 1449.0, "cmp": 3999.0, "r": 4.8, "img": "IMG:9664e91aa0ca3406", "img2": "IMG:e1bc295571a4be6a", "imgs": ["IMG:9664e91aa0ca3406", "IMG:e1bc295571a4be6a"], "color": "Grey", "sizes": [["28", true], ["30", true], ["32", true], ["34", true], ["36", true], ["38", true]], "sw": [["Grey", "IMG:073183820477adee", "grey-baggy-fit-jeans"]]}, "korean-baggy-fit-trouser-3": {"h": "korean-baggy-fit-trouser-3", "t": "Korean Baggy Fit Trouser", "type": "Trouser", "price": 999.0, "cmp": 2999.0, "r": null, "img": "IMG:0dc8c8b805ef6f72", "img2": "IMG:c2e9eeb8ec9c3fe2", "imgs": ["IMG:0dc8c8b805ef6f72", "IMG:c2e9eeb8ec9c3fe2", "IMG:88e939446b81ef8b", "IMG:ff29a8ae4bdc6eee", "IMG:b1ec8afa1811ab56", "IMG:4024eb8c2d597837", "IMG:8dae2736b689577f"], "color": "Pearl Grey", "sizes": [["30", true], ["32", true], ["34", true], ["36", true]], "sw": [["Black", "IMG:71ea0732dcd3b6c0", "korean-baggy-fit-trouser-5"], ["Grey", "IMG:ad92bcdfe1ee2ff9", "korean-baggy-fit-trouser-1"], ["Brown", "IMG:c503ff9d6159a320", "korean-baggy-fit-trouser-2"], ["Pearl Grey", "IMG:0dc8c8b805ef6f72", "korean-baggy-fit-trouser-3"], ["Dark Brown", "IMG:1502d325083980ae", "korean-baggy-fit-trouser-4"]]}, "korean-baggy-fit-trouser-2": {"h": "korean-baggy-fit-trouser-2", "t": "Korean Baggy Fit Trouser", "type": "Trouser", "price": 999.0, "cmp": 2999.0, "r": null, "img": "IMG:c503ff9d6159a320", "img2": "IMG:51dea91080955544", "imgs": ["IMG:c503ff9d6159a320", "IMG:51dea91080955544", "IMG:3ed3e346803537f9", "IMG:c3778f4da094cbd3", "IMG:8affbc4d0b8a3055", "IMG:ff47f541e0a6f87c", "IMG:eb12bf09a9a263cd"], "color": "Brown", "sizes": [["30", true], ["32", true], ["34", true], ["36", true]], "sw": [["Black", "IMG:71ea0732dcd3b6c0", "korean-baggy-fit-trouser-5"], ["Grey", "IMG:ad92bcdfe1ee2ff9", "korean-baggy-fit-trouser-1"], ["Brown", "IMG:c503ff9d6159a320", "korean-baggy-fit-trouser-2"], ["Pearl Grey", "IMG:0dc8c8b805ef6f72", "korean-baggy-fit-trouser-3"], ["Dark Brown", "IMG:1502d325083980ae", "korean-baggy-fit-trouser-4"]]}, "korean-pleated-pant-wide-leg-7": {"h": "korean-pleated-pant-wide-leg-7", "t": "Wide Leg Pleated Korean Pant", "type": "Trouser", "price": 1099.0, "cmp": 2999.0, "r": null, "img": "IMG:50b3ef7c057a5407", "img2": "IMG:05ec9bdc4cb1d130", "imgs": ["IMG:50b3ef7c057a5407", "IMG:05ec9bdc4cb1d130"], "color": "Pearl Grey", "sizes": [["30", true], ["32", true], ["34", true], ["36", true]], "sw": [["Pearl Grey", "IMG:6f530fe8e9cc731b", "korean-pleated-pant-wide-leg-7"], ["Brown", "IMG:e0ab9b759f1c09f4", "korean-pleated-pant-wide-leg-6"]]}, "korean-pleated-pant-wide-leg-6": {"h": "korean-pleated-pant-wide-leg-6", "t": "Wide Leg Pleated Korean Pant", "type": "Trouser", "price": 1099.0, "cmp": 2999.0, "r": null, "img": "IMG:6a5167694cb12256", "img2": "IMG:cb9522f9afe9c891", "imgs": ["IMG:6a5167694cb12256", "IMG:cb9522f9afe9c891"], "color": "Brown", "sizes": [["30", false], ["32", true], ["34", true], ["36", true]], "sw": [["Brown", "IMG:e0ab9b759f1c09f4", "korean-pleated-pant-wide-leg-6"], ["Pearl Grey", "IMG:6f530fe8e9cc731b", "korean-pleated-pant-wide-leg-7"]]}, "korean-pleated-pant-wide-leg-1": {"h": "korean-pleated-pant-wide-leg-1", "t": "Wide Leg Pleated Korean Pant", "type": "Trouser", "price": 1099.0, "cmp": 2999.0, "r": null, "img": "IMG:5d4fc01036eb692b", "img2": "IMG:01b86cf6b526f8ef", "imgs": ["IMG:5d4fc01036eb692b", "IMG:01b86cf6b526f8ef"], "color": "Grey", "sizes": [["30", false], ["32", true], ["34", true], ["36", true]], "sw": [["Grey", "IMG:f9f676760e20776f", "korean-pleated-pant-wide-leg-1"], ["Pearl Grey", "IMG:6f530fe8e9cc731b", "korean-pleated-pant-wide-leg-7"], ["Brown", "IMG:e0ab9b759f1c09f4", "korean-pleated-pant-wide-leg-6"]]}, "wide-leg-pleated-trouser": {"h": "wide-leg-pleated-trouser", "t": "Korean Pleated Pant - Wide Leg", "type": "Trouser", "price": 1199.0, "cmp": 3499.0, "r": null, "img": "IMG:f25c3a35b012dbc9", "img2": "IMG:b981dfc2b99b1491", "imgs": ["IMG:f25c3a35b012dbc9", "IMG:b981dfc2b99b1491"], "color": "Brown", "sizes": [["30", false], ["32", true], ["34", true], ["36", true]], "sw": [["Brown", "IMG:f63f6708559d7233", "wide-leg-pleated-trouser"], ["Pista Green", "IMG:b946fe8c049c99a2", "wide-leg-pleated-trouser-4"], ["Blue", "IMG:8a4b0138f0d47657", "wide-leg-pleated-trouser-3"], ["Black", "IMG:5aaa34882ac04afa", "wide-leg-pleated-trouser-2"], ["Green", "IMG:ef175121a83ed2a2", "wide-leg-pleated-trouser-1"]]}, "wide-leg-pleated-trouser-4": {"h": "wide-leg-pleated-trouser-4", "t": "Korean Pleated Pant - Wide Leg", "type": "Trouser", "price": 1199.0, "cmp": 3499.0, "r": 3.0, "img": "IMG:84ff1f4704af04b6", "img2": "IMG:e9bf51d310e0804d", "imgs": ["IMG:84ff1f4704af04b6", "IMG:e9bf51d310e0804d"], "color": "Pista Green", "sizes": [["30", true], ["32", true], ["34", true], ["36", true]], "sw": [["Pista Green", "IMG:b946fe8c049c99a2", "wide-leg-pleated-trouser-4"], ["Blue", "IMG:8a4b0138f0d47657", "wide-leg-pleated-trouser-3"], ["Black", "IMG:5aaa34882ac04afa", "wide-leg-pleated-trouser-2"], ["Green", "IMG:ef175121a83ed2a2", "wide-leg-pleated-trouser-1"], ["Brown", "IMG:f63f6708559d7233", "wide-leg-pleated-trouser"]]}, "milano-pleated-trouser": {"h": "milano-pleated-trouser", "t": "Japanese Three Pleated Trouser", "type": "Trouser", "price": 1399.0, "cmp": 3999.0, "r": 3.7, "img": "IMG:e260482693e8e6d0", "img2": "IMG:7f274ccdc67c48b2", "imgs": ["IMG:e260482693e8e6d0", "IMG:7f274ccdc67c48b2"], "color": "Black", "sizes": [["30", true], ["32", true], ["34", true], ["36", true]], "sw": [["Black", "IMG:dff61d0565d1ff52", "milano-pleated-trouser"], ["Grey", "IMG:fc94491971435e6d", "milano-pleated-trouser-1"], ["Beige", "IMG:bd53ff65cbac4b2c", "milano-pleated-trouser-2"], ["Mint", "IMG:198b113a00b4bce9", "milano-pleated-trouser-3"], ["Light Beige", "IMG:b5df12e94979c97a", "milano-pleated-trouser-4"]]}, "korean-baggy-fit-pleated-trouser": {"h": "korean-baggy-fit-pleated-trouser", "t": "Korean Baggy Fit Pleated Trouser", "type": "Trouser", "price": 999.0, "cmp": 2799.0, "r": 4.0, "img": "IMG:ac4847a88a940afc", "img2": "IMG:5235717d9bc5d374", "imgs": ["IMG:ac4847a88a940afc", "IMG:5235717d9bc5d374"], "color": "Black", "sizes": [["28", false], ["30", true], ["32", false], ["34", true], ["36", false]], "sw": [["Black", "IMG:28825b61d82e735f", "korean-baggy-fit-pleated-trouser"]]}, "steel-blue-korean-baggy-fit-trouser": {"h": "steel-blue-korean-baggy-fit-trouser", "t": "Korean Baggy Fit Trouser", "type": "Trouser", "price": 1199.0, "cmp": 3499.0, "r": 4.4, "img": "IMG:60f9729ab7344c38", "img2": "IMG:6a7875342fceb497", "imgs": ["IMG:60f9729ab7344c38", "IMG:6a7875342fceb497"], "color": "Steel Blue", "sizes": [["30", false], ["32", true], ["34", true], ["36", true]], "sw": [["Steel Blue", "IMG:f30d005dacbad5ca", "steel-blue-korean-baggy-fit-trouser"], ["Beige", "IMG:170dacbb39d5997d", "korean-baggy-fit-trouser"], ["Grey", "IMG:e7d4b4191727f1f6", "korean-baggy-fit-trouser-1"], ["Brown", "IMG:122fc354ca3ca845", "korean-baggy-fit-trouser-2"], ["Pearl Grey", "IMG:e8a6c551ddbc14b8", "korean-baggy-fit-trouser-3"], ["Dark Brown", "IMG:e0d7551feeb7a450", "korean-baggy-fit-trouser-4"], ["Black", "IMG:05d47c0da9b0b66e", "korean-baggy-fit-trouser-5"], ["Light Grey", "IMG:b921caca46ab28bf", "korean-baggy-fit-trouser-6"]]}, "stretch-ease-all-day-casual-pant": {"h": "stretch-ease-all-day-casual-pant", "t": "Stretch Ease All Day Casual Pant", "type": "Trouser", "price": 999.0, "cmp": 3499.0, "r": null, "img": "IMG:00929a80ff21c36e", "img2": "IMG:3e0b357e0ce7de06", "imgs": ["IMG:00929a80ff21c36e", "IMG:3e0b357e0ce7de06"], "color": "Stone Grey", "sizes": [["30", true], ["32", true], ["34", true], ["36", true]], "sw": [["Stone Grey", "IMG:66cb560e7d56362f", "stretch-ease-all-day-casual-pant"], ["Light Grey", "IMG:df0263ad4238c750", "stretch-ease-all-day-casual-pant-11"], ["Dark Grey", "IMG:761678ada18b5f8d", "stretch-ease-all-day-casual-pant-10"], ["Olive", "IMG:6cfe45e18145e176", "stretch-ease-all-day-casual-pant-9"], ["Grey", "IMG:0358228ade0b2921", "stretch-ease-all-day-casual-pant-8"], ["Beige", "IMG:b215c5e4aba7676e", "stretch-ease-all-day-casual-pant-7"], ["Brown", "IMG:745d7049f854bf10", "stretch-ease-all-day-casual-pant-6"], ["Black", "IMG:2749340bc9cd839f", "stretch-ease-all-day-casual-pant-5"]]}, "striped-gurkha-trouser": {"h": "striped-gurkha-trouser", "t": "Pleated Striped Gurkha Trouser", "type": "Trouser", "price": 1199.0, "cmp": 3499.0, "r": 5.0, "img": "IMG:775c5c87b6bb131e", "img2": "IMG:5060c86af5e95195", "imgs": ["IMG:775c5c87b6bb131e", "IMG:5060c86af5e95195"], "color": "Blue", "sizes": [["30", false], ["32", true], ["34", true], ["36", true]], "sw": [["Blue", "IMG:579609ba935b6e84", "striped-gurkha-trouser"]]}, "milano-pleated-trouser-4": {"h": "milano-pleated-trouser-4", "t": "Japanese Three Pleated Trouser", "type": "Trouser", "price": 1399.0, "cmp": 3999.0, "r": 4.0, "img": "IMG:c30ca2a764b885ab", "img2": "IMG:82b01267cacd1f11", "imgs": ["IMG:c30ca2a764b885ab", "IMG:82b01267cacd1f11"], "color": "Light Beige", "sizes": [["30", true], ["32", true], ["34", true], ["36", true]], "sw": [["Light Beige", "IMG:b5df12e94979c97a", "milano-pleated-trouser-4"], ["Grey", "IMG:fc94491971435e6d", "milano-pleated-trouser-1"], ["Beige", "IMG:bd53ff65cbac4b2c", "milano-pleated-trouser-2"], ["Mint", "IMG:198b113a00b4bce9", "milano-pleated-trouser-3"], ["Black", "IMG:dff61d0565d1ff52", "milano-pleated-trouser"]]}, "milano-pleated-trouser-3": {"h": "milano-pleated-trouser-3", "t": "Japanese Three Pleated Trouser", "type": "Trouser", "price": 1399.0, "cmp": 3999.0, "r": 4.0, "img": "IMG:dffa00ad76cd5a05", "img2": "IMG:e77f6845ee4a5f84", "imgs": ["IMG:dffa00ad76cd5a05", "IMG:e77f6845ee4a5f84"], "color": "Mint", "sizes": [["30", true], ["32", true], ["34", true], ["36", true]], "sw": [["Mint", "IMG:198b113a00b4bce9", "milano-pleated-trouser-3"], ["Grey", "IMG:fc94491971435e6d", "milano-pleated-trouser-1"], ["Beige", "IMG:bd53ff65cbac4b2c", "milano-pleated-trouser-2"], ["Light Beige", "IMG:b5df12e94979c97a", "milano-pleated-trouser-4"], ["Black", "IMG:dff61d0565d1ff52", "milano-pleated-trouser"]]}, "milano-pleated-trouser-2": {"h": "milano-pleated-trouser-2", "t": "Japanese Three Pleated Trouser", "type": "Trouser", "price": 1399.0, "cmp": 3999.0, "r": 4.0, "img": "IMG:fc76dc3c91d08516", "img2": "IMG:829cb10bbb639da4", "imgs": ["IMG:fc76dc3c91d08516", "IMG:829cb10bbb639da4"], "color": "Beige", "sizes": [["30", true], ["32", true], ["34", true], ["36", true]], "sw": [["Beige", "IMG:bd53ff65cbac4b2c", "milano-pleated-trouser-2"], ["Grey", "IMG:fc94491971435e6d", "milano-pleated-trouser-1"], ["Mint", "IMG:198b113a00b4bce9", "milano-pleated-trouser-3"], ["Light Beige", "IMG:b5df12e94979c97a", "milano-pleated-trouser-4"], ["Black", "IMG:dff61d0565d1ff52", "milano-pleated-trouser"]]}, "milano-pleated-trouser-1": {"h": "milano-pleated-trouser-1", "t": "Japanese Three Pleated Trouser", "type": "Trouser", "price": 1399.0, "cmp": 3999.0, "r": 4.2, "img": "IMG:60bf236cf6769f00", "img2": "IMG:a4be8994eab8dca8", "imgs": ["IMG:60bf236cf6769f00", "IMG:a4be8994eab8dca8"], "color": "Grey", "sizes": [["30", true], ["32", true], ["34", true], ["36", true]], "sw": [["Grey", "IMG:fc94491971435e6d", "milano-pleated-trouser-1"], ["Beige", "IMG:bd53ff65cbac4b2c", "milano-pleated-trouser-2"], ["Mint", "IMG:198b113a00b4bce9", "milano-pleated-trouser-3"], ["Light Beige", "IMG:b5df12e94979c97a", "milano-pleated-trouser-4"], ["Black", "IMG:dff61d0565d1ff52", "milano-pleated-trouser"]]}, "wide-leg-pleated-trouser-3": {"h": "wide-leg-pleated-trouser-3", "t": "Korean Pleated Pant - Wide Leg", "type": "Trouser", "price": 1199.0, "cmp": 3499.0, "r": 1.5, "img": "IMG:c02010b86f6f69f6", "img2": "IMG:4b9f524ec54d0554", "imgs": ["IMG:c02010b86f6f69f6", "IMG:4b9f524ec54d0554"], "color": "Blue", "sizes": [["30", true], ["32", true], ["34", true], ["36", true]], "sw": [["Blue", "IMG:8a4b0138f0d47657", "wide-leg-pleated-trouser-3"], ["Pista Green", "IMG:b946fe8c049c99a2", "wide-leg-pleated-trouser-4"], ["Black", "IMG:5aaa34882ac04afa", "wide-leg-pleated-trouser-2"], ["Green", "IMG:ef175121a83ed2a2", "wide-leg-pleated-trouser-1"], ["Brown", "IMG:f63f6708559d7233", "wide-leg-pleated-trouser"]]}, "wide-leg-pleated-trouser-2": {"h": "wide-leg-pleated-trouser-2", "t": "Korean Pleated Pant - Wide Leg", "type": "Trouser", "price": 1199.0, "cmp": 3499.0, "r": 4.0, "img": "IMG:485f1946df25c4e5", "img2": "IMG:c30ec37efcfaecc9", "imgs": ["IMG:485f1946df25c4e5", "IMG:c30ec37efcfaecc9"], "color": "Black", "sizes": [["30", false], ["32", true], ["34", true], ["36", true]], "sw": [["Black", "IMG:5aaa34882ac04afa", "wide-leg-pleated-trouser-2"], ["Pista Green", "IMG:b946fe8c049c99a2", "wide-leg-pleated-trouser-4"], ["Blue", "IMG:8a4b0138f0d47657", "wide-leg-pleated-trouser-3"], ["Green", "IMG:ef175121a83ed2a2", "wide-leg-pleated-trouser-1"], ["Brown", "IMG:f63f6708559d7233", "wide-leg-pleated-trouser"]]}, "wide-leg-pleated-trouser-1": {"h": "wide-leg-pleated-trouser-1", "t": "Korean Pleated Pant - Wide Leg", "type": "Trouser", "price": 1199.0, "cmp": 3499.0, "r": 1.0, "img": "IMG:aa97a5b0e071d39d", "img2": "IMG:219b86987e7ba16b", "imgs": ["IMG:aa97a5b0e071d39d", "IMG:219b86987e7ba16b"], "color": "Green", "sizes": [["30", true], ["32", true], ["34", true], ["36", true]], "sw": [["Green", "IMG:ef175121a83ed2a2", "wide-leg-pleated-trouser-1"], ["Pista Green", "IMG:b946fe8c049c99a2", "wide-leg-pleated-trouser-4"], ["Blue", "IMG:8a4b0138f0d47657", "wide-leg-pleated-trouser-3"], ["Black", "IMG:5aaa34882ac04afa", "wide-leg-pleated-trouser-2"], ["Brown", "IMG:f63f6708559d7233", "wide-leg-pleated-trouser"]]}, "stretch-ease-all-day-casual-pant-11": {"h": "stretch-ease-all-day-casual-pant-11", "t": "Stretch Ease All Day Casual Pant", "type": "Trouser", "price": 999.0, "cmp": 3499.0, "r": null, "img": "IMG:df82e4a0d57938cd", "img2": "IMG:a8134838ba785a57", "imgs": ["IMG:df82e4a0d57938cd", "IMG:a8134838ba785a57"], "color": "Light Grey", "sizes": [["30", true], ["32", true], ["34", true], ["36", true]], "sw": [["Light Grey", "IMG:df0263ad4238c750", "stretch-ease-all-day-casual-pant-11"], ["Dark Grey", "IMG:761678ada18b5f8d", "stretch-ease-all-day-casual-pant-10"], ["Olive", "IMG:6cfe45e18145e176", "stretch-ease-all-day-casual-pant-9"], ["Grey", "IMG:0358228ade0b2921", "stretch-ease-all-day-casual-pant-8"], ["Beige", "IMG:b215c5e4aba7676e", "stretch-ease-all-day-casual-pant-7"], ["Brown", "IMG:745d7049f854bf10", "stretch-ease-all-day-casual-pant-6"], ["Black", "IMG:2749340bc9cd839f", "stretch-ease-all-day-casual-pant-5"], ["Olive", "IMG:0142a33d6255e0ac", "stretch-ease-all-day-casual-pant-4"]]}, "stretch-ease-all-day-casual-pant-10": {"h": "stretch-ease-all-day-casual-pant-10", "t": "Stretch Ease All Day Casual Pant", "type": "Trouser", "price": 999.0, "cmp": 3499.0, "r": null, "img": "IMG:7ad159f956660de4", "img2": "IMG:2cd97a7d85199ffd", "imgs": ["IMG:7ad159f956660de4", "IMG:2cd97a7d85199ffd"], "color": "Dark Grey", "sizes": [["30", true], ["32", true], ["34", true], ["36", true]], "sw": [["Dark Grey", "IMG:761678ada18b5f8d", "stretch-ease-all-day-casual-pant-10"], ["Light Grey", "IMG:df0263ad4238c750", "stretch-ease-all-day-casual-pant-11"], ["Olive", "IMG:6cfe45e18145e176", "stretch-ease-all-day-casual-pant-9"], ["Grey", "IMG:0358228ade0b2921", "stretch-ease-all-day-casual-pant-8"], ["Beige", "IMG:b215c5e4aba7676e", "stretch-ease-all-day-casual-pant-7"], ["Brown", "IMG:745d7049f854bf10", "stretch-ease-all-day-casual-pant-6"], ["Black", "IMG:2749340bc9cd839f", "stretch-ease-all-day-casual-pant-5"], ["Olive", "IMG:0142a33d6255e0ac", "stretch-ease-all-day-casual-pant-4"]]}, "stretch-ease-all-day-casual-pant-9": {"h": "stretch-ease-all-day-casual-pant-9", "t": "Stretch Ease All Day Casual Pant", "type": "Trouser", "price": 999.0, "cmp": 3499.0, "r": null, "img": "IMG:b79677475ad5d8e8", "img2": "IMG:0fba5fbaeae2dd1f", "imgs": ["IMG:b79677475ad5d8e8", "IMG:0fba5fbaeae2dd1f"], "color": "Olive", "sizes": [["30", true], ["32", true], ["34", true], ["36", true]], "sw": [["Olive", "IMG:6cfe45e18145e176", "stretch-ease-all-day-casual-pant-9"], ["Light Grey", "IMG:df0263ad4238c750", "stretch-ease-all-day-casual-pant-11"], ["Dark Grey", "IMG:761678ada18b5f8d", "stretch-ease-all-day-casual-pant-10"], ["Grey", "IMG:0358228ade0b2921", "stretch-ease-all-day-casual-pant-8"], ["Beige", "IMG:b215c5e4aba7676e", "stretch-ease-all-day-casual-pant-7"], ["Brown", "IMG:745d7049f854bf10", "stretch-ease-all-day-casual-pant-6"], ["Black", "IMG:2749340bc9cd839f", "stretch-ease-all-day-casual-pant-5"], ["Olive", "IMG:0142a33d6255e0ac", "stretch-ease-all-day-casual-pant-4"]]}, "stretch-ease-all-day-casual-pant-8": {"h": "stretch-ease-all-day-casual-pant-8", "t": "Stretch Ease All Day Casual Pant", "type": "Trouser", "price": 999.0, "cmp": 3499.0, "r": null, "img": "IMG:faf27bf4bae18a65", "img2": "IMG:241709a7509f4792", "imgs": ["IMG:faf27bf4bae18a65", "IMG:241709a7509f4792"], "color": "Grey", "sizes": [["30", true], ["32", true], ["34", true], ["36", true]], "sw": [["Grey", "IMG:0358228ade0b2921", "stretch-ease-all-day-casual-pant-8"], ["Light Grey", "IMG:df0263ad4238c750", "stretch-ease-all-day-casual-pant-11"], ["Dark Grey", "IMG:761678ada18b5f8d", "stretch-ease-all-day-casual-pant-10"], ["Olive", "IMG:6cfe45e18145e176", "stretch-ease-all-day-casual-pant-9"], ["Beige", "IMG:b215c5e4aba7676e", "stretch-ease-all-day-casual-pant-7"], ["Brown", "IMG:745d7049f854bf10", "stretch-ease-all-day-casual-pant-6"], ["Black", "IMG:2749340bc9cd839f", "stretch-ease-all-day-casual-pant-5"], ["Olive", "IMG:0142a33d6255e0ac", "stretch-ease-all-day-casual-pant-4"]]}, "stretch-ease-all-day-casual-pant-7": {"h": "stretch-ease-all-day-casual-pant-7", "t": "Stretch Ease All Day Casual Pant", "type": "Trouser", "price": 999.0, "cmp": 3499.0, "r": null, "img": "IMG:14092bbb1450b018", "img2": "IMG:a4b260171c3d2c09", "imgs": ["IMG:14092bbb1450b018", "IMG:a4b260171c3d2c09"], "color": "Beige", "sizes": [["30", true], ["32", true], ["34", true], ["36", true]], "sw": [["Beige", "IMG:b215c5e4aba7676e", "stretch-ease-all-day-casual-pant-7"], ["Light Grey", "IMG:df0263ad4238c750", "stretch-ease-all-day-casual-pant-11"], ["Dark Grey", "IMG:761678ada18b5f8d", "stretch-ease-all-day-casual-pant-10"], ["Olive", "IMG:6cfe45e18145e176", "stretch-ease-all-day-casual-pant-9"], ["Grey", "IMG:0358228ade0b2921", "stretch-ease-all-day-casual-pant-8"], ["Brown", "IMG:745d7049f854bf10", "stretch-ease-all-day-casual-pant-6"], ["Black", "IMG:2749340bc9cd839f", "stretch-ease-all-day-casual-pant-5"], ["Olive", "IMG:0142a33d6255e0ac", "stretch-ease-all-day-casual-pant-4"]]}, "stretch-ease-all-day-casual-pant-6": {"h": "stretch-ease-all-day-casual-pant-6", "t": "Stretch Ease All Day Casual Pant", "type": "Trouser", "price": 999.0, "cmp": 3499.0, "r": null, "img": "IMG:0900bd1051c2e4ac", "img2": "IMG:841499575874b8e0", "imgs": ["IMG:0900bd1051c2e4ac", "IMG:841499575874b8e0"], "color": "Brown", "sizes": [["30", true], ["32", true], ["34", true], ["36", true]], "sw": [["Brown", "IMG:745d7049f854bf10", "stretch-ease-all-day-casual-pant-6"], ["Light Grey", "IMG:df0263ad4238c750", "stretch-ease-all-day-casual-pant-11"], ["Dark Grey", "IMG:761678ada18b5f8d", "stretch-ease-all-day-casual-pant-10"], ["Olive", "IMG:6cfe45e18145e176", "stretch-ease-all-day-casual-pant-9"], ["Grey", "IMG:0358228ade0b2921", "stretch-ease-all-day-casual-pant-8"], ["Beige", "IMG:b215c5e4aba7676e", "stretch-ease-all-day-casual-pant-7"], ["Black", "IMG:2749340bc9cd839f", "stretch-ease-all-day-casual-pant-5"], ["Olive", "IMG:0142a33d6255e0ac", "stretch-ease-all-day-casual-pant-4"]]}, "stretch-ease-all-day-casual-pant-5": {"h": "stretch-ease-all-day-casual-pant-5", "t": "Stretch Ease All Day Casual Pant", "type": "Trouser", "price": 999.0, "cmp": 3499.0, "r": 5.0, "img": "IMG:963f682e9ecc70bd", "img2": "IMG:aca14c322afb7f42", "imgs": ["IMG:963f682e9ecc70bd", "IMG:aca14c322afb7f42"], "color": "Black", "sizes": [["30", false], ["32", true], ["34", true], ["36", false]], "sw": [["Black", "IMG:2749340bc9cd839f", "stretch-ease-all-day-casual-pant-5"], ["Light Grey", "IMG:df0263ad4238c750", "stretch-ease-all-day-casual-pant-11"], ["Dark Grey", "IMG:761678ada18b5f8d", "stretch-ease-all-day-casual-pant-10"], ["Olive", "IMG:6cfe45e18145e176", "stretch-ease-all-day-casual-pant-9"], ["Grey", "IMG:0358228ade0b2921", "stretch-ease-all-day-casual-pant-8"], ["Beige", "IMG:b215c5e4aba7676e", "stretch-ease-all-day-casual-pant-7"], ["Brown", "IMG:745d7049f854bf10", "stretch-ease-all-day-casual-pant-6"], ["Olive", "IMG:0142a33d6255e0ac", "stretch-ease-all-day-casual-pant-4"]]}, "stretch-ease-all-day-casual-pant-4": {"h": "stretch-ease-all-day-casual-pant-4", "t": "Stretch Ease All Day Casual Pant", "type": "Trouser", "price": 999.0, "cmp": 3499.0, "r": null, "img": "IMG:9fcee970a71e43ac", "img2": "IMG:5d4da7acb5fee9a4", "imgs": ["IMG:9fcee970a71e43ac", "IMG:5d4da7acb5fee9a4"], "color": "Olive", "sizes": [["30", true], ["32", true], ["34", true], ["36", true]], "sw": [["Olive", "IMG:0142a33d6255e0ac", "stretch-ease-all-day-casual-pant-4"], ["Light Grey", "IMG:df0263ad4238c750", "stretch-ease-all-day-casual-pant-11"], ["Dark Grey", "IMG:761678ada18b5f8d", "stretch-ease-all-day-casual-pant-10"], ["Olive", "IMG:6cfe45e18145e176", "stretch-ease-all-day-casual-pant-9"], ["Grey", "IMG:0358228ade0b2921", "stretch-ease-all-day-casual-pant-8"], ["Beige", "IMG:b215c5e4aba7676e", "stretch-ease-all-day-casual-pant-7"], ["Brown", "IMG:745d7049f854bf10", "stretch-ease-all-day-casual-pant-6"], ["Black", "IMG:2749340bc9cd839f", "stretch-ease-all-day-casual-pant-5"]]}, "stretch-ease-all-day-casual-pant-3": {"h": "stretch-ease-all-day-casual-pant-3", "t": "Stretch Ease All Day Casual Pant", "type": "Trouser", "price": 999.0, "cmp": 3499.0, "r": null, "img": "IMG:c84575282ceae666", "img2": "IMG:6de55372c7cd1f7b", "imgs": ["IMG:c84575282ceae666", "IMG:6de55372c7cd1f7b"], "color": "Dark Grey", "sizes": [["30", true], ["32", true], ["34", true], ["36", true]], "sw": [["Dark Grey", "IMG:11327a6e7d52696e", "stretch-ease-all-day-casual-pant-3"], ["Light Grey", "IMG:df0263ad4238c750", "stretch-ease-all-day-casual-pant-11"], ["Dark Grey", "IMG:761678ada18b5f8d", "stretch-ease-all-day-casual-pant-10"], ["Olive", "IMG:6cfe45e18145e176", "stretch-ease-all-day-casual-pant-9"], ["Grey", "IMG:0358228ade0b2921", "stretch-ease-all-day-casual-pant-8"], ["Beige", "IMG:b215c5e4aba7676e", "stretch-ease-all-day-casual-pant-7"], ["Brown", "IMG:745d7049f854bf10", "stretch-ease-all-day-casual-pant-6"], ["Black", "IMG:2749340bc9cd839f", "stretch-ease-all-day-casual-pant-5"]]}, "stretch-ease-all-day-casual-pant-2": {"h": "stretch-ease-all-day-casual-pant-2", "t": "Stretch Ease All Day Casual Pant", "type": "Trouser", "price": 999.0, "cmp": 3499.0, "r": null, "img": "IMG:8ff337f14b4db36d", "img2": "IMG:44d33e83ef2b8ced", "imgs": ["IMG:8ff337f14b4db36d", "IMG:44d33e83ef2b8ced"], "color": "Black", "sizes": [["30", true], ["32", true], ["34", true], ["36", true]], "sw": [["Black", "IMG:74e917c782b747a5", "stretch-ease-all-day-casual-pant-2"], ["Light Grey", "IMG:df0263ad4238c750", "stretch-ease-all-day-casual-pant-11"], ["Dark Grey", "IMG:761678ada18b5f8d", "stretch-ease-all-day-casual-pant-10"], ["Olive", "IMG:6cfe45e18145e176", "stretch-ease-all-day-casual-pant-9"], ["Grey", "IMG:0358228ade0b2921", "stretch-ease-all-day-casual-pant-8"], ["Beige", "IMG:b215c5e4aba7676e", "stretch-ease-all-day-casual-pant-7"], ["Brown", "IMG:745d7049f854bf10", "stretch-ease-all-day-casual-pant-6"], ["Black", "IMG:2749340bc9cd839f", "stretch-ease-all-day-casual-pant-5"]]}, "stretch-ease-all-day-casual-pant-1": {"h": "stretch-ease-all-day-casual-pant-1", "t": "Stretch Ease All Day Casual Pant", "type": "Trouser", "price": 999.0, "cmp": 3499.0, "r": null, "img": "IMG:c81178313148019e", "img2": "IMG:9815fad1f0b2652a", "imgs": ["IMG:c81178313148019e", "IMG:9815fad1f0b2652a"], "color": "Dark Brown", "sizes": [["30", true], ["32", true], ["34", true], ["36", true]], "sw": [["Dark Brown", "IMG:c3a2985dc2d00e80", "stretch-ease-all-day-casual-pant-1"], ["Light Grey", "IMG:df0263ad4238c750", "stretch-ease-all-day-casual-pant-11"], ["Dark Grey", "IMG:761678ada18b5f8d", "stretch-ease-all-day-casual-pant-10"], ["Olive", "IMG:6cfe45e18145e176", "stretch-ease-all-day-casual-pant-9"], ["Grey", "IMG:0358228ade0b2921", "stretch-ease-all-day-casual-pant-8"], ["Beige", "IMG:b215c5e4aba7676e", "stretch-ease-all-day-casual-pant-7"], ["Brown", "IMG:745d7049f854bf10", "stretch-ease-all-day-casual-pant-6"], ["Black", "IMG:2749340bc9cd839f", "stretch-ease-all-day-casual-pant-5"]]}, "stretch-ease-all-day-casual-pant-copy": {"h": "stretch-ease-all-day-casual-pant-copy", "t": "Stretch Ease All Day Casual Pant", "type": "Trouser", "price": 999.0, "cmp": 3499.0, "r": null, "img": "IMG:b0f1a5fe1a7603b0", "img2": "IMG:ba44db41b12ee810", "imgs": ["IMG:b0f1a5fe1a7603b0", "IMG:ba44db41b12ee810"], "color": "Light Grey", "sizes": [["30", true], ["32", true], ["34", true], ["36", true]], "sw": [["Light Grey", "IMG:2262c6e0bc3098d3", "stretch-ease-all-day-casual-pant-copy"], ["Light Grey", "IMG:df0263ad4238c750", "stretch-ease-all-day-casual-pant-11"], ["Dark Grey", "IMG:761678ada18b5f8d", "stretch-ease-all-day-casual-pant-10"], ["Olive", "IMG:6cfe45e18145e176", "stretch-ease-all-day-casual-pant-9"], ["Grey", "IMG:0358228ade0b2921", "stretch-ease-all-day-casual-pant-8"], ["Beige", "IMG:b215c5e4aba7676e", "stretch-ease-all-day-casual-pant-7"], ["Brown", "IMG:745d7049f854bf10", "stretch-ease-all-day-casual-pant-6"], ["Black", "IMG:2749340bc9cd839f", "stretch-ease-all-day-casual-pant-5"]]}, "grey-adjustable-gurkha-trouser-copy": {"h": "grey-adjustable-gurkha-trouser-copy", "t": "Stretch Ease Casual Pant", "type": "Trouser", "price": 999.0, "cmp": 3499.0, "r": 5.0, "img": "IMG:a753a1e742aa0fb8", "img2": "IMG:504b94968d06b25c", "imgs": ["IMG:a753a1e742aa0fb8", "IMG:504b94968d06b25c"], "color": "grey", "sizes": [["30", true], ["32", true], ["34", true], ["36", true]], "sw": [["grey", "IMG:d3431cf74a09498a", "grey-adjustable-gurkha-trouser-copy"]]}, "black-adjustable-gurkha-trouser": {"h": "black-adjustable-gurkha-trouser", "t": "Adjustable Gurkha Trouser", "type": "Trouser", "price": 1199.0, "cmp": 3499.0, "r": 4.0, "img": "IMG:115ed50555d3857e", "img2": "IMG:833c79bd0bc8cbad", "imgs": ["IMG:115ed50555d3857e", "IMG:833c79bd0bc8cbad"], "color": "black", "sizes": [["30", false], ["32", true], ["34", false], ["36", false]], "sw": [["black", "IMG:e06803b1abc93b84", "black-adjustable-gurkha-trouser"], ["Green", "IMG:d93a37d10d150661", "green-adjustable-fastening-gurkha-trouser"]]}, "beige-linen-casual-trouser": {"h": "beige-linen-casual-trouser", "t": "Casual Cotton Linen Trouser", "type": "Trouser", "price": 1199.0, "cmp": 3499.0, "r": 4.4, "img": "IMG:b260e2c6b83831cb", "img2": "IMG:337e80aaafdfe01c", "imgs": ["IMG:b260e2c6b83831cb", "IMG:337e80aaafdfe01c"], "color": "Beige", "sizes": [["30", true], ["32", true], ["34", true], ["36", false], ["38", true]], "sw": [["Beige", "IMG:a4ac857e8af8f1e2", "beige-linen-casual-trouser"], ["Nude", "IMG:0eff31a2ee1227f4", "nude-linen-casual-trouser"], ["Grey", "IMG:553be9c3d34bf0da", "grey-linen-casual-trouser"], ["Black", "IMG:d9a2bd36ba629cf9", "black-linen-casual-trouser"], ["White", "IMG:6ab37d48ecc94234", "white-linen-casual-trouser"]]}, "nude-linen-casual-trouser": {"h": "nude-linen-casual-trouser", "t": "Casual Cotton Linen Trouser", "type": "Trouser", "price": 1199.0, "cmp": 3499.0, "r": 4.4, "img": "IMG:c02934ed63b77495", "img2": "IMG:0ee2db30e71f036e", "imgs": ["IMG:c02934ed63b77495", "IMG:0ee2db30e71f036e"], "color": "Nude", "sizes": [["30", true], ["32", true], ["34", true], ["36", true], ["38", true]], "sw": [["Nude", "IMG:0eff31a2ee1227f4", "nude-linen-casual-trouser"], ["Beige", "IMG:a4ac857e8af8f1e2", "beige-linen-casual-trouser"], ["Grey", "IMG:553be9c3d34bf0da", "grey-linen-casual-trouser"], ["Black", "IMG:d9a2bd36ba629cf9", "black-linen-casual-trouser"], ["White", "IMG:6ab37d48ecc94234", "white-linen-casual-trouser"]]}, "grey-linen-casual-trouser": {"h": "grey-linen-casual-trouser", "t": "Casual Cotton Linen Trouser", "type": "Trouser", "price": 1199.0, "cmp": 3499.0, "r": 5.0, "img": "IMG:46a9b4f4b54935b9", "img2": "IMG:22d12707b9623e20", "imgs": ["IMG:46a9b4f4b54935b9", "IMG:22d12707b9623e20"], "color": "Grey", "sizes": [["30", false], ["32", false], ["34", false], ["36", true], ["38", false]], "sw": [["Grey", "IMG:553be9c3d34bf0da", "grey-linen-casual-trouser"], ["Beige", "IMG:a4ac857e8af8f1e2", "beige-linen-casual-trouser"], ["Nude", "IMG:0eff31a2ee1227f4", "nude-linen-casual-trouser"], ["Black", "IMG:d9a2bd36ba629cf9", "black-linen-casual-trouser"], ["White", "IMG:6ab37d48ecc94234", "white-linen-casual-trouser"]]}, "light-grey-linen-casual-trouser": {"h": "light-grey-linen-casual-trouser", "t": "Casual Cotton  Linen Trouser", "type": "Trouser", "price": 1199.0, "cmp": 3499.0, "r": 4.5, "img": "IMG:b995bc1d64434e13", "img2": "IMG:0d92a17ce5c7465f", "imgs": ["IMG:b995bc1d64434e13", "IMG:0d92a17ce5c7465f"], "color": "Light Grey", "sizes": [["30", true], ["32", true], ["34", true], ["36", true], ["38", true]], "sw": [["Light Grey", "IMG:e5997d7255fa0a68", "light-grey-linen-casual-trouser"]]}, "black-linen-casual-trouser": {"h": "black-linen-casual-trouser", "t": "Casual Cotton Linen Trouser", "type": "Trouser", "price": 1199.0, "cmp": 3499.0, "r": 4.7, "img": "IMG:3512258ce9d67599", "img2": "IMG:1742f8360e4bd0fb", "imgs": ["IMG:3512258ce9d67599", "IMG:1742f8360e4bd0fb"], "color": "Black", "sizes": [["30", true], ["32", true], ["34", true], ["36", false], ["38", true]], "sw": [["Black", "IMG:d9a2bd36ba629cf9", "black-linen-casual-trouser"], ["Beige", "IMG:a4ac857e8af8f1e2", "beige-linen-casual-trouser"], ["Nude", "IMG:0eff31a2ee1227f4", "nude-linen-casual-trouser"], ["Grey", "IMG:553be9c3d34bf0da", "grey-linen-casual-trouser"], ["White", "IMG:6ab37d48ecc94234", "white-linen-casual-trouser"]]}, "white-linen-casual-trouser": {"h": "white-linen-casual-trouser", "t": "Casual Cotton Linen Trouser", "type": "Trouser", "price": 1199.0, "cmp": 3499.0, "r": 4.3, "img": "IMG:d1837cfe26decfa0", "img2": "IMG:5f6ebfe14ca3ba6b", "imgs": ["IMG:d1837cfe26decfa0", "IMG:5f6ebfe14ca3ba6b"], "color": "White", "sizes": [["30", true], ["32", true], ["34", true], ["36", false], ["38", false]], "sw": [["White", "IMG:6ab37d48ecc94234", "white-linen-casual-trouser"], ["Beige", "IMG:a4ac857e8af8f1e2", "beige-linen-casual-trouser"], ["Nude", "IMG:0eff31a2ee1227f4", "nude-linen-casual-trouser"], ["Grey", "IMG:553be9c3d34bf0da", "grey-linen-casual-trouser"], ["Black", "IMG:d9a2bd36ba629cf9", "black-linen-casual-trouser"]]}, "green-adjustable-fastening-gurkha-trouser": {"h": "green-adjustable-fastening-gurkha-trouser", "t": "Adjustable Gurkha Trouser", "type": "Trouser", "price": 1199.0, "cmp": 3499.0, "r": 4.3, "img": "IMG:6bdc8d4950d52201", "img2": "IMG:13f5d6062d3646eb", "imgs": ["IMG:6bdc8d4950d52201", "IMG:13f5d6062d3646eb"], "color": "Green", "sizes": [["30", false], ["32", true], ["34", false], ["36", false]], "sw": [["Green", "IMG:d93a37d10d150661", "green-adjustable-fastening-gurkha-trouser"], ["black", "IMG:e06803b1abc93b84", "black-adjustable-gurkha-trouser"]]}, "blue-checkered-flexi-waist-korean-pant": {"h": "blue-checkered-flexi-waist-korean-pant", "t": "Flexi Waist Formal Trouser", "type": "Trouser", "price": 1199.0, "cmp": 3499.0, "r": 4.6, "img": "IMG:f719cc78b16a10f4", "img2": "IMG:0671fa4d503f2b96", "imgs": ["IMG:f719cc78b16a10f4", "IMG:0671fa4d503f2b96"], "color": "Blue", "sizes": [["30", false], ["32", true], ["34", true], ["36", true]], "sw": [["Blue", "IMG:b161b03b7487a3a3", "blue-checkered-flexi-waist-korean-pant"]]}, "green-striped-baggy-fit-korean-pant": {"h": "green-striped-baggy-fit-korean-pant", "t": "Striped Korean Trouser", "type": "Trouser", "price": 1199.0, "cmp": 3499.0, "r": 4.0, "img": "IMG:092242b7fcf9822b", "img2": "IMG:9494e1d02b585747", "imgs": ["IMG:092242b7fcf9822b", "IMG:9494e1d02b585747"], "color": "Green", "sizes": [["30", false], ["32", false], ["34", true], ["36", false]], "sw": [["Green", "IMG:ce94e4ce25da4536", "green-striped-baggy-fit-korean-pant"], ["Beige", "IMG:2267248f090e125a", "beige-striped-baggy-fit-korean-pant"], ["Grey", "IMG:c9c8e61439eb2f08", "grey-striped-baggy-fit-korean-pant"]]}, "beige-striped-baggy-fit-korean-pant": {"h": "beige-striped-baggy-fit-korean-pant", "t": "Striped Korean Trouser", "type": "Trouser", "price": 1199.0, "cmp": 3499.0, "r": 5.0, "img": "IMG:424ea10a94c8ef3a", "img2": "IMG:b0068f64d2f0c5c3", "imgs": ["IMG:424ea10a94c8ef3a", "IMG:b0068f64d2f0c5c3"], "color": "Beige", "sizes": [["30", false], ["32", true], ["34", false], ["36", false]], "sw": [["Beige", "IMG:2267248f090e125a", "beige-striped-baggy-fit-korean-pant"], ["Green", "IMG:ce94e4ce25da4536", "green-striped-baggy-fit-korean-pant"], ["Grey", "IMG:c9c8e61439eb2f08", "grey-striped-baggy-fit-korean-pant"]]}, "grey-striped-baggy-fit-korean-pant": {"h": "grey-striped-baggy-fit-korean-pant", "t": "Striped Korean Trouser", "type": "Trouser", "price": 1199.0, "cmp": 3499.0, "r": 5.0, "img": "IMG:42d855b81a49b9f2", "img2": "IMG:94889c029602bfcc", "imgs": ["IMG:42d855b81a49b9f2", "IMG:94889c029602bfcc"], "color": "Grey", "sizes": [["30", true], ["32", false], ["34", false], ["36", false]], "sw": [["Grey", "IMG:c9c8e61439eb2f08", "grey-striped-baggy-fit-korean-pant"], ["Green", "IMG:ce94e4ce25da4536", "green-striped-baggy-fit-korean-pant"], ["Beige", "IMG:2267248f090e125a", "beige-striped-baggy-fit-korean-pant"]]}, "dark-green-korean-baggy-fit-inverted-pleated-casual-trouser": {"h": "dark-green-korean-baggy-fit-inverted-pleated-casual-trouser", "t": "Baggy Korean Trouser", "type": "Trouser", "price": 1199.0, "cmp": 3499.0, "r": 4.4, "img": "IMG:09830eee1e4d5dc9", "img2": "IMG:9369327958042724", "imgs": ["IMG:09830eee1e4d5dc9", "IMG:9369327958042724"], "color": "Dark Green", "sizes": [["30", true], ["32", true], ["34", true], ["36", true]], "sw": [["Dark Green", "IMG:f60445d13f0af928", "dark-green-korean-baggy-fit-inverted-pleated-casual-trouser"]]}, "korean-baggy-fit-trouser-1": {"h": "korean-baggy-fit-trouser-1", "t": "Korean Baggy Fit Trouser", "type": "Trouser", "price": 999.0, "cmp": 2999.0, "r": null, "img": "IMG:ad92bcdfe1ee2ff9", "img2": "IMG:c76e981eb5d6547f", "imgs": ["IMG:ad92bcdfe1ee2ff9", "IMG:c76e981eb5d6547f", "IMG:59a1765bc143af00", "IMG:6b805ea5dfad36dd", "IMG:40d10fde985f351d", "IMG:2fa39e8b689c616d", "IMG:b3e162d172d590fb", "IMG:eea877d87f1d94d2"], "color": "Grey", "sizes": [["30", false], ["32", true], ["34", true], ["36", true]], "sw": [["Black", "IMG:71ea0732dcd3b6c0", "korean-baggy-fit-trouser-5"], ["Grey", "IMG:ad92bcdfe1ee2ff9", "korean-baggy-fit-trouser-1"], ["Brown", "IMG:c503ff9d6159a320", "korean-baggy-fit-trouser-2"], ["Pearl Grey", "IMG:0dc8c8b805ef6f72", "korean-baggy-fit-trouser-3"], ["Dark Brown", "IMG:1502d325083980ae", "korean-baggy-fit-trouser-4"]]}, "korean-baggy-fit-trouser": {"h": "korean-baggy-fit-trouser", "t": "Korean Baggy Fit Trouser", "type": "Trouser", "price": 999.0, "cmp": 2999.0, "r": null, "img": "IMG:2d7426e0f3cb64c0", "img2": "IMG:04b274a94b369552", "imgs": ["IMG:2d7426e0f3cb64c0", "IMG:04b274a94b369552"], "color": "Beige", "sizes": [["30", false], ["32", false], ["34", true], ["36", true]], "sw": [["Beige", "IMG:170dacbb39d5997d", "korean-baggy-fit-trouser"], ["Grey", "IMG:e7d4b4191727f1f6", "korean-baggy-fit-trouser-1"], ["Brown", "IMG:122fc354ca3ca845", "korean-baggy-fit-trouser-2"], ["Pearl Grey", "IMG:e8a6c551ddbc14b8", "korean-baggy-fit-trouser-3"], ["Dark Brown", "IMG:e0d7551feeb7a450", "korean-baggy-fit-trouser-4"], ["Black", "IMG:05d47c0da9b0b66e", "korean-baggy-fit-trouser-5"], ["Light Grey", "IMG:b921caca46ab28bf", "korean-baggy-fit-trouser-6"], ["Coffee Brown", "IMG:121131fcbe97eda1", "korean-baggy-fit-trouser-7"]]}, "korean-baggy-fit-trouser-6": {"h": "korean-baggy-fit-trouser-6", "t": "Korean Baggy Fit Trouser", "type": "Trouser", "price": 999.0, "cmp": 2999.0, "r": null, "img": "IMG:9a337eca7178d0a3", "img2": "IMG:8693da71dd75dbc7", "imgs": ["IMG:9a337eca7178d0a3", "IMG:8693da71dd75dbc7", "IMG:d47dafd78ac53ef0", "IMG:9a358f4340b073e8", "IMG:ab35e4b65ecb65c7", "IMG:37c4a73ebbdc23a1", "IMG:9d64f6af247c65d4"], "color": "Light Grey", "sizes": [["30", true], ["32", true], ["34", true], ["36", true]], "sw": [["Light Grey", "IMG:b921caca46ab28bf", "korean-baggy-fit-trouser-6"], ["Beige", "IMG:170dacbb39d5997d", "korean-baggy-fit-trouser"], ["Grey", "IMG:e7d4b4191727f1f6", "korean-baggy-fit-trouser-1"], ["Brown", "IMG:122fc354ca3ca845", "korean-baggy-fit-trouser-2"], ["Pearl Grey", "IMG:e8a6c551ddbc14b8", "korean-baggy-fit-trouser-3"], ["Dark Brown", "IMG:e0d7551feeb7a450", "korean-baggy-fit-trouser-4"], ["Black", "IMG:05d47c0da9b0b66e", "korean-baggy-fit-trouser-5"], ["Coffee Brown", "IMG:121131fcbe97eda1", "korean-baggy-fit-trouser-7"]]}, "korean-baggy-fit-trouser-7": {"h": "korean-baggy-fit-trouser-7", "t": "Korean Baggy Fit Trouser", "type": "Trouser", "price": 999.0, "cmp": 2999.0, "r": null, "img": "IMG:42e3908b26878c48", "img2": "IMG:142c21a14f73fd3f", "imgs": ["IMG:42e3908b26878c48", "IMG:142c21a14f73fd3f", "IMG:0f6a41217d752eeb", "IMG:4daf64e44e3a71bd", "IMG:a73a228154f0750c", "IMG:25f8e1da725c09e8", "IMG:7d3c315ced2b02b6", "IMG:e79bf9bbb93ba406"], "color": "Coffee Brown", "sizes": [["30", false], ["32", true], ["34", true], ["36", false]], "sw": [["Coffee Brown", "IMG:121131fcbe97eda1", "korean-baggy-fit-trouser-7"], ["Beige", "IMG:170dacbb39d5997d", "korean-baggy-fit-trouser"], ["Grey", "IMG:e7d4b4191727f1f6", "korean-baggy-fit-trouser-1"], ["Brown", "IMG:122fc354ca3ca845", "korean-baggy-fit-trouser-2"], ["Pearl Grey", "IMG:e8a6c551ddbc14b8", "korean-baggy-fit-trouser-3"], ["Dark Brown", "IMG:e0d7551feeb7a450", "korean-baggy-fit-trouser-4"], ["Black", "IMG:05d47c0da9b0b66e", "korean-baggy-fit-trouser-5"], ["Light Grey", "IMG:b921caca46ab28bf", "korean-baggy-fit-trouser-6"]]}}))),window.REC=["classic-bootcut-trouser-5", "classic-bootcut-trouser-4", "korean-baggy-fit-trouser-5", "vertical-striped-spread-collar-shirt-1", "classic-bootcut-trouser-7", "classic-bootcut-trouser-6", "korean-baggy-fit-trouser-9", "korean-baggy-fit-trouser-4", "black-baggy-fit-korean-trouser", "grey-baggy-fit-jeans"];window.LOOKS=JSON.parse(__R(JSON.stringify([{"v": "assets/look0.mp4", "poster": "IMG:look0", "p": "vertical-striped-spread-collar-shirt-1"}, {"v": "assets/look1.mp4", "poster": "IMG:look1", "p": "korean-baggy-fit-trouser-5"}, {"v": "assets/look2.mp4", "poster": "IMG:look2", "p": "vertical-striped-spread-collar-shirt-1"}, {"v": "assets/look3.mp4", "poster": "IMG:look3", "p": "classic-bootcut-trouser-5"}, {"v": "assets/look4.mp4", "poster": "IMG:look4", "p": "korean-baggy-fit-trouser-9"}, {"v": "assets/look5.mp4", "poster": "IMG:look5", "p": "vertical-striped-spread-collar-shirt-1"}, {"v": "assets/look6.mp4", "poster": "IMG:look6", "p": "korean-baggy-fit-trouser-4"}])));</script>
+<script>
+(function(){
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const LS={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const P=window.P||{};
+const fmt=n=>'Rs. '+Number(n).toLocaleString('en-IN',{minimumFractionDigits:2,maximumFractionDigits:2});
+const fmt0=n=>'Rs. '+Math.round(n).toLocaleString('en-IN');
+const STAR='<svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.6 7.2.9-5.3 5 1.4 7.1L12 18.1 5.6 21.6 7 14.5 1.7 9.5l7.2-.9z"/></svg>';
+function toast(t){let e=$('.toast');if(!e){e=document.createElement('div');e.className='toast';document.body.appendChild(e)}e.textContent=t;e.classList.add('on');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('on'),1800)}
+
+/* gate */
+const gate=$('#gate');
+if(gate){ if(LS.get('dn_gate_ok',false)){gate.remove()}else{document.body.classList.add('gated');
+  const go=()=>{if($('#gpw').value.trim().toLowerCase()===window.GATE_PW){LS.set('dn_gate_ok',true);gate.remove();document.body.classList.remove('gated')}else{$('#gate .err').textContent='Incorrect password'}};
+  $('#gate button').onclick=go;$('#gpw').addEventListener('keydown',e=>{if(e.key==='Enter')go()});}}
+
+/* preview viewport toggle */
+const setView=v=>{document.body.classList.toggle('mobile',v==='m');$$('#pbar .vt button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));LS.set('dn_view',v);setTimeout(()=>window.dispatchEvent(new Event('resize')),50)};
+if($('#pbar')){setView(LS.get('dn_view','d'));$$('#pbar .vt button').forEach(b=>b.onclick=()=>setView(b.dataset.v))}
+const isMob=()=>{const vp=$('#viewport');return (vp?vp.clientWidth:innerWidth)<=760};
+
+/* header shadow + hdr height */
+const hdr=$('.site-header');
+addEventListener('scroll',()=>hdr&&hdr.classList.toggle('stuck',scrollY>30),{passive:true});
+
+/* overlays */
+const ovl=$('.ovl');
+function openPanel(el){closeAll();el.classList.add('on');ovl.classList.add('on');ovl._p=el}
+function closeAll(){$$('.nav-drawer.on,.cart-dr.on,.sheet.on,.search-ov.on').forEach(e=>e.classList.remove('on'));ovl&&ovl.classList.remove('on');resetDrawer()}
+ovl&&(ovl.onclick=closeAll);
+addEventListener('keydown',e=>{if(e.key==='Escape'){closeAll();closeModal();closeReel()}});
+
+/* drawer drill-down */
+function resetDrawer(){setTimeout(()=>{$$('.dview.sub').forEach(v=>v.classList.remove('on'));$$('.dview.root,.dview.sub').forEach(v=>v.classList.remove('push'))},350)}
+function pushView(id){const v=$('#'+id);if(!v)return;const cur=$$('.dview.on').pop()||$('.dview.root');cur.classList.add('push');v.classList.add('on')}
+function popView(btn){const v=btn.closest('.dview');v.classList.remove('on');const prev=$$('.dview.on').filter(x=>x!==v).pop()||$('.dview.root');prev.classList.remove('push')}
+
+/* wishlist */
+let WL=LS.get('dn_wl',[]);
+function syncWL(){$$('[data-wl]').forEach(b=>b.classList.toggle('on',WL.includes(b.dataset.wl)));$$('.wl-cnt').forEach(c=>{c.textContent=WL.length;c.dataset.z=WL.length?0:1})}
+function toggleWL(h){const i=WL.indexOf(h);if(i>-1){WL.splice(i,1);toast('Removed from wishlist')}else{WL.push(h);toast('Added to wishlist')}LS.set('dn_wl',WL);syncWL();renderWLPage()}
+function cardHTML(p){if(!p)return '';const bv=p.price*0.8;
+ return `<div class="pc"><div class="imw"><a href="product.html" class="im"><img src="${p.img}" alt="" loading="lazy"><img class="h2" src="${p.img2}" alt="" loading="lazy"></a>
+ <button class="heart" data-act="wl" data-wl="${p.h}" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.8 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.3 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
+ <button class="qa" data-act="quick" data-h="${p.h}" aria-label="Quick add"><svg class="svg" viewBox="0 0 24 24"><path d="M5 8h14l-1 13H6L5 8z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg></button></div>
+ <div class="meta"><a href="product.html" class="tt">${p.t}</a><div class="pr"><span>${fmt(p.price)}</span>${p.r?`<span class="rt">${STAR}${p.r.toFixed(1)}</span>`:''}</div>
+ <span class="bv">BEST Value: <b>${fmt(bv)}*</b></span></div></div>`}
+window.cardHTML=cardHTML;
+function renderWLPage(){const g=$('#wlgrid');if(!g)return;g.innerHTML=WL.length?WL.map(h=>cardHTML(P[h])).join(''):'<div class="empty">Your wishlist is empty. Tap the ♡ on any product to save it here.<br><br><a class="btn" href="collection.html">Shop trousers</a></div>';syncWL()}
+
+/* cart */
+let CART=LS.get('dn_cart',[]), SFL=LS.get('dn_sfl',[]);
+const saveCart=()=>{LS.set('dn_cart',CART);LS.set('dn_sfl',SFL);renderCart()};
+function addToCart(h,size,qty=1){const ex=CART.find(i=>i.h===h&&i.s===size);if(ex)ex.q+=qty;else CART.push({h,s:size,q:qty});saveCart()}
+function cartTotals(){const n=CART.reduce((a,i)=>a+i.q,0);const sub=CART.reduce((a,i)=>a+(P[i.h]?P[i.h].price:0)*i.q,0);const d=n>=3?.25:n>=2?.2:0;return{n,sub,d,tot:sub*(1-d)}}
+function renderCart(){const t=cartTotals();$$('.cart-cnt').forEach(c=>{c.textContent=t.n;c.dataset.z=t.n?0:1});
+ const b=$('#cartBody');if(!b)return;
+ const need=t.n>=3?0:t.n>=2?1:2-t.n;
+ $('#cartFS').innerHTML=t.n>=3?'🎉 <b>BUY 3 GET 25% OFF</b> unlocked!':t.n===2?`<b>BUY 2 GET 20% OFF</b> unlocked! Add 1 more for 25% off`:`Add <b>${need}</b> more item${need>1?'s':''} to unlock <b>BUY 2 GET 20% OFF</b>`;
+ $('#cartBar').style.width=Math.min(100,t.n/3*100)+'%';
+ let html=CART.length?CART.map((i,ix)=>{const p=P[i.h];if(!p)return '';return `<div class="ci" data-ix="${ix}"><img src="${p.img}" alt=""><div class="cm"><div class="nm">${p.t}</div><div class="vr" data-act="cedit">${p.color||''} / ${i.s} ✎</div>
+  <div class="edit"><select data-act="cchg" data-k="h">${(p.sw||[]).filter(s=>P[s[2]]).map(s=>`<option value="${s[2]}" ${s[2]===i.h?'selected':''}>${s[0]}</option>`).join('')}</select><select data-act="cchg" data-k="s">${p.sizes.map(s=>`<option ${s[0]===i.s?'selected':''} ${s[1]?'':'disabled'}>${s[0]}</option>`).join('')}</select></div>
+  <div class="qty"><button data-act="cq" data-d="-1">−</button><span>${i.q}</span><button data-act="cq" data-d="1">+</button></div>
+  <div class="acts"><button data-act="csfl">Save for later</button><button data-act="crm">Remove</button></div></div></div>`}).join(''):'<div class="empty-c">Your cart is currently empty.<br><br><a class="btn" href="collection.html">Continue shopping</a></div>';
+ if(SFL.length)html+=`<div class="sfl"><h5>Saved for later (${SFL.length})</h5>${SFL.map((i,ix)=>{const p=P[i.h];return p?`<div class="ci" data-six="${ix}"><img src="${p.img}" alt=""><div class="cm"><div class="nm">${p.t}</div><div class="vr">${p.color} / ${i.s}</div><div class="acts"><button data-act="cmove">Move to cart</button><button data-act="srm">Remove</button></div></div></div>`:''}).join('')}</div>`;
+ const rec=(window.REC||[]).filter(h=>!CART.find(i=>i.h===h)).slice(0,8);
+ if(rec.length)html+=`<div class="yml"><h5>You might like</h5><div class="yr">${rec.map(h=>{const p=P[h];return p?`<a href="product.html"><img src="${p.img}" alt="">${p.t}<br>${fmt(p.price)}<br><button data-act="quick" data-h="${h}">+ Add</button></a>`:''}).join('')}</div></div>`;
+ b.innerHTML=html;
+ $('#ckb').textContent=t.n?`CHECKOUT @ ${fmt0(t.tot)}`:'CHECKOUT';
+}
+window.openCart=()=>{renderCart();openPanel($('.cart-dr'))};
+
+/* quick (variant) modal */
+let Q={h:null,s:null};
+function openQuick(h,preSize){const p=P[h];if(!p)return;Q={h,s:preSize||null};const m=$('#qmodal');
+ m.querySelector('.mc').innerHTML=`<button class="x" data-act="mclose">×</button><img src="${p.img}" alt=""><div><h3>${p.t}</h3>
+ ${p.r?`<div class="pc"><span class="rt" style="margin-top:6px">${STAR}${p.r.toFixed(1)}</span></div>`:''}
+ <div class="mp">${fmt(p.price)}${p.cmp>p.price?`<s>${fmt(p.cmp)}</s>`:''}</div><span class="bv">BEST Value: <b>${fmt(p.price*.8)}*</b></span>
+ ${(p.sw||[]).filter(s=>P[s[2]]).length>1?`<div class="lbl">Color — ${p.color}</div><div class="swr">${p.sw.filter(s=>P[s[2]]).map(s=>`<button class="${s[2]===h?'on':''}" data-act="qsw" data-h="${s[2]}" title="${s[0]}"><img src="${P[s[2]].img}" alt=""></button>`).join('')}</div>`:`<div class="lbl">Color — ${p.color}</div>`}
+ <div class="lbl">Size</div><div class="szr" style="margin-top:0">${p.sizes.map(s=>`<div class="szb"><button class="${s[1]?'':'so'} ${Q.s===s[0]?'on':''}" ${s[1]?'':'disabled'} data-act="qsz" data-s="${s[0]}">${s[0]}</button></div>`).join('')}</div>
+ <div class="merr"></div><button class="addb" data-act="qadd">ADD TO CART</button><a class="vfd" href="product.html">View full product details</a></div>`;
+ m.classList.add('on')}
+window.openQuick=openQuick;
+function closeModal(){$$('.modal.on').forEach(m=>m.classList.remove('on'))}
+
+/* reels */
+let RI=0,RL=window.LOOKS||[];
+function openReel(i){RI=i;const m=$('#reel');if(!m)return;m.classList.add('on');playReel()}
+function playReel(){const m=$('#reel'),L=RL[RI],v=m.querySelector('video');v.src=L.v;v.muted=m._muted!==false;v.play().catch(()=>{});
+ m.querySelector('.pbars').innerHTML=RL.map((_,i)=>`<i><b style="width:${i<RI?100:0}%"></b></i>`).join('');
+ const p=P[L.p];if(p){m.querySelector('.rbar img').src=p.img;m.querySelector('.rbar .rn').innerHTML=`${p.t}<b>${fmt(p.price)}</b>`;m.querySelector('.rbar a').dataset.h=p.h}
+ v.ontimeupdate=()=>{const b=m.querySelectorAll('.pbars b')[RI];if(b&&v.duration)b.style.width=(v.currentTime/v.duration*100)+'%'};
+ v.onended=()=>stepReel(1)}
+function stepReel(d){RI+=d;if(RI<0)RI=0;if(RI>=RL.length){closeReel();return}playReel()}
+function closeReel(){const m=$('#reel');if(!m)return;m.classList.remove('on');const v=m.querySelector('video');v.pause()}
+
+/* global click delegation */
+document.addEventListener('click',e=>{
+ const a=e.target.closest('[data-act]');
+ if(e.target.closest('a[href="cart.html"]')){e.preventDefault();openCart();return}
+ if(!a)return;const act=a.dataset.act;
+ if(['wl','quick','qsz','qsw','qadd','mclose','menu','dclose','push','pop','search','sclose','cart','cclose','cq','crm','csfl','cmove','srm','cedit','reel','rclose','rprev','rnext','rmute','radd','sheet','sizech','sw','sz','atc','buy','gp','gn','chip','fclr','sopt','coupon','ck'].includes(act))e.preventDefault();
+ const ci=a.closest('.ci');
+ switch(act){
+  case 'wl':toggleWL(a.dataset.wl);break;
+  case 'quick':closeAll();openQuick(a.dataset.h);break;
+  case 'qsw':openQuick(a.dataset.h,Q.s);break;
+  case 'qsz':Q.s=a.dataset.s;$$('#qmodal .szb button').forEach(b=>b.classList.toggle('on',b===a));$('#qmodal .merr').textContent='';break;
+  case 'qadd':if(!Q.s){$('#qmodal .merr').textContent='Please select a size';return}addToCart(Q.h,Q.s);closeModal();openCart();break;
+  case 'mclose':closeModal();break;
+  case 'menu':openPanel($('.nav-drawer'));break;
+  case 'dclose':closeAll();break;
+  case 'push':pushView(a.dataset.v);break;
+  case 'pop':popView(a);break;
+  case 'search':openPanel($('.search-ov'));setTimeout(()=>$('#sq').focus(),300);break;
+  case 'sclose':closeAll();break;
+  case 'cart':openCart();break;
+  case 'cclose':closeAll();break;
+  case 'cq':{const i=CART[+ci.dataset.ix];i.q+=+a.dataset.d;if(i.q<1)CART.splice(+ci.dataset.ix,1);saveCart();break}
+  case 'crm':CART.splice(+ci.dataset.ix,1);saveCart();break;
+  case 'csfl':SFL.push(CART.splice(+ci.dataset.ix,1)[0]);saveCart();break;
+  case 'cmove':{const i=SFL.splice(+ci.dataset.six,1)[0];addToCart(i.h,i.s,i.q);break}
+  case 'srm':SFL.splice(+ci.dataset.six,1);saveCart();break;
+  case 'cedit':ci.classList.toggle('editing');break;
+  case 'coupon':{const v=$('#cpn').value.trim();$('#cmsg').textContent=v?`Code “${v.toUpperCase()}” will be applied at checkout.`:'Enter a coupon code';break}
+  case 'ck':toast(cartTotals().n?'Proceeding to checkout (mockup)':'Your cart is empty');break;
+  case 'reel':openReel(+a.dataset.i);break;
+  case 'rclose':closeReel();break;
+  case 'rprev':stepReel(-1);break;
+  case 'rnext':stepReel(1);break;
+  case 'rmute':{const m=$('#reel'),v=m.querySelector('video');m._muted=!v.muted;v.muted=!v.muted;a.textContent=v.muted?'🔇':'🔊';break}
+  case 'radd':closeReel();openQuick(a.dataset.h);break;
+  case 'sheet':openPanel($('#'+a.dataset.s));break;
+  case 'sizech':$('#szmodal').classList.add('on');break;
+ }
+});
+document.addEventListener('change',e=>{const a=e.target.closest('[data-act=cchg]');if(!a)return;const ix=+a.closest('.ci').dataset.ix;CART[ix][a.dataset.k]=a.value;if(a.dataset.k==='h'){const p=P[a.value];if(!p.sizes.find(s=>s[0]===CART[ix].s&&s[1]))CART[ix].s=(p.sizes.find(s=>s[1])||p.sizes[0])[0]}saveCart()});
+$$('.modal .mbg').forEach(b=>b.onclick=closeModal);
+
+/* search */
+const sq=$('#sq');
+if(sq)sq.addEventListener('input',()=>{const q=sq.value.trim().toLowerCase();const r=$('#sres');if(q.length<2){r.innerHTML='';$('#spop').style.display='';return}
+ $('#spop').style.display='none';const seen=new Set();const hits=Object.values(P).filter(p=>(p.t+' '+p.color+' '+p.type).toLowerCase().includes(q)&&!seen.has(p.h)&&seen.add(p.h)).slice(0,12);
+ r.innerHTML=`<h4>Products (${hits.length})</h4><div class="s-res">${hits.map(p=>`<a href="product.html"><img src="${p.img}" alt=""><span>${p.t}<br><small>${p.color} · ${fmt(p.price)}</small></span></a>`).join('')||'<p>No results</p>'}</div>`});
+$$('[data-q]').forEach(c=>c.onclick=e=>{e.preventDefault();sq.value=c.dataset.q;sq.dispatchEvent(new Event('input'))});
+
+/* hero / banner sliders */
+$$('.slider').forEach(s=>{const tr=s.querySelector('.track'),n=tr.children.length;if(n<2)return;let i=0;const dots=s.querySelector('.dots');
+ dots.innerHTML=[...Array(n)].map((_,k)=>`<button aria-label="slide ${k+1}"></button>`).join('');
+ const go=k=>{i=(k+n)%n;tr.style.transform=`translateX(-${i*100}%)`;[...dots.children].forEach((d,j)=>d.classList.toggle('on',j===i))};
+ [...dots.children].forEach((d,j)=>d.onclick=()=>{go(j);reset()});
+ let t;const reset=()=>{clearInterval(t);t=setInterval(()=>go(i+1),5000)};go(0);reset();
+ let x0=null;s.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});s.addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40){go(i+(dx<0?1:-1));reset()}x0=null})});
+
+/* carousels with arrows + dots */
+$$('.cslider').forEach(c=>{const tr=c.querySelector('.cs-track'),dots=c.parentElement.querySelector('.cs-dots');
+ const step=()=>tr.children[0].getBoundingClientRect().width+16;
+ c.querySelector('.prev')&&(c.querySelector('.prev').onclick=()=>tr.scrollBy({left:-step()}));
+ c.querySelector('.next')&&(c.querySelector('.next').onclick=()=>tr.scrollBy({left:step()}));
+ const upd=()=>{if(!dots)return;const pages=Math.max(1,Math.ceil((tr.scrollWidth-tr.clientWidth)/step())+1);const cur=Math.round(tr.scrollLeft/step());dots.innerHTML=[...Array(Math.min(pages,8))].map((_,k)=>`<i class="${k===cur?'on':''}"></i>`).join('')};
+ tr.addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd()});
+
+/* offers auto-rotate */
+$$('.offers').forEach(o=>{const t=o.querySelector('.ot'),n=t.children.length;let i=0;if(n>1)setInterval(()=>{i=(i+1)%n;t.style.transform=`translateX(-${i*100}%)`},3500)});
+
+/* reels row: play previews */
+$$('.look .reel video').forEach(v=>{v.muted=true;v.loop=true;v.playsInline=true;const io=new IntersectionObserver(es=>es.forEach(en=>en.isIntersecting?v.play().catch(()=>{}):v.pause()));io.observe(v)});
+
+syncWL();renderCart();renderWLPage();
+window.DN={$,$$,LS,P,fmt,STAR,toast,addToCart,openCart,openQuick,isMob,closeModal};
+})();
+</script></body></html>
