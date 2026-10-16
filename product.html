@@ -362,24 +362,60 @@ body.has-bar{--barh:40px;padding-top:40px}
 .prate u{text-underline-offset:2px;color:#333}
 .prate:hover u{color:#000}
 #reviews{scroll-margin-top:calc(var(--barh) + 100px)}
-/* offers rail (CRO) */
-.poffers{margin-top:22px}
-.poh{display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:600;margin-bottom:10px}
-.poh span:first-child{display:flex;align-items:center;gap:6px}
-.poh svg{width:15px;height:15px}
-.pnav{display:flex;gap:6px}
-.pnav button{width:26px;height:26px;border:1px solid #ddd;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#fff}
+/* offers rail (CRO) — Dennison palette (black/white/#f7f7f7), Poppins; live offers from dennison.in (GoKwik valid-offers) */
+.poffers{margin-top:22px;background:#f7f7f7;border:1px dashed #c8c8c8;border-radius:10px;padding:16px 0 16px 16px}
+.ohead{display:flex;justify-content:space-between;align-items:center;margin:0 16px 12px 0}
+.ohl{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:.12em;color:#444}
+.ohl svg{width:18px;height:18px;stroke-width:1.5}
+.pnav{display:flex;gap:8px}
+.pnav button{width:32px;height:32px;border:1px solid #000;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#fff;transition:.2s}
+.pnav button:disabled{border-color:#e0e0e0;opacity:.6;cursor:default}
 .pnav svg{width:9px;height:9px}
-.prail{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding-bottom:8px}
-.prail::-webkit-scrollbar{height:4px}.prail::-webkit-scrollbar-thumb{background:#cfcfcf;border-radius:2px}.prail::-webkit-scrollbar-track{background:#f1f1f1}
-.pcard{flex:0 0 178px;scroll-snap-align:start;background:rgba(188,82,29,.05);border:1px dashed #e2c9bd;border-radius:11px;padding:14px;display:flex;flex-direction:column}
-.pcard em{font-style:normal;font-size:10px;letter-spacing:.05em;color:#bc521d;font-weight:700;text-transform:uppercase}
-.pcard b{font-size:16px;margin-top:4px;font-weight:700;letter-spacing:.02em}
-.pcard p{font-size:12.5px;color:#6b7480;margin:4px 0 10px;flex:1;line-height:1.4}
-.pcard p strong{color:#c9302c}
-.pcard button{align-self:flex-start;font-size:12.5px;font-weight:700;color:#000;padding:0}
-.pcard button:hover{text-decoration:underline}
-.pcard button.done{color:#0d7c66;text-decoration:none}
+.prail{display:flex;align-items:flex-start;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding-right:16px}
+.prail::-webkit-scrollbar{display:none}
+.ocard{flex:0 0 236px;scroll-snap-align:start;background:#fff;border:1px solid #e3e3e3;border-radius:10px;padding:14px}
+.ocode{display:flex;align-items:center;justify-content:space-between;gap:8px;border:1px dashed #b5b5b5;border-radius:6px;background:#f7f7f7;padding:9px 12px;min-height:44px}
+.ocode span:first-child{font-size:13px;font-weight:600;letter-spacing:.04em;color:#000;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ocopy{width:24px;height:24px;display:flex;align-items:center;justify-content:center;flex:none}
+.ocopy svg{width:16px;height:16px;stroke-width:1.6}
+.ocopy.ok{color:#0a7a3e}
+.oauto{flex:none;font-size:9px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:#000;padding:3px 6px;border-radius:3px}
+.otitle{font-size:14px;line-height:1.4;color:#000;margin-top:10px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.osub{font-size:12px;color:#777;margin-top:4px;line-height:1.4}
+/* frequently bought together (CRO) */
+.fbt{border:1px solid #e3e3e3;border-radius:8px;padding:20px 20px 18px;margin:40px 0 0;max-width:780px}
+.fh{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.fh h2{font-size:15px;font-weight:600;letter-spacing:.14em}
+.fsave,.ftot em{background:#c94f4a;color:#fff;font-size:12px;font-weight:600;font-style:normal;padding:4px 11px;border-radius:20px;white-space:nowrap}
+.frow{border-bottom:1px solid #e8e8e8}
+.fmain{display:flex;align-items:center;gap:14px;padding:14px 0}
+.frow.off .fmain img,.frow.off .fi,.frow.off .fp{opacity:.45}
+.fck{width:26px;height:26px;border:1.5px solid #000;border-radius:5px;display:flex;align-items:center;justify-content:center;flex:none;background:#fff}
+.fck svg{width:16px;height:16px;fill:none;stroke:#fff;stroke-width:2.6}
+.fck.on{background:#000}
+.fmain img{width:62px;height:78px;object-fit:cover;flex:none}
+.fi{flex:1;min-width:0}
+.fn{font-size:14px;color:#000;text-transform:uppercase}
+.fn span{font-size:12px;color:#777;text-transform:none;margin-left:4px}
+.fv{font-size:12px;color:#777;margin:3px 0 5px}
+.fopt{font-size:12px;text-decoration:underline;text-underline-offset:3px;padding:0;color:#000}
+.fp{font-size:14px;white-space:nowrap;padding-left:8px}
+.fedit{background:#f7f7f7;border-radius:6px;padding:14px 16px;margin:0 0 14px}
+.feh{display:flex;justify-content:space-between;align-items:center;font-size:11px;font-weight:600;letter-spacing:.14em;color:#444}
+.feh button{font-size:18px;line-height:1}
+.fel{font-size:10.5px;letter-spacing:.12em;color:#777;margin:12px 0 8px}
+.fchips{display:flex;flex-wrap:wrap;gap:8px}
+.fchips button{border:1px solid #cfcfcf;border-radius:20px;padding:7px 14px;font-size:12px;background:#fff}
+.fchips button.on{background:#000;color:#fff;border-color:#000}
+.fchips button:disabled{color:#bbb;text-decoration:line-through;cursor:not-allowed}
+.fupd{margin-top:14px;background:#000;color:#fff;padding:10px 22px;font-size:12px;letter-spacing:.15em;border-radius:3px}
+.ffoot{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:16px;flex-wrap:wrap}
+.ftot{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.ftot span{font-size:14px}
+.ftot b{font-size:20px;font-weight:600}
+.ftot s{color:#888;font-size:14px}
+.fadd{background:#000;color:#fff;padding:15px 34px;font-size:13px;letter-spacing:.2em;text-transform:uppercase;border-radius:3px}
+.fadd:disabled{opacity:.4}
 /* breadcrumb (CRO: PDP wayfinding) */
 .bcrumb{border-bottom:1px solid #f0f0f0}
 .bcrumb ol{list-style:none;display:flex;align-items:center;gap:0;padding:12px 0;font-size:12px;white-space:nowrap;overflow:hidden}
@@ -441,8 +477,9 @@ body.has-bar{--barh:40px;padding-top:40px}
 #qmodal .qr span{color:#777}
 #qmodal .qp{display:flex;align-items:center;gap:8px;margin-top:6px;font-size:16px}
 #qmodal .qp s{color:#888;font-size:12.5px}
-#qmodal .qp em{font-style:normal;background:#fdecec;color:var(--red);font-size:11px;font-weight:600;padding:2px 7px;border-radius:4px}
-#qmodal .qo{display:block;font-size:11px;line-height:1.45;color:#0d6b5a;margin-top:6px}
+#qmodal .qp em{font-style:normal;background:#c94f4a;color:#fff;font-size:10.5px;font-weight:600;padding:2px 7px;border-radius:3px}
+#qmodal .qo{display:block;font-size:11px;line-height:1.45;color:#555;margin-top:6px}
+#qmodal .qo b{color:#c9302c}
 #qmodal .qo svg{width:12px;height:12px;fill:var(--star);vertical-align:-2px;margin-right:3px}
 #qmodal .x{top:12px;right:12px;width:30px;height:30px;border-radius:6px;background:#f3f3f3;font-size:20px;display:flex;align-items:center;justify-content:center}
 #qmodal .qb{overflow-y:auto;padding:16px 18px 6px;flex:1 1 auto;overscroll-behavior:contain}
@@ -605,8 +642,16 @@ body.gated{overflow:hidden}
  .pdp>.gal{margin:0 -12px}
  .pinfo{position:static}
  .bcrumb ol{padding:10px 0;font-size:11.5px}
- .pcard{flex-basis:165px}
- .pnav{display:none}
+ .ocard{flex-basis:210px}
+ .fbt{padding:16px 14px}
+ .fh h2{font-size:13px}
+ .fmain{gap:10px;align-items:flex-start}
+ .fmain img{width:52px;height:66px}
+ .fn{font-size:12.5px}
+ .fp{font-size:13px}
+ .ffoot{flex-direction:column;align-items:stretch}
+ .fadd{width:100%}
+ .poffers{padding:14px 0 14px 14px}
  .bcrumb+.wrap .pdp{padding-top:0}
  .gal .gt{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth}
  .gal .gt img{flex:none;width:100%;scroll-snap-align:start}
@@ -660,13 +705,7 @@ body.gated{overflow:hidden}
 <div class="prw"><div><div class="price">Rs. 999</div><div class="tax">(Inc. of all taxes)</div></div></div>
 <div class="lbl">Color —&nbsp; <span id="pcolor"></span></div><div class="swr"><button data-h="korean-baggy-fit-trouser-5" title="Black" class="on"><img data-src="IMG:05d47c0da9b0b66e" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Black"></button><button data-h="korean-baggy-fit-trouser-1" title="Grey" class=""><img data-src="IMG:e7d4b4191727f1f6" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Grey"></button><button data-h="korean-baggy-fit-trouser-2" title="Brown" class=""><img data-src="IMG:122fc354ca3ca845" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Brown"></button><button data-h="korean-baggy-fit-trouser-3" title="Pearl Grey" class=""><img data-src="IMG:e8a6c551ddbc14b8" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Pearl Grey"></button><button data-h="korean-baggy-fit-trouser-4" title="Dark Brown" class=""><img data-src="IMG:e0d7551feeb7a450" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Dark Brown"></button></div>
 <div class="szr" id="psizes"></div><a href="#" class="sizech" data-act="sizech">SIZE CHART</a>
-<section class="poffers" aria-label="Offers available on this product"><div class="poh"><span><svg class="svg" viewBox="0 0 24 24"><path d="M3 12V3h9l9 9-9 9z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg> Offers available on this product</span><span class="pnav"><button class="pprev" aria-label="Previous offer"><svg class="svg" viewBox="0 0 8 14"><path d="M7 1L1 7l6 6"/></svg></button><button class="pnext" aria-label="Next offer"><svg class="svg" viewBox="0 0 8 14"><path d="M1 1l6 6-6 6"/></svg></button></span></div>
-<div class="prail">
-<div class="pcard"><em>BUNDLE OFFER</em><b>BUY 2 GET 20% OFF</b><p>Get this for <strong>₹799</strong> each — Extra ₹200 off</p><button data-offer="b2">Add 2 &amp; save</button></div>
-<div class="pcard"><em>BUNDLE OFFER</em><b>BUY 3 GET 25% OFF</b><p>Get this for <strong>₹749</strong> each — Extra ₹250 off</p><button data-offer="b3">Add 3 &amp; save</button></div>
-<div class="pcard"><em>NEW USERS</em><b>FLAT ₹100 OFF</b><p>On your first order with Dennison</p><button data-offer="nu">Apply &amp; save</button></div>
-<div class="pcard"><em>PAYMENT OFFER</em><b>AMAZON PAY</b><p>Flat ₹150 &amp; flat ₹50 on min ₹2,500</p><button data-offer="pay">Pay at checkout</button></div>
-</div></section>
+<section class="poffers" aria-label="Offers available"><div class="ohead"><span class="ohl"><svg class="svg" viewBox="0 0 24 24"><path d="M3 7a2 2 0 012-2h14a2 2 0 012 2v2.5a2.5 2.5 0 000 5V17a2 2 0 01-2 2H5a2 2 0 01-2-2v-2.5a2.5 2.5 0 000-5z"/><path d="M14 5v2M14 11v2M14 17v2"/></svg> OFFERS AVAILABLE</span><span class="pnav"><button class="pprev" aria-label="Previous offers" disabled><svg class="svg" viewBox="0 0 8 14"><path d="M7 1L1 7l6 6"/></svg></button><button class="pnext" aria-label="Next offers"><svg class="svg" viewBox="0 0 8 14"><path d="M1 1l6 6-6 6"/></svg></button></span></div><div class="prail"><div class="ocard"><div class="ocode"><span>BUY 2 · 20% OFF</span><span class="oauto">Auto</span></div><p class="otitle">Get this for ₹799 each</p><p class="osub">Add any 2 styles — discount auto-applies in cart</p></div><div class="ocard"><div class="ocode"><span>BUY 3 · 25% OFF</span><span class="oauto">Auto</span></div><p class="otitle">Get this for ₹749 each</p><p class="osub">Add any 3 styles — discount auto-applies in cart</p></div><div class="ocard"><div class="ocode"><span>NEW USER ₹100</span><span class="oauto">Auto</span></div><p class="otitle">Get ₹100 off your first order</p><p class="osub">For first-time Dennison shoppers</p></div><div class="ocard"><div class="ocode"><span>PAYTMUPI</span><button class="ocopy" data-code="PAYTMUPI" aria-label="Copy code PAYTMUPI"><svg class="svg" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2h2"/></svg></button></div><p class="otitle">Upto ₹300 instant cashback &amp; Gold Coins on using Paytm UPI</p><p class="osub">Offer valid on a min payment of ₹49</p></div><div class="ocard"><div class="ocode"><span>MBKUPICB</span><button class="ocopy" data-code="MBKUPICB" aria-label="Copy code MBKUPICB"><svg class="svg" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2h2"/></svg></button></div><p class="otitle">Upto ₹200 cashback on payments with MobiKwik UPI</p><p class="osub">Offer valid on min payment of ₹49</p></div><div class="ocard"><div class="ocode"><span>APAYCB75</span><button class="ocopy" data-code="APAYCB75" aria-label="Copy code APAYCB75"><svg class="svg" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2h2"/></svg></button></div><p class="otitle">Win upto ₹200 cashback on ₹150 &amp; flat ₹50 cashback on ₹2500 with Amazon Pay Balance via scratch card</p><p class="osub">Assured cashback of ₹20 on ₹150 or ₹50 on ₹2500</p></div><div class="ocard"><div class="ocode"><span>NAVIUPI</span><button class="ocopy" data-code="NAVIUPI" aria-label="Copy code NAVIUPI"><svg class="svg" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2h2"/></svg></button></div><p class="otitle">Upto ₹100 cashback on using Navi UPI</p><p class="osub">No minimum order value, valid on all transactions</p></div><div class="ocard"><div class="ocode"><span>POPUPI</span><button class="ocopy" data-code="POPUPI" aria-label="Copy code POPUPI"><svg class="svg" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2h2"/></svg></button></div><p class="otitle">Upto ₹100 cashback on using POP UPI</p><p class="osub">Valid on all transactions</p></div><div class="ocard"><div class="ocode"><span>BHIMUPI</span><button class="ocopy" data-code="BHIMUPI" aria-label="Copy code BHIMUPI"><svg class="svg" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2h2"/></svg></button></div><p class="otitle">Upto ₹75 cashback on using BHIM App</p><p class="osub">Valid on a minimum payment of ₹99</p></div><div class="ocard"><div class="ocode"><span>CREDUPI</span><button class="ocopy" data-code="CREDUPI" aria-label="Copy code CREDUPI"><svg class="svg" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2h2"/></svg></button></div><p class="otitle">Upto ₹50 instant cashback on using CRED UPI</p><p class="osub">Valid twice per user</p></div><div class="ocard"><div class="ocode"><span>SUPERUPI</span><button class="ocopy" data-code="SUPERUPI" aria-label="Copy code SUPERUPI"><svg class="svg" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2h2"/></svg></button></div><p class="otitle">Upto ₹50 cashback via SuperMoney UPI</p><p class="osub">Upto 10% cashback on all transactions</p></div><div class="ocard"><div class="ocode"><span>MBKCB15</span><button class="ocopy" data-code="MBKCB15" aria-label="Copy code MBKCB15"><svg class="svg" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2h2"/></svg></button></div><p class="otitle">Upto 15% cashback auto applied on MobiKwik wallet</p><p class="osub">Valid on a minimum transaction of ₹350</p></div><div class="ocard"><div class="ocode"><span>AMAZONCB</span><button class="ocopy" data-code="AMAZONCB" aria-label="Copy code AMAZONCB"><svg class="svg" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2h2"/></svg></button></div><p class="otitle">Up to ₹25 cashback using Amazon Pay UPI</p><p class="osub">Applies at checkout</p></div></div></section>
 <div class="ctas"><button data-pdp="atc">ADD TO CART</button><button data-pdp="buy">BUY NOW</button></div>
 <div class="deliv"><h4>Delivery Details</h4><form id="pin"><input placeholder="Enter your pincode" inputmode="numeric" maxlength="6"><button>CHECK</button></form><div class="dmsg"></div></div>
 <div class="acc"><details><summary>Description</summary><div class="ab"><h3>PRODUCT DETAILS<br><br>
@@ -749,8 +788,7 @@ body.gated{overflow:hidden}
 <p >Pair these baggy trousers with oversized tees, relaxed shirts, or lightweight jackets for a clean, trendy, and fashion-forward outfit.</p></div></details><details><summary>Return/Refund Policy</summary><div class="ab">Returns accepted within 100 days of delivery. Items must be unused, unworn, and with original tags. Orders placed during BOGO or any special promotional sale are not eligible for return or exchange under the DENNISON 100 policy. Clearance Sale purchases are final sales. Refunds for prepaid orders are made to the original payment method.</div></details></div>
 <div class="shr"><a href="#"><svg viewBox="0 0 24 24"><path d="M24 12a12 12 0 10-13.9 11.9v-8.4h-3V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0024 12z"/></svg> Share</a><a href="#"><svg viewBox="0 0 24 24"><path d="M23 4.6c-.8.4-1.7.6-2.6.7a4.5 4.5 0 002-2.5c-.9.5-1.9.9-2.9 1.1a4.5 4.5 0 00-7.7 4.1A12.8 12.8 0 012.5 3.3a4.5 4.5 0 001.4 6c-.7 0-1.4-.2-2-.6v.1c0 2.2 1.5 4 3.6 4.4-.7.2-1.4.2-2 .1.6 1.8 2.2 3.1 4.2 3.1A9 9 0 011 18.3 12.8 12.8 0 007.9 20.3c8.3 0 12.8-6.9 12.8-12.8v-.6c.9-.6 1.6-1.4 2.3-2.3z"/></svg> Tweet</a><a href="#"><svg viewBox="0 0 24 24"><path d="M12 0a12 12 0 00-4.4 23.2c-.1-.9-.2-2.4 0-3.4l1.4-6s-.4-.7-.4-1.8c0-1.7 1-2.9 2.2-2.9 1 0 1.5.8 1.5 1.7 0 1-.7 2.6-1 4-.3 1.2.6 2.2 1.8 2.2 2.1 0 3.8-2.2 3.8-5.5 0-2.9-2.1-4.9-5-4.9-3.4 0-5.4 2.6-5.4 5.2 0 1 .4 2.1.9 2.7.1.1.1.2.1.3l-.3 1.4c-.1.2-.2.3-.4.2-1.5-.7-2.4-2.9-2.4-4.6 0-3.8 2.7-7.2 7.9-7.2 4.1 0 7.3 2.9 7.3 6.9 0 4.1-2.6 7.4-6.2 7.4-1.2 0-2.4-.6-2.8-1.4l-.8 2.9c-.3 1-1 2.3-1.5 3.1A12 12 0 1012 0z"/></svg> Pin it</a></div>
 </div></div>
-<section class="bundle"><h2>BUY 2 GET 20% OFF</h2><div class="bt"><div class="bi"><img data-src="IMG:71ea0732dcd3b6c0" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt=""> + <img data-src="IMG:ad92bcdfe1ee2ff9" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt=""></div><div class="tot">TOTAL <b>Rs. 1,598.40</b><br><a class="btn" href="#">BUY NOW</a></div></div>
-<div class="bl"><label><input type="checkbox" checked disabled> <b>Korean Baggy Fit Trouser</b> <select><option>32</option><option>34</option><option>36</option></select> <span class="bp">Rs. 999.00 ★★★★★ (1)</span></label><label><input type="checkbox" checked disabled> <b>Korean Baggy Fit Trouser</b> <select><option>32</option><option>34</option><option>36</option></select> <span class="bp">Rs. 999.00</span></label></div></section>
+<section class="fbt" id="fbt" aria-label="Frequently bought together"></section>
 <section class="seen"><h2 class="sh">SEEN ON</h2><div class="lr"><img data-src="IMG:16dd61ce65daaf4e" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"><img data-src="IMG:5d2be278cba31232" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"><img data-src="IMG:1719992297eae4c7" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"><img data-src="IMG:8579ec2a0201b406" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"><img data-src="IMG:b1b440a1dfe0cc48" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"><img data-src="IMG:aadc14bfedac669c" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" loading="lazy"></div></section>
 </div><section class="look"><div class="wrap"><h2 class="sh big">SHOP THE LOOK</h2><div class="row"><div class="reel" data-act="reel" data-i="0"><video src="assets/look0.mp4" data-poster="IMG:look0" muted loop playsinline preload="none"></video><span class="tag"><svg class="svg" viewBox="0 0 24 24"><path d="M3 12V3h9l9 9-9 9z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg></span></div><div class="reel" data-act="reel" data-i="1"><video src="assets/look1.mp4" data-poster="IMG:look1" muted loop playsinline preload="none"></video><span class="tag"><svg class="svg" viewBox="0 0 24 24"><path d="M3 12V3h9l9 9-9 9z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg></span></div><div class="reel" data-act="reel" data-i="2"><video src="assets/look2.mp4" data-poster="IMG:look2" muted loop playsinline preload="none"></video><span class="tag"><svg class="svg" viewBox="0 0 24 24"><path d="M3 12V3h9l9 9-9 9z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg></span></div><div class="reel" data-act="reel" data-i="3"><video src="assets/look3.mp4" data-poster="IMG:look3" muted loop playsinline preload="none"></video><span class="tag"><svg class="svg" viewBox="0 0 24 24"><path d="M3 12V3h9l9 9-9 9z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg></span></div><div class="reel" data-act="reel" data-i="4"><video src="assets/look4.mp4" data-poster="IMG:look4" muted loop playsinline preload="none"></video><span class="tag"><svg class="svg" viewBox="0 0 24 24"><path d="M3 12V3h9l9 9-9 9z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg></span></div><div class="reel" data-act="reel" data-i="5"><video src="assets/look5.mp4" data-poster="IMG:look5" muted loop playsinline preload="none"></video><span class="tag"><svg class="svg" viewBox="0 0 24 24"><path d="M3 12V3h9l9 9-9 9z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg></span></div><div class="reel" data-act="reel" data-i="6"><video src="assets/look6.mp4" data-poster="IMG:look6" muted loop playsinline preload="none"></video><span class="tag"><svg class="svg" viewBox="0 0 24 24"><path d="M3 12V3h9l9 9-9 9z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg></span></div></div></div></section><div class="wrap"><section class="revs" id="reviews"><h2 class="sh">Customer Reviews</h2><div class="rh"><div class="avg"><div class="st">★★★★★</div><div>5.00 out of 5</div><small>Based on 1 review</small></div>
 <div class="hist"><div><span class="st" style="color:#108474">★★★★★</span><span class="b"><i style="width:100%"></i></span>1</div><div><span class="st" style="color:#108474">★★★★☆</span><span class="b"><i style="width:0%"></i></span>0</div><div><span class="st" style="color:#108474">★★★☆☆</span><span class="b"><i style="width:0%"></i></span>0</div><div><span class="st" style="color:#108474">★★☆☆☆</span><span class="b"><i style="width:0%"></i></span>0</div><div><span class="st" style="color:#108474">★☆☆☆☆</span><span class="b"><i style="width:0%"></i></span>0</div></div><button class="wr" onclick="DN.toast('Review form (mockup)')">Write a review</button></div>
@@ -955,7 +993,7 @@ document.addEventListener('click',e=>{const a=e.target.closest('.pc a');if(!a)re
 syncWL();renderCart();renderWLPage();
 window.DN={$,$$,LS,P,fmt,STAR,toast,addToCart,openCart,openQuick,isMob,closeModal};
 })();
-</script><script>window.PDP_H="korean-baggy-fit-trouser-5";window.BUNDLE_H="korean-baggy-fit-trouser-1";window.STOCK={"32":6,"34":6,"36":7};window.RV_SEED=["korean-baggy-fit-trouser-7", "korean-baggy-fit-trouser", "korean-baggy-fit-trouser-2", "korean-baggy-fit-trouser-1", "korean-baggy-fit-pleated-trouser", "korean-baggy-fit-trouser-6"];</script><script>
+</script><script>window.PDP_H="korean-baggy-fit-trouser-5";window.BUNDLE_H="korean-baggy-fit-trouser-1";window.FBT=["korean-baggy-fit-trouser-5", "korean-baggy-fit-trouser-1", "vertical-striped-spread-collar-shirt-1"];window.STOCK={"32":6,"34":6,"36":7};window.RV_SEED=["korean-baggy-fit-trouser-7", "korean-baggy-fit-trouser", "korean-baggy-fit-trouser-2", "korean-baggy-fit-trouser-1", "korean-baggy-fit-pleated-trouser", "korean-baggy-fit-trouser-6"];</script><script>
 (function(){const {$,$$,P,fmt,STAR,toast,addToCart,openCart,isMob}=window.DN;let cur=window.PDP_H,size=null;
 const gt=$('.gal .gt');
 function render(h){const p=P[h];cur=h;size=null;
@@ -967,7 +1005,7 @@ function render(h){const p=P[h];cur=h;size=null;
  $('#psizes').innerHTML=p.sizes.map(s=>`<div class="szb"><button class="${s[1]?'':'so'}" ${s[1]?'':'disabled'} data-s="${s[0]}">${s[0]}</button><small>${s[1]&&left[s[0]]?left[s[0]]+' left':''}</small></div>`).join('');
  $$('#psizes button').forEach(b=>b.onclick=()=>{size=b.dataset.s;$$('#psizes button').forEach(x=>x.classList.toggle('on',x===b))});
  $$('.satc img').forEach(i=>i.src=p.img);
- $('.bundle .bi img').src=p.img}
+ renderFBT()}
 $$('.swr button').forEach(b=>b.onclick=()=>render(b.dataset.h));
 gt.addEventListener('scroll',()=>{const i=Math.round(gt.scrollLeft/gt.clientWidth);$$('.gal .gdots i').forEach((d,j)=>d.classList.toggle('on',j===i))},{passive:true});
 $('.gal .ga.p').onclick=()=>gt.scrollBy({left:-gt.clientWidth/2});$('.gal .ga.n').onclick=()=>gt.scrollBy({left:gt.clientWidth/2});
@@ -977,17 +1015,42 @@ $('#pin').onsubmit=e=>{e.preventDefault();const v=$('#pin input').value.trim();$
 const satc=$('.satc'),cta=$('.ctas');
 function chk(){if(isMob()){satc.classList.add('on');return}const r=cta.getBoundingClientRect();satc.classList.toggle('on',r.bottom<0)}
 addEventListener('scroll',chk,{passive:true});addEventListener('resize',chk);
-$('.bundle .btn').onclick=e=>{e.preventDefault();const s=$$('.bundle select');addToCart(window.PDP_H,s[0].value);addToCart(window.BUNDLE_H,s[1].value);openCart()};
+/* Frequently bought together (CRO): checkbox rows, inline option editing, tiered bundle saving (2=20%, 3=25%) */
+const FB={on:{},sz:{},edit:null};
+function fbItems(){return (window.FBT||[]).map((h,i)=>i===0?cur:h).filter(h=>P[h])}
+function fbSize(h,i){if(i===0&&size)return size;if(FB.sz[h])return FB.sz[h];const p=P[h];return (p.sizes.find(s=>s[1])||p.sizes[0])[0]}
+function renderFBT(){const box=$('#fbt');if(!box)return;const items=fbItems();
+ items.forEach(h=>{if(FB.on[h]===undefined)FB.on[h]=true});
+ const sel=items.filter(h=>FB.on[h]);const n=sel.length;const d=n>=3?.25:n>=2?.2:0;
+ const sum=sel.reduce((a,h)=>a+P[h].price,0);const tot=sum*(1-d);
+ box.innerHTML=`<div class="fh"><h2>FREQUENTLY BOUGHT TOGETHER</h2><span class="fsave">${d?'Save '+Math.round(d*100)+'%':'Buy 2, save 20%'}</span></div>
+ ${items.map((h,i)=>{const p=P[h];const sz=fbSize(h,i);const ed=FB.edit===h;return `<div class="frow ${FB.on[h]?'':'off'}">
+  <div class="fmain"><button class="fck ${FB.on[h]?'on':''}" data-fb="tog" data-h="${h}" aria-label="${FB.on[h]?'Remove':'Add'} ${p.t}" aria-pressed="${!!FB.on[h]}"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button>
+  <img src="${p.img}" alt=""><div class="fi"><div class="fn">${p.t}${i===0?' <span>This item</span>':''}</div><div class="fv">${p.color} / ${sz}</div><button class="fopt" data-fb="edit" data-h="${h}">${ed?'Hide options':'Select options'}</button></div>
+  <div class="fp">${fmt(p.price)}</div></div>
+  ${ed?`<div class="fedit"><div class="feh"><span>EDIT OPTIONS</span><button data-fb="close" aria-label="Close">×</button></div>
+   ${i>0&&(p.sw||[]).filter(s=>P[s[2]]).length>1?`<div class="fel">COLOUR</div><div class="fchips">${p.sw.filter(s=>P[s[2]]).map(s=>`<button class="${s[2]===h?'on':''}" data-fb="col" data-from="${h}" data-h="${s[2]}">${s[0]}</button>`).join('')}</div>`:''}
+   <div class="fel">SIZE</div><div class="fchips">${p.sizes.map(s=>`<button class="${s[0]===sz?'on':''}" ${s[1]?'':'disabled'} data-fb="sz" data-h="${h}" data-i="${i}" data-s="${s[0]}">${s[0]}</button>`).join('')}</div>
+   <button class="fupd" data-fb="close">Update</button></div>`:''}</div>`}).join('')}
+ <div class="ffoot"><div class="ftot"><span>Bundle total</span><b>${fmt(tot)}</b>${d?`<s>${fmt(sum)}</s><em>Save ${Math.round(d*100)}%</em>`:''}</div>
+ <button class="fadd" data-fb="add" ${n?'':'disabled'}>Add ${n} to cart</button></div>`}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-fb]');if(!b)return;const a=b.dataset.fb,h=b.dataset.h;
+ if(a==='tog'){FB.on[h]=!FB.on[h]}
+ else if(a==='edit'){FB.edit=FB.edit===h?null:h}
+ else if(a==='close'){FB.edit=null}
+ else if(a==='sz'){if(+b.dataset.i===0){size=b.dataset.s;$$('#psizes button').forEach(x=>x.classList.toggle('on',x.dataset.s===size))}else FB.sz[h]=b.dataset.s}
+ else if(a==='col'){const L=window.FBT;const k=L.indexOf(b.dataset.from);if(k>0){L[k]=h;FB.on[h]=true;FB.edit=h}}
+ else if(a==='add'){const items=fbItems().filter(x=>FB.on[x]);items.forEach((x,i)=>addToCart(x,fbSize(x,fbItems().indexOf(x))));openCart();return}
+ renderFBT()});
+$$('#psizes').forEach(el=>el.addEventListener('click',()=>setTimeout(renderFBT,0)));
 $('.share').onclick=()=>{navigator.clipboard&&navigator.clipboard.writeText(location.href);toast('Link copied')};
 render(cur);chk();
-/* offers rail */
-(function(){const r=$('.prail');if(!r)return;const st=()=>r.children[0].getBoundingClientRect().width+10;
- $('.pprev').onclick=()=>r.scrollBy({left:-st()});$('.pnext').onclick=()=>r.scrollBy({left:st()});
- $$('[data-offer]').forEach(b=>b.onclick=()=>{const o=b.dataset.offer;
-  if(o==='b2'||o==='b3'){if(!size){window.openQuick(cur,null,'add');toast('Pick a size, then set quantity to '+(o==='b2'?2:3));return}addToCart(cur,size,o==='b2'?2:3);openCart();return}
-  if(o==='nu'){window.DN.LS.set('dn_offer_nu',true);b.textContent='✓ Applied';b.classList.add('done');const ci=$('#cpn');if(ci)ci.value='NEW USER ₹100 OFF';toast('✓ New-user offer applied — ₹100 off at checkout');return}
-  if(o==='pay'){toast('✓ Pay with Amazon Pay at checkout to get this offer')}})
- if(window.DN.LS.get('dn_offer_nu',false)){const b=$('[data-offer=nu]');b.textContent='✓ Applied';b.classList.add('done')}})();
+/* offers rail: arrows (disabled at ends) + copy code */
+(function(){const r=$('.prail');if(!r)return;const st=()=>r.children[0].getBoundingClientRect().width+12;const pv=$('.pprev'),nx=$('.pnext');
+ const upd=()=>{pv.disabled=r.scrollLeft<4;nx.disabled=r.scrollLeft+r.clientWidth>=r.scrollWidth-4};
+ pv.onclick=()=>r.scrollBy({left:-st()});nx.onclick=()=>r.scrollBy({left:st()});r.addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();
+ const ok='<svg class="svg" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+ $$('.ocopy').forEach(b=>{const ic=b.innerHTML;b.onclick=()=>{const code=b.dataset.code;try{navigator.clipboard.writeText(code).catch(()=>{})}catch(e){}b.innerHTML=ok;b.classList.add('ok');toast('✓ Code '+code+' copied');setTimeout(()=>{b.innerHTML=ic;b.classList.remove('ok')},1800)}})})();
 /* Recently viewed (as on dennison.in: section above You may also like, up to 8, current product excluded) */
 (function(){let L=window.DN.LS.get('dn_rv',[]);if(!L.length)L=(window.RV_SEED||[]).slice();const cur0=window.PDP_H;
  const items=L.filter(h=>h!==cur0&&P[h]).slice(0,8);const L2=[cur0,...L.filter(h=>h!==cur0)].slice(0,12);window.DN.LS.set('dn_rv',L2);

@@ -362,24 +362,60 @@ body.has-bar{--barh:40px;padding-top:40px}
 .prate u{text-underline-offset:2px;color:#333}
 .prate:hover u{color:#000}
 #reviews{scroll-margin-top:calc(var(--barh) + 100px)}
-/* offers rail (CRO) */
-.poffers{margin-top:22px}
-.poh{display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:600;margin-bottom:10px}
-.poh span:first-child{display:flex;align-items:center;gap:6px}
-.poh svg{width:15px;height:15px}
-.pnav{display:flex;gap:6px}
-.pnav button{width:26px;height:26px;border:1px solid #ddd;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#fff}
+/* offers rail (CRO) — Dennison palette (black/white/#f7f7f7), Poppins; live offers from dennison.in (GoKwik valid-offers) */
+.poffers{margin-top:22px;background:#f7f7f7;border:1px dashed #c8c8c8;border-radius:10px;padding:16px 0 16px 16px}
+.ohead{display:flex;justify-content:space-between;align-items:center;margin:0 16px 12px 0}
+.ohl{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:.12em;color:#444}
+.ohl svg{width:18px;height:18px;stroke-width:1.5}
+.pnav{display:flex;gap:8px}
+.pnav button{width:32px;height:32px;border:1px solid #000;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#fff;transition:.2s}
+.pnav button:disabled{border-color:#e0e0e0;opacity:.6;cursor:default}
 .pnav svg{width:9px;height:9px}
-.prail{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding-bottom:8px}
-.prail::-webkit-scrollbar{height:4px}.prail::-webkit-scrollbar-thumb{background:#cfcfcf;border-radius:2px}.prail::-webkit-scrollbar-track{background:#f1f1f1}
-.pcard{flex:0 0 178px;scroll-snap-align:start;background:rgba(188,82,29,.05);border:1px dashed #e2c9bd;border-radius:11px;padding:14px;display:flex;flex-direction:column}
-.pcard em{font-style:normal;font-size:10px;letter-spacing:.05em;color:#bc521d;font-weight:700;text-transform:uppercase}
-.pcard b{font-size:16px;margin-top:4px;font-weight:700;letter-spacing:.02em}
-.pcard p{font-size:12.5px;color:#6b7480;margin:4px 0 10px;flex:1;line-height:1.4}
-.pcard p strong{color:#c9302c}
-.pcard button{align-self:flex-start;font-size:12.5px;font-weight:700;color:#000;padding:0}
-.pcard button:hover{text-decoration:underline}
-.pcard button.done{color:#0d7c66;text-decoration:none}
+.prail{display:flex;align-items:flex-start;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding-right:16px}
+.prail::-webkit-scrollbar{display:none}
+.ocard{flex:0 0 236px;scroll-snap-align:start;background:#fff;border:1px solid #e3e3e3;border-radius:10px;padding:14px}
+.ocode{display:flex;align-items:center;justify-content:space-between;gap:8px;border:1px dashed #b5b5b5;border-radius:6px;background:#f7f7f7;padding:9px 12px;min-height:44px}
+.ocode span:first-child{font-size:13px;font-weight:600;letter-spacing:.04em;color:#000;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ocopy{width:24px;height:24px;display:flex;align-items:center;justify-content:center;flex:none}
+.ocopy svg{width:16px;height:16px;stroke-width:1.6}
+.ocopy.ok{color:#0a7a3e}
+.oauto{flex:none;font-size:9px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:#000;padding:3px 6px;border-radius:3px}
+.otitle{font-size:14px;line-height:1.4;color:#000;margin-top:10px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.osub{font-size:12px;color:#777;margin-top:4px;line-height:1.4}
+/* frequently bought together (CRO) */
+.fbt{border:1px solid #e3e3e3;border-radius:8px;padding:20px 20px 18px;margin:40px 0 0;max-width:780px}
+.fh{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.fh h2{font-size:15px;font-weight:600;letter-spacing:.14em}
+.fsave,.ftot em{background:#c94f4a;color:#fff;font-size:12px;font-weight:600;font-style:normal;padding:4px 11px;border-radius:20px;white-space:nowrap}
+.frow{border-bottom:1px solid #e8e8e8}
+.fmain{display:flex;align-items:center;gap:14px;padding:14px 0}
+.frow.off .fmain img,.frow.off .fi,.frow.off .fp{opacity:.45}
+.fck{width:26px;height:26px;border:1.5px solid #000;border-radius:5px;display:flex;align-items:center;justify-content:center;flex:none;background:#fff}
+.fck svg{width:16px;height:16px;fill:none;stroke:#fff;stroke-width:2.6}
+.fck.on{background:#000}
+.fmain img{width:62px;height:78px;object-fit:cover;flex:none}
+.fi{flex:1;min-width:0}
+.fn{font-size:14px;color:#000;text-transform:uppercase}
+.fn span{font-size:12px;color:#777;text-transform:none;margin-left:4px}
+.fv{font-size:12px;color:#777;margin:3px 0 5px}
+.fopt{font-size:12px;text-decoration:underline;text-underline-offset:3px;padding:0;color:#000}
+.fp{font-size:14px;white-space:nowrap;padding-left:8px}
+.fedit{background:#f7f7f7;border-radius:6px;padding:14px 16px;margin:0 0 14px}
+.feh{display:flex;justify-content:space-between;align-items:center;font-size:11px;font-weight:600;letter-spacing:.14em;color:#444}
+.feh button{font-size:18px;line-height:1}
+.fel{font-size:10.5px;letter-spacing:.12em;color:#777;margin:12px 0 8px}
+.fchips{display:flex;flex-wrap:wrap;gap:8px}
+.fchips button{border:1px solid #cfcfcf;border-radius:20px;padding:7px 14px;font-size:12px;background:#fff}
+.fchips button.on{background:#000;color:#fff;border-color:#000}
+.fchips button:disabled{color:#bbb;text-decoration:line-through;cursor:not-allowed}
+.fupd{margin-top:14px;background:#000;color:#fff;padding:10px 22px;font-size:12px;letter-spacing:.15em;border-radius:3px}
+.ffoot{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:16px;flex-wrap:wrap}
+.ftot{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.ftot span{font-size:14px}
+.ftot b{font-size:20px;font-weight:600}
+.ftot s{color:#888;font-size:14px}
+.fadd{background:#000;color:#fff;padding:15px 34px;font-size:13px;letter-spacing:.2em;text-transform:uppercase;border-radius:3px}
+.fadd:disabled{opacity:.4}
 /* breadcrumb (CRO: PDP wayfinding) */
 .bcrumb{border-bottom:1px solid #f0f0f0}
 .bcrumb ol{list-style:none;display:flex;align-items:center;gap:0;padding:12px 0;font-size:12px;white-space:nowrap;overflow:hidden}
@@ -441,8 +477,9 @@ body.has-bar{--barh:40px;padding-top:40px}
 #qmodal .qr span{color:#777}
 #qmodal .qp{display:flex;align-items:center;gap:8px;margin-top:6px;font-size:16px}
 #qmodal .qp s{color:#888;font-size:12.5px}
-#qmodal .qp em{font-style:normal;background:#fdecec;color:var(--red);font-size:11px;font-weight:600;padding:2px 7px;border-radius:4px}
-#qmodal .qo{display:block;font-size:11px;line-height:1.45;color:#0d6b5a;margin-top:6px}
+#qmodal .qp em{font-style:normal;background:#c94f4a;color:#fff;font-size:10.5px;font-weight:600;padding:2px 7px;border-radius:3px}
+#qmodal .qo{display:block;font-size:11px;line-height:1.45;color:#555;margin-top:6px}
+#qmodal .qo b{color:#c9302c}
 #qmodal .qo svg{width:12px;height:12px;fill:var(--star);vertical-align:-2px;margin-right:3px}
 #qmodal .x{top:12px;right:12px;width:30px;height:30px;border-radius:6px;background:#f3f3f3;font-size:20px;display:flex;align-items:center;justify-content:center}
 #qmodal .qb{overflow-y:auto;padding:16px 18px 6px;flex:1 1 auto;overscroll-behavior:contain}
@@ -605,8 +642,16 @@ body.gated{overflow:hidden}
  .pdp>.gal{margin:0 -12px}
  .pinfo{position:static}
  .bcrumb ol{padding:10px 0;font-size:11.5px}
- .pcard{flex-basis:165px}
- .pnav{display:none}
+ .ocard{flex-basis:210px}
+ .fbt{padding:16px 14px}
+ .fh h2{font-size:13px}
+ .fmain{gap:10px;align-items:flex-start}
+ .fmain img{width:52px;height:66px}
+ .fn{font-size:12.5px}
+ .fp{font-size:13px}
+ .ffoot{flex-direction:column;align-items:stretch}
+ .fadd{width:100%}
+ .poffers{padding:14px 0 14px 14px}
  .bcrumb+.wrap .pdp{padding-top:0}
  .gal .gt{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth}
  .gal .gt img{flex:none;width:100%;scroll-snap-align:start}
