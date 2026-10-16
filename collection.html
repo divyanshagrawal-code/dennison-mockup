@@ -362,6 +362,24 @@ body.has-bar{--barh:40px;padding-top:40px}
 .prate u{text-underline-offset:2px;color:#333}
 .prate:hover u{color:#000}
 #reviews{scroll-margin-top:calc(var(--barh) + 100px)}
+/* offers rail (CRO) */
+.poffers{margin-top:22px}
+.poh{display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:600;margin-bottom:10px}
+.poh span:first-child{display:flex;align-items:center;gap:6px}
+.poh svg{width:15px;height:15px}
+.pnav{display:flex;gap:6px}
+.pnav button{width:26px;height:26px;border:1px solid #ddd;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#fff}
+.pnav svg{width:9px;height:9px}
+.prail{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding-bottom:8px}
+.prail::-webkit-scrollbar{height:4px}.prail::-webkit-scrollbar-thumb{background:#cfcfcf;border-radius:2px}.prail::-webkit-scrollbar-track{background:#f1f1f1}
+.pcard{flex:0 0 178px;scroll-snap-align:start;background:rgba(188,82,29,.05);border:1px dashed #e2c9bd;border-radius:11px;padding:14px;display:flex;flex-direction:column}
+.pcard em{font-style:normal;font-size:10px;letter-spacing:.05em;color:#bc521d;font-weight:700;text-transform:uppercase}
+.pcard b{font-size:16px;margin-top:4px;font-weight:700;letter-spacing:.02em}
+.pcard p{font-size:12.5px;color:#6b7480;margin:4px 0 10px;flex:1;line-height:1.4}
+.pcard p strong{color:#c9302c}
+.pcard button{align-self:flex-start;font-size:12.5px;font-weight:700;color:#000;padding:0}
+.pcard button:hover{text-decoration:underline}
+.pcard button.done{color:#0d7c66;text-decoration:none}
 /* breadcrumb (CRO: PDP wayfinding) */
 .bcrumb{border-bottom:1px solid #f0f0f0}
 .bcrumb ol{list-style:none;display:flex;align-items:center;gap:0;padding:12px 0;font-size:12px;white-space:nowrap;overflow:hidden}
@@ -587,6 +605,8 @@ body.gated{overflow:hidden}
  .pdp>.gal{margin:0 -12px}
  .pinfo{position:static}
  .bcrumb ol{padding:10px 0;font-size:11.5px}
+ .pcard{flex-basis:165px}
+ .pnav{display:none}
  .bcrumb+.wrap .pdp{padding-top:0}
  .gal .gt{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth}
  .gal .gt img{flex:none;width:100%;scroll-snap-align:start}
